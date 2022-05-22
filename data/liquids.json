@@ -1,0 +1,172 @@
+{
+  "Water":{
+    "desc":"An essential component of life. Don't forget to stay hydrated!",
+    "ap":2,
+    "value":5
+  },"Manaqua":{
+    "desc":"Magically-enriched water. It always stays just a bit warmer than room temperature.",
+    "mana":2,
+    "value":40
+  },"Nectar":{
+    "desc":"Thick and sweet, this golden elixir never spoils and is full of nutrients which promote good health.",
+    "hp":5,
+    "value":50
+  },"Sand":{
+    "desc":"Fine grains of rocks, probably. Their exact composition is really hard to make out with the naked eye.",
+    "powder":true,
+    "value":2,
+    "drinkable":false
+  },"Flour":{
+    "desc":"Finely-ground wheat, ready for baking.",
+    "powder":true,
+    "value":4,
+    "foreign":true,
+    "drinkable":false
+  },"Blood":{
+    "desc":"Tastes like salty metal. Not pleasant to drink, unless you're a vampire, but it'll technically hydrate you.",
+    "ap":1,
+    "value":0
+  },"Kobold Blood":{
+    "desc":"Blood sourced from one of our own. Drinking this is probably unsanitary, but metal as hell.",
+    "ap":1,
+    "value":0
+  },"Bubble Tea":{
+    "desc":"Made from bubbleshroom steeped in boiling water. A great way to keep you going through the day.",
+    "ap":3,
+    "value":20
+  },"Milk":{
+    "desc":"Milk from a large mammal. Healthy and full of nutrients, though it's not enough to sustain an adult creature on its own.",
+    "ap":2,
+    "hp":1,
+    "value":15
+  },"Earthen Ale":{
+    "desc":"Alcohol made from mushrooms. Bland, but no one drinks this for the taste.",
+    "booze":true,
+    "ap":4,
+    "value":25
+  },"Wheat Whisky":{
+    "desc":"A drink made from a fermented mash of wheat. More flavorful (and healthier) than mushroom ale.",
+    "booze":true,
+    "foreign":true,
+    "ap":4,
+    "hp":1,
+    "value":30
+  },"Moss Bitter":{
+    "desc":"Extract of pulped healmoss, which turns out has a surprisingly high volume of alcohol.",
+    "booze":true,
+    "ap":5,
+    "value":35
+  },"Antibiotic Elixir":{
+    "desc":"A carefully-made elixir that strengthens the immune system and stops infections in their tracks.",
+    "potion":true,
+    "value":50,
+    "hp":3,
+    "del_trait":["infection_initial","infection"]
+  },"Blood Wine":{
+    "desc":"A good source of iron, once you get used to the taste.",
+    "booze":true,
+    "value":20,
+    "ap":3
+  },"Cold-Blooded Wine":{
+    "desc":"I wonder why they call it that? It doesn't taste much better cold...",
+    "booze":true,
+    "value":20,
+    "ap":3
+  },"Goodberry Wine":{
+    "desc":"The distillation makes these berries lose much of their magical properties, in exchange for the magical property of inebriation.",
+    "booze":true,
+    "ap":2,
+    "value":40,
+    "hp":2
+  },"Ghostberry Wine":{
+    "desc":"The natural tartness of the ghostberries has been dampened into more of a pleasant kick, thanks to heavy watering-down.",
+    "booze":true,
+    "ap":2,
+    "value":25
+  },"Death Waltz":{
+    "desc":"A cloudy black drink with a high concentration of alcohol. Some kobolds drink this to show off. Not all of them live.",
+    "booze":true,
+    "ap":6,
+    "hp":-6,
+    "value":50,
+    "add_trait":["poisoned"]
+  },"Lesser Health Potion":{
+    "desc":"Goes straight to the bloodstream, where it encourages rapid clotting and aids in the transfer of oxygen.",
+    "potion":true,
+    "value":40,
+    "hp":5
+  },"Standard Health Potion":{
+    "desc":"The classic health potion formula with a dash of magic to make wounds close faster.",
+    "potion":true,
+    "value":80,
+    "hp":12
+  },"Greater Health Potion":{
+    "desc":"Goes down smooth and makes even smoother skin - don't drink this if you like to show off your battle scars.",
+    "potion":true,
+    "foreign":true,
+    "value":120,
+    "hp":20
+  },"Lesser Mana Potion":{
+    "desc":"Mildly psychadelic, though the general assertion is that this state of mind strengthens your connection with the mana stream.",
+    "potion":true,
+    "value":50,
+    "mana":3
+  },"Standard Mana Potion":{
+    "desc":"It's blue and it's viscous. Tastes like magical cough syrup. Don't ask how you know what that is. That's the magic.",
+    "potion":true,
+    "value":100,
+    "mana":6
+  },"Greater Mana Potion":{
+    "desc":"If you can stomach the cavalcade of colors and sensations, this potion will refill a significant amount of mana.",
+    "potion":true,
+    "foreign":true,
+    "value":150,
+    "mana":10
+  },"Antidote":{
+    "desc":"This pale green swill neutralizes most venoms and poisons at the cost of leaving a bitter aftertaste for several days. Worth?",
+    "potion":true,
+    "value":30,
+    "del_trait":["poisoned"]
+  },"Calming Potion":{
+    "desc":"A softly bubbling brew which goes down easy and leaves you feeling warm inside. The perfect thing for an unstable psyche.",
+    "potion":true,
+    "value":40,
+    "del_trait":["stressed","confused"]
+  },"Bull's Strength":{
+    "desc":"A stark red potion which inflates muscular tissue, granting the consumer a burst of strength.",
+    "potion":true,
+    "foreign":true,
+    "value":100,
+    "add_trait":["strup"]
+  },"Crane's Finesse":{
+    "desc":"A creamy white potion which enhances the user's reflexes and increases their dexterity.",
+    "potion":true,
+    "foreign":true,
+    "value":100,
+    "add_trait":["dexup"]
+  },"Camel's Endurance":{
+    "desc":"A thick black potion which strengthen's the user's core and increases their constitution.",
+    "potion":true,
+    "foreign":true,
+    "value":100,
+    "add_trait":["conup"]
+  },"Owl's Wit":{
+    "desc":"A bubbly blue potion which amplifies the firing of neurons, enabling the user to think more clearly.",
+    "potion":true,
+    "foreign":true,
+    "value":100,
+    "add_trait":["intup"]
+  },"Hawk's Perception":{
+    "desc":"A swirling green potion which sharpens the senses and enhances the user's focus.",
+    "potion":true,
+    "foreign":true,
+    "value":100,
+    "add_trait":["wisup"]
+  },"Snake's Charm":{
+    "desc":"A sparkling yellow potion which loosen's the user's inhibitions and bolsters confidence.",
+    "potion":true,
+    "foreign":true,
+    "value":100,
+    "add_trait":["chaup"]
+  }
+}   

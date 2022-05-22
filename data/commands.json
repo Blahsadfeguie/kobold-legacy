@@ -1,0 +1,1239 @@
+[
+  {
+    "cmd":"mine",
+    "desc":"!mine - 2 AP. Dig at the rock in the area. The amount of progress you contribute, and the chance of getting a resource drop, increases with Strength and Mining skill. When the total progress reaches a multiple of 100 in a tile, you receive a guaranteed resource drop and (if you're in the den) +1 space for housing kobolds or buildings.",
+    "args":1,
+    "min_age":3,
+    "args_optional":1,
+    "cost":2,
+    "anywhere":true,
+    "combat":false,
+    "tavern":false,
+    "danger":2,
+    "skill":"mining",
+    "tool":"mining",
+    "task":true,
+    "function":"cmd_mine"
+  },{
+    "cmd":"chop",
+    "desc":"!chop - 2 AP. Requires an axe. Chop down trees in the area. The amount of progress you contribute, and the chance of getting a resource drop, increases with Strength and Woodcutting skill. When the total progress reaches a multiple of 100 in a tile, a tree is chopped down and wooden logs are produced.",
+    "args":1,
+    "min_age":3,
+    "args_optional":1,
+    "cost":2,
+    "anywhere":true,
+    "combat":false,
+    "tavern":false,
+    "danger":2,
+    "skill":"woodcutting",
+    "tool":"woodcutting",
+    "function":"cmd_chop"
+  },{
+    "cmd":"build",
+    "desc":"!build <building> - 2 AP. Work on constructing a building in the den. The amount of progress you contribute increases with Strength and Construction skill. When progress reaches the goal, the building is complete.",
+    "anywhere":true,
+    "tavern":false,
+    "cost":2,
+    "min_age":3,
+    "danger":2,
+    "skill":"construction",
+    "tool":"construction",
+    "task":true,
+    "function":"cmd_build"
+  },{
+    "cmd":"repair",
+    "synonyms":["fix"],
+    "desc":"!repair <building> - 1 AP. Repair a constructed building that has been damaged. The amount of building health you repair increases with Strength and Construction skill.",
+    "tavern":false,
+    "cost":1,
+    "min_age":3,
+    "danger":2,
+    "skill":"construction",
+    "tool":"construction",
+    "task":true,
+    "function":"cmd_repair"
+  },{
+    "cmd":"expand",
+    "desc":"!expand - 2 AP. Expand the farm in this tile. The amount of capacity you add increases with Strength and Construction skill. A farm can have up to 1000 capacity.",
+    "args":0,
+    "anywhere":true,
+    "cost":2,
+    "min_age":3,
+    "danger":2,
+    "skill":"construction",
+    "tool":"construction",
+    "task":true,
+    "function":"cmd_expand"
+  },{
+    "cmd":"research",
+    "desc":"!research <research> - 2 AP. Work on a research project. The amount of progress you contribute increases with Intelligence and Research skill. When progress reaches the goal, the research is complete and can be applied immediately, usually unlocking some new crafts, buildings, or subsequent research.",
+    "cost":2,
+    "min_age":3,
+    "task":true,
+    "function":"cmd_research"
+  },{
+    "cmd":"craft",
+    "synonyms":["cook","make"],
+    "desc":"!craft <item> - Variable AP. Craft an item using available resources from your inventory or the ground. The quality of the item depends on the relevant stat and skill (usually Dexterity and Crafting, though there are other possibilities). Many crafting recipes are locked behind research, and the AP cost depends on the craft.",
+    "cp":1,
+    "anywhere":true,
+    "tavern":false,
+    "combat":false,
+    "min_age":3,
+    "skill":"crafting",
+    "tool":"chisel",
+    "task":true,
+    "function":"cmd_craft"
+  },{
+    "cmd":"recycle",
+    "desc":"!recycle <item> - 1 AP. Attempt to recycle an item into its components. Chance of success depends on the item, its durability and quality, and the user's Dexterity and Crafting skill. The item will be destroyed regardless of success.",
+    "cost":1,
+    "target":"item",
+    "anywhere":true,
+    "tavern":false,
+    "combat":false,
+    "min_age":3,
+    "confirm_prompt":"You are about to recycle an item. This WILL destroy the item, and you are NOT guaranteed to get anything back from it. Are you sure you wish to continue?",
+    "function":"cmd_recycle"
+  },{
+    "cmd":"farm",
+    "desc":"!farm <plant> - 1 AP. Work on the farm. The amount of progress you contribute increases with Constitution and Farming skill. The amount of food produced by a farm per month increases with the amount of progress made that day, and the max amount of progress possible increases with the number of farms built.",
+    "anywhere":true,
+    "cost":1,
+    "args":1,
+    "args_optional":1,
+    "min_age":3,
+    "danger":2,
+    "skill":"farming",
+    "tool":"farming",
+    "task":true,
+    "function":"cmd_farm"
+  },{
+    "cmd":"fish",
+    "desc":"!fish - 1 AP. Attempt to catch a fish in a fishable area. Strength, Dexterity, and Fishing skill increases the chance of success, as well as the size and type of fish caught.",
+    "overworld":true,
+    "cost":1,
+    "args":0,
+    "min_age":3,
+    "function":"cmd_fish"
+  },{
+    "cmd":"domesticate",
+    "synonyms":["domestic","domest","dom"],
+    "desc":"!domesticate <plant> - 2 AP. Work on domesticating a farmable item so that it can be planted. The progress required depends on the item and is boosted by Intelligence and Farming skill. When complete, the item is consumed and becomes immediately available to farm.",
+    "cost":2,
+    "min_age":3,
+    "target":"item",
+    "req":[["research","Plant Domestication"]],
+    "skill":"farming",
+    "task":true,
+    "function":"cmd_domesticate"
+  },{
+    "cmd":"study",
+    "desc":"!study <research> - 1 AP. Study a technology to increase your familiarity with it. Progress gained increases with your Intelligence and Research skill.",
+    "cost":1,
+    "min_age":1,
+    "req":[["research","Education"],["building","Study"]],
+    "function":"cmd_study"
+  },{
+    "cmd":"thesis",
+    "desc":"!thesis <research> - 3 AP. Create a Thesis for a given technology, which can be used in another tribe to instantly unlock that research. Consumes a Stone Tablet. Must be Very Familiar with that research.",
+    "cost":3,
+    "min_age":1,
+    "req":[["research","Education"],["building","Study"]],
+    "function":"cmd_thesis"
+  },{
+    "cmd":"heal",
+    "desc":"!heal - 1 AP. Heal a wounded kobold. The amount of HP you can restore increses with Wisdom and Medicine skill. You will automatically use the best medicine in your inventory. You can heal without medicine, but the amount restored is greatly reduced.",
+    "cost":1,
+    "min_age":3,
+    "task":true,
+    "can_target_self":true,
+    "anywhere":true,
+    "target":"living",
+    "combat":false,
+    "skill":"medicine",
+    "function":"cmd_heal"
+  },{
+    "cmd":"comfort",
+    "synonyms":["hug"],
+    "desc":"!comfort - 1 AP. Comfort a kobold, curing Stressed and other mental statuses, or applying Relaxed if there are no negative mental statuses. Wisdom, Charisma, and Willpower skill increases the chance of success.",
+    "cost":1,
+    "min_age":3,
+    "anywhere":true,
+    "target":"kobold",
+    "combat":false,
+    "skill":"willpower",
+    "function":"cmd_comfort"
+  },{
+    "cmd":"cheer",
+    "synonyms":["praise"],
+    "desc":"!cheer - 1 AP. Compliment and build up a fellow named kobold, increasing their influence and restoring some CP. Charisma and Willpower skill increase the amount restored. Can only be done by and for named kobolds.",
+    "cost":1,
+    "min_age":3,
+    "anywhere":true,
+    "target":"kobold",
+    "combat":false,
+    "nameless":false,
+    "skill":"willpower",
+    "function":"cmd_cheer"
+  },{
+    "cmd":"breed",
+    "synonyms":["court"],
+    "desc":"!breed <kobold> - 2 AP. Make a breeding attempt with a fellow kobold. The other kobold must consent by responding with a !breed command of their own (though nameless kobolds will always consent). If both partners are of opposite sex, the female may become pregnant depending on their combined Vitality skill (you can prevent this by adding 'nobaby' to the end of the command text). Vitality EXP will be gained regardless of the sex of the participants, however. Each kobold may only do this once per month.",
+    "args":2,
+    "args_optional":1,
+    "anywhere":true,
+    "target":"kobold",
+    "targ_arg":1,
+    "os_order":false,
+    "combat":false,
+    "confirm_prompt":"Breeding will cost both you and your partner 2 AP. In addition, once you make a breeding request, there is NO WAY to undo it - you are giving your consent for the requestee to breed with you at any time. Are you sure you wish to proceed?",
+    "function":"cmd_breed"
+  },{
+    "cmd":"spar",
+    "desc":"!spar <kobold> - 1 AP. Begin a sparring session with a kobold. A named kobold must consent, but a nameless will always accept. Both of you will make mock attack rolls against the other, and you will each gain EXP in a combat skill depending on your weapon, as well as Resilience. However, the stronger your weapon is, the more likely you'll hurt your partner by accident. This accident chance is reduced by being more skilled with your current weapon.",
+    "anywhere":true,
+    "target":"kobold",
+    "os_order":false,
+    "combat":false,
+    "danger":5,
+    "confirm_prompt":"Sparring will cost both you and your partner 1 AP and may result in accidental injury or death. In addition, once you make a sparring request, there is NO WAY to undo it - you are giving your consent for the requestee to spar with you at any time. Are you sure you wish to proceed?",
+    "function":"cmd_spar"
+  },{
+    "cmd":"practice",
+    "desc":"!practice <skill> - 1 AP/1 mana. Directly trains a skill. Each skill requires a different building to train. Buildings that enable training include Training Dummies (Melee/Marksman), Magic Box (Sorcery/Arcana), and Spinning Poles (Vitality/Resilience). Has a chance to damage the building or injure you.",
+    "combat":false,
+    "task":true,
+    "min_age":3,
+    "danger":2,
+    "function":"cmd_train2"
+  },{
+    "cmd":"orders",
+    "synonyms":["order"],
+    "desc":"!orders - Toggle whether to allow Overseers to issue orders to you under certain conditions (on by default).",
+    "args":0,
+    "anywhere":true,
+    "free":true,
+    "os_order":false,
+    "nameless":false,
+    "function":"cmd_orders"
+  },{
+    "cmd":"getoff",
+    "synonyms":["unmount","dismount"],
+    "desc":"!getoff - Get yourself down from a kobold or mount who is carrying you.",
+    "args":0,
+    "anywhere":true,
+    "free":true,
+    "nameless":false,
+    "function":"cmd_getoff"
+  },{
+    "cmd":"rescues",
+    "synonyms":["rescue"],
+    "desc":"!rescues - Toggle whether to allow other members of your tribe to carry you.",
+    "args":0,
+    "anywhere":true,
+    "free":true,
+    "os_order":false,
+    "nameless":false,
+    "function":"cmd_rescues"
+  },{
+    "cmd":"researches",
+    "desc":"!researches - Show list of available research and their progress.",
+    "args":0,
+    "informational":true,
+    "function":"cmd_researches"
+  },{
+    "cmd":"buildings",
+    "synonyms":["builds"],
+    "desc":"!buildings - Show list of available building projects and their progress.",
+    "anywhere":true,
+    "args":0,
+    "informational":true,
+    "function":"cmd_buildings"
+  },{
+    "cmd":"crafts",
+    "desc":"!crafts - Show list of available crafts, AP costs, and their materials needed.",
+    "anywhere":true,
+    "args_optional":1,
+    "informational":true,
+    "free":true,
+    "function":"cmd_crafts"
+  },{
+    "cmd":"butcher",
+    "desc":"!butcher <item> - Variable AP. Butcher a corpse and convert it into meat, bone, and hide. Larger creatures cost more AP to butcher. Has a chance to destroy the materials, a high Wisdom and/or Survival skill minimizes this.",
+    "cp":1,
+    "anywhere":true,
+    "tavern":false,
+    "min_age":3,
+    "target":"item",
+    "target_type":"corpse",
+    "combat":false,
+    "function":"cmd_butcher"
+  },{
+    "cmd":"serve",
+    "desc":"!serve <kobold> <liquid> - Serve a drink to a tavern patron. The kobold will pay you and consume the drink.",
+    "req":[["building","Tavern"]],
+    "target":"kobold",
+    "targ_arg":1,
+    "args":2,
+    "min_age":1,
+    "function":"cmd_serve"
+  },{
+    "cmd":"fill",
+    "desc":"!fill <item> <target> - Fill a container with a liquid/item. <target> can be a food item (for pots), the name of the liquid or the name of another item containing a liquid.",
+    "anywhere":true,
+    "tavern":false,
+    "args":2,
+    "informational":true,
+    "min_age":1,
+    "function":"cmd_fill"
+  },{
+    "cmd":"empty",
+    "desc":"!empty <item> - Empty a container onto the ground.",
+    "anywhere":true,
+    "min_age":1,
+    "target":"item",
+    "target_type":"container",
+    "function":"cmd_empty"
+  },{
+    "cmd":"get",
+    "synonyms":["take","pickup","grab","pick"],
+    "desc":"!get <item> - Pick up an item.",
+    "animal_training":"haul",
+    "anywhere":true,
+    "min_age":1,
+    "target":"item",
+    "numbers":true,
+    "start_in_inv":false,
+    "place":"ground",
+    "function":"cmd_get"
+  },{
+    "cmd":"scoop",
+    "desc":"!scoop <item> - Pick up as many items as possible, matching text <item> if provided.",
+    "animal_training":"haul",
+    "args_optional":1,
+    "anywhere":true,
+    "min_age":1,
+    "function":"cmd_scoop"
+  },{
+    "cmd":"carry",
+    "desc":"!carry <kobold> - Carry a young kobold. This will take up an inventory slot.",
+    "animal_training":"mount",
+    "anywhere":true,
+    "min_age":6,
+    "target":"kobold",
+    "function":"cmd_carry"
+  },{
+    "cmd":"setdown",
+    "synonyms":["putdown"],
+    "desc":"!setdown - Set down a carried kobold.",
+    "animal_training":"mount",
+    "args":0,
+    "anywhere":true,
+    "min_age":6,
+    "function":"cmd_setdown"
+  },{
+    "cmd":"equip",
+    "synonyms":["eq","uneq","unequip"],
+    "desc":"!equip <item> - Equip an item from the inventory to the hand.",
+    "anywhere":true,
+    "min_age":1,
+    "target":"item",
+    "free":true,
+    "place":"inv",
+    "function":"cmd_equip"
+  },{
+    "cmd":"wear",
+    "synonyms":["puton","remove","takeoff"],
+    "desc":"!wear <item> - Wear an item from the inventory in its corresponding equipment slot.",
+    "anywhere":true,
+    "min_age":1,
+    "target":"item",
+    "free":true,
+    "place":"inv",
+    "function":"cmd_wear"
+  },{
+    "cmd":"dropall",
+    "desc":"!dropall <eq> - Drop all non-equipped items in your inventory. <eq> is optional; if included (as `!dropall eq`), you will drop all items including equipped items and pouches.",
+    "animal_training":"haul",
+    "anywhere":true,
+    "min_age":1,
+    "args":1,
+    "args_optional":1,
+    "free":true,
+    "function":"cmd_dropall"
+  },{
+    "cmd":"drop",
+    "desc":"!drop <item> - Drop on item on the ground.",
+    "animal_training":"haul",
+    "anywhere":true,
+    "min_age":1,
+    "target":"item",
+    "numbers":true,
+    "free":true,
+    "place":"inv",
+    "function":"cmd_drop"
+  },{
+    "cmd":"give",
+    "desc":"!give <kobold> <item> - Give an item you're holding directly to another kobold.",
+    "animal_training":"haul",
+    "anywhere":true,
+    "args":2,
+    "min_age":1,
+    "target":"item",
+    "numbers":true,
+    "place":"inv",
+    "function":"cmd_give"
+  },{
+    "cmd":"flavor",
+    "synonyms":["desc"],
+    "desc":"!flavor <text> - Set a kobold's flavor text (bio). You can view this with `!bio <kobold>`.",
+    "anywhere":true,
+    "free":true,
+    "os_order":false,
+    "min_age":0,
+    "function":"cmd_flavor"
+  },{
+    "cmd":"bio",
+    "desc":"!bio <kobold> - View a kobold's bio. You can set this with `!flavor <text>`.",
+    "target":"kobold",
+    "can_target_self":true,
+    "anywhere":true,
+    "free":true,
+    "function":"cmd_bio"
+  },{
+    "cmd":"look",
+    "synonyms":["examine","ex","check"],
+    "desc":"!look <thing> - Look at a particular kobold or item in your area and view all relevant information about it. Omit <thing> to show information about the area you're in.",
+    "args_optional":1,
+    "informational":true,
+    "anywhere":true,
+    "free":true,
+    "function":"cmd_look"
+  },{
+    "cmd":"lookall",
+    "synonyms":["examineall","exall","checkall"],
+    "desc":"!lookall - Show an embed group with detailed information about each kobold in the area.",
+    "args":0,
+    "anywhere":true,
+    "free":true,
+    "informational":true,
+    "function":"cmd_lookall"
+  },{
+    "cmd":"familiarity",
+    "synonyms":["familiarities","familiar","fam"],
+    "desc":"!familiarity <kobold> - View familiarity status for a kobold.",
+    "can_target_self":true,
+    "args_optional":1,
+    "target_self_if_omitted":true,
+    "target":"kobold",
+    "anywhere":true,
+    "free":true,
+    "function":"cmd_familiarity"
+  },{
+    "cmd":"farming",
+    "desc":"!farming - View information about the tribe's farms: what type of farms are operational, what progress has been made with each farmable plant, and what has been domesticated.",
+    "anywhere":true,
+    "args":0,
+    "free":true,
+    "function":"cmd_farming"
+  },{
+    "cmd":"animals",
+    "synonyms":["kennel","animals","animal","pasture"],
+    "desc":"!animals - View the list of animals in the kennel/pasture.",
+    "args":0,
+    "anywhere":true,
+    "free":true,
+    "function":"cmd_kennel"
+  },{
+    "cmd":"say",
+    "desc":"!say <message> - Say a message to all kobolds in the area, whether they're in your party or not.",
+    "anywhere":true,
+    "free":true,
+    "os_order":false,
+    "informational":true,
+    "min_age":1,
+    "function":"cmd_say"
+  },{
+    "cmd":"me",
+    "synonyms":["emote"],
+    "desc":"!me <message> - Emote a message, formatted like an action log.",
+    "anywhere":true,
+    "free":true,
+    "os_order":false,
+    "informational":true,
+    "min_age":0,
+    "function":"cmd_me"
+  },{
+    "cmd":"cast",
+    "desc":"!cast <spell> - Cast a spell that you know. This will cost mana based on the spell in question.",
+    "os_order":false,
+    "args":3,
+    "args_optional":2,
+    "anywhere":true,
+    "informational":true,
+    "can_target_self":true,
+    "function":"cmd_cast"
+  },{
+    "cmd":"items",
+    "desc":"!items <filter> - View all items in the area. <filter> is optional and will filter the results.",
+    "args":1,
+    "args_optional":1,
+    "informational":true,
+    "anywhere":true,
+    "free":true,
+    "function":"cmd_items"
+  },{
+    "cmd":"fast",
+    "desc":"!fast - Toggle whether you will fast this month. If enabled, you will not eat automatically on month change. You can only do this if you are not starving. Nameless kobolds will not follow this command unless ordered by the Chieftain.",
+    "args":0,
+    "anywhere":true,
+    "free":true,
+    "command_by":"chieftain",
+    "function":"cmd_fast"
+  },{
+    "cmd":"rest",
+    "desc":"!rest - Toggle whether you will rest this month. If enabled, you will not participate in tasks at the end of the month, instead preserving any AP you have remaining.",
+    "args":0,
+    "anywhere":true,
+    "free":true,
+    "os_order":false,
+    "function":"cmd_rest"
+  },{
+    "cmd":"lock",
+    "desc":"!lock <kobold> - Chieftain command. Lock <kobold> as a nameless, preventing a player from joining as them. You can only lock up to 1/3 of your tribe's total population.",
+    "target":"kobold",
+    "anywhere":true,
+    "chieftain":true,
+    "function":"cmd_lock"
+  },{
+    "cmd":"overseer",
+    "desc":"!overseer <kobold> - Chieftain command. Appoint <kobold> to be your tribe's Overseer. Must be a named kobold. If you already have an Overseer, this will replace the old one. Can only be done once per month.",
+    "target":"kobold",
+    "anywhere":true,
+    "chieftain":true,
+    "confirm_prompt":"When you appoint an Overseer, you cannot appoint a new one until month change. Are you sure?",
+    "function":"cmd_overseer"
+  },{
+    "cmd":"exile",
+    "desc":"!exile <kobold> - Chieftain command. Exile a kobold, causing them to leave the tribe and be unable to return. You can only exile a kobold once per month.",
+    "anywhere":true,
+    "chieftain":true,
+    "confirm_prompt":"An exiled kobold will be left outside to their own fate, and be unable to rejoin the tribe without an invitation. Are you sure?",
+    "function":"cmd_exile"
+  },{
+    "cmd":"demolish",
+    "desc":"!demolish <building> - Chieftain command. Demolish a building, freeing up space.",
+    "chieftain":true,
+    "confirm_prompt":"You are about to demolish a building. This is irreversible and will not refund any materials or labor used to build it. Are you sure?",
+    "function":"cmd_demolish"
+  },{
+    "cmd":"tribe_name",
+    "desc":"!tribe_name <name> - Chieftain command. Rename the current tribe.",
+    "chieftain":true,
+    "function":"cmd_tribename"
+  },{
+    "cmd":"tavern_open",
+    "synonyms":["tavern_close","tavernclose","tavernopen","opentavern","closetavern"],
+    "desc":"!tavern_open - Chieftain command. Toggle open status of tavern. If the tavern is closed, kobolds cannot enter.",
+    "chieftain":true,
+    "args":0,
+    "function":"cmd_tavopen"
+  },{
+    "cmd":"kick",
+    "desc":"!kick <kobold> - Chieftain command. Kick a kobold from your tavern and expel them to the overworld. This kicks all kobolds in the target's party, but does not prevent them from re-entering.",
+    "chieftain":true,
+    "target":"kobold",
+    "confirm_prompt":"This action will kick the target kobold and all kobolds in their party. They will be able to re-enter your tavern manually later. Are you sure?",
+    "function":"cmd_tavkick"
+  },{
+    "cmd":"ban",
+    "desc":"!ban <kobold> - Chieftain command. Ban a kobold from your tavern and expel them to the overworld. This bans all kobolds in the target's party, and prevents them from re-entering.",
+    "chieftain":true,
+    "target":"kobold",
+    "confirm_prompt":"This action will ban the target kobold and all kobolds in their party. They will NOT be able to re-enter your tavern, until you `!unban` them. Are you sure?",
+    "function":"cmd_tavban"
+  },{
+    "cmd":"unban",
+    "desc":"!unban <kobold> - Chieftain command. Unban a target kobold and allow them to enter your tavern again. Each kobold in a party must be unbanned individually.",
+    "anywhere":true,
+    "chieftain":true,
+    "target":"kobold",
+    "function":"cmd_tavunban"
+  },{
+    "cmd":"ce",
+    "desc":"!ce <building/research> - Vote for the selected building or research as your tribe's Community Effort for this month.",
+    "nameless":false,
+    "os_order":false,
+    "function":"cmd_ce"
+  },{
+    "cmd":"elect",
+    "synonyms":["vote"],
+    "desc":"!elect <kobold> - Cast a vote to elect <kobold> as Chieftain. The majority vote will become the new Chieftain. You can instead type `!elect abstain` to change your vote to a neutral one.",
+    "nameless":false,
+    "os_order":false,
+    "can_target_self":true,
+    "function":"cmd_elect"
+  },{
+    "cmd":"cp",
+    "synonyms":["give_cp","cp_give","deputize"],
+    "desc":"!cp <kobold> <amount> - Give your CP to another named kobold. If <amount> is omitted, you will give as much CP as you can.",
+    "args":2,
+    "args_optional":1,
+    "target":"kobold",
+    "targ_arg":1,
+    "nameless":false,
+    "os_order":false,
+    "can_target_self":true,
+    "function":"cmd_cpgive"
+  },{
+    "cmd":"leave",
+    "desc":"!leave - Leave the den to explore the overworld. Must be leading a party, your party will follow you.",
+    "args":0,
+    "anywhere":true,
+    "combat":false,
+    "function":"cmd_leave"
+  },{
+    "cmd":"enter",
+    "synonyms":["knock"],
+    "desc":"!enter - Enter the den from the overworld. Must be leading a party, your party will follow you. If you cannot enter this den, you will knock, alerting everyone inside.",
+    "args":0,
+    "party_leader":true,
+    "overworld":true,
+    "combat":false,
+    "function":"cmd_enter"
+  },{
+    "cmd":"move",
+    "synonyms":["go"],
+    "desc":"!move <dir> - 1 AP. Move to the tile in the specified direction (north, east, west, or south). Your party will follow. All party members must be able to expend the AP for you to move.",
+    "party_leader":true,
+    "overworld":true,
+    "free":true,
+    "combat":false,
+    "function":"cmd_move"
+  },{
+    "cmd":"camp",
+    "desc":"!camp - Set up a camp on the current tile. Requires 2 items in the *block category. Dexterity and Stealth skill reduces the initial heat of the camp; its defenses can be bolstered with additional *blocks and the !fortify command. Camps start with 5 space and can be increased with fortifications.",
+    "party_leader":true,
+    "args":0,
+    "overworld":true,
+    "combat":false,
+    "dungeon":false,
+    "function":"cmd_camp"
+  },{
+    "cmd":"hide",
+    "desc":"!hide - 1 AP. Attempt to hide in the overworld. Dexterity and Stealth skill increases your chances of survival overnight. This can be used multiple times to increase your chances further.",
+    "cost":1,
+    "args":0,
+    "overworld":true,
+    "combat":false,
+    "dungeon":false,
+    "function":"cmd_hide"
+  },{
+    "cmd":"fortify",
+    "desc":"!fortify - 1 AP. Fortify a camp, consuming 1 *block-category item to add 5 Defense and 5 Space.",
+    "cost":1,
+    "args":0,
+    "overworld":true,
+    "combat":false,
+    "dungeon":false,
+    "function":"cmd_fortify"
+  },{
+    "cmd":"flee",
+    "synonyms":["run","gtfo"],
+    "desc":"!flee <dir> - 2 AP. Allows you and your party to escape from combat, moving yourselves in the direction specified. Party members might be forced to drop items or take damage, but this always succeeds.",
+    "party_leader":true,
+    "overworld":true,
+    "confirm_prompt":"Fleeing a battle costs each party member 2 AP and may provoke attacks of opportunity, or the loss of items in someone's inventory. Are you sure?",
+    "function":"cmd_flee"
+  },{
+    "cmd":"prospect",
+    "desc":"!prospect - 1 AP. Determine what kinds of minerals are in this tile, as well as how stable this tile is. Intelligence/Wisdom and Geology skill helps find nodes deeper into the walls.",
+    "cost":1,
+    "args":0,
+    "min_age":3,
+    "anywhere":true,
+    "combat":false,
+    "dungeon":false,
+    "function":"cmd_prospect"
+  },{
+    "cmd":"search",
+    "desc":"!search - Search the area for forageables. You can do this for free once per tile per day.",
+    "animal_training":"search",
+    "args":0,
+    "min_age":1,
+    "overworld":true,
+    "dungeon":false,
+    "combat":false,
+    "function":"cmd_search"
+  },{
+    "cmd":"searchall",
+    "desc":"!searchall - Have all party members search. Only members you can command will perform the search.",
+    "args":0,
+    "min_age":1,
+    "overworld":true,
+    "combat":false,
+    "dungeon":false,
+    "party_leader":true,
+    "function":"cmd_searchall"
+  },{
+    "cmd":"fight",
+    "synonyms":["ambush"],
+    "desc":"!fight - Initiate combat with a group of enemies. If you succeed a stealth roll, you will ambush them and get a free round of combat.",
+    "args":0,
+    "min_age":1,
+    "overworld":true,
+    "combat":false,
+    "function":"cmd_fight"
+  },{
+    "cmd":"attack",
+    "synonyms":["hit"],
+    "desc":"!attack <enemy> - Attack the enemy with your currently equipped weapon. If there are multiple enemies, use the letter at the end of the enemy's name to target them.",
+    "animal_training":"combat",
+    "args":1,
+    "min_age":1,
+    "anywhere":true,
+    "target":"enemy",
+    "function":"cmd_attack"
+  },{
+    "cmd":"pass",
+    "synonyms":["wait"],
+    "desc":"!pass - Pass your turn in combat. You will draw less aggro.",
+    "animal_training":"guard",
+    "args":0,
+    "anywhere":true,
+    "combatonly":true,
+    "function":"cmd_pass"
+  },{
+    "cmd":"capture",
+    "desc":"!capture <kobold> - 1 AP. Attempt to capture a target tribeless/nameless kobold. Strength/Charisma and Intimidation skill will increase the chance of success, as well as the strength of the binding used and the HP of the target. The target may attack or flee on a failure.",
+    "cost":1,
+    "args":1,
+    "min_age":3,
+    "anywhere":true,
+    "tavern":false,
+    "target":"kobold",
+    "function":"cmd_capture"
+  },{
+    "cmd":"release",
+    "desc":"!release <kobold> - Chieftain command. Release a prisoner. They'll immediately run away, never to be seen again.",
+    "chieftain":true,
+    "anywhere":true,
+    "tavern":false,
+    "target":"kobold",
+    "function":"cmd_release"
+  },{
+    "cmd":"break",
+    "desc":"!break <kobold> - 1 AP. Attempt to break a prisoner's will, allowing them to be commanded. Strength/Charisma and Intimidation skill will increase the chance of success. The target will lose 2 HP in the process.",
+    "cost":1,
+    "args":1,
+    "min_age":3,
+    "anywhere":true,
+    "target":"kobold",
+    "function":"cmd_break"
+  },{
+    "cmd":"dodge",
+    "desc":"!dodge - Spend this turn protecting yourself and staying out of harm's way. You will draw less aggro and attacks against you will miss more often this turn.",
+    "animal_training":"combat",
+    "args":0,
+    "min_age":1,
+    "anywhere":true,
+    "combatonly":true,
+    "function":"cmd_dodge"
+  },{
+    "cmd":"guard",
+    "desc":"!guard <kobold> - Protect a kobold from harm for one combat round. If that kobold is targeted, you will be targeted instead. You take reduced damage if you pass a CON save while doing this.",
+    "min_age":1,
+    "animal_training":"guard",
+    "anywhere":true,
+    "combatonly":true,
+    "target":"living",
+    "function":"cmd_guard"
+  },{
+    "cmd":"rally",
+    "desc":"!rally - Inspire your fellow kobolds this turn. Has a chance to give the Inspired buff for each party member which increases based on your Charisma and Command skill. An Inspired kobold has advantage on their attack rolls.",
+    "args":0,
+    "min_age":1,
+    "anywhere":true,
+    "combatonly":true,
+    "function":"cmd_rally"
+  },{
+    "cmd":"pacify",
+    "desc":"!pacify <enemy> - Attempt to pacify an intelligent enemy in combat. Must be able to speak the target's language. Charisma and Negotiation skill improves your chances; heat with the target's faction reduces them. If successful, the encounter will end peacefully and the other side will no longer be hostile.",
+    "target":"enemy",
+    "min_age":1,
+    "anywhere":true,
+    "async":true,
+    "function":"cmd_pacify"
+  },{
+    "cmd":"kobolds",
+    "desc":"!kobolds - View all kobolds in the area. The icon represents the kobold's color and sex (square is male, circle is female). A name in italics represents a juvenile kobold. A bolded name is one that the kobold chose for themselves (they are under control of a player).",
+    "args":1,
+    "args_optional":1,
+    "informational":true,
+    "anywhere":true,
+    "free":true,
+    "function":"cmd_kobolds"
+  },{
+    "cmd":"drink",
+    "desc":"!drink <liquid> - Drink a liquid. You will drink from a source if one is available, or a container.",
+    "anywhere":true,
+    "min_age":0,
+    "function":"cmd_drink"
+  },{
+    "cmd":"use",
+    "synonyms":["eat"],
+    "desc":"!use <item> - Use an item from your inventory or the ground.",
+    "anywhere":true,
+    "tavern":false,
+    "informational":true,
+    "allow_multi":true,
+    "min_age":0,
+    "function":"cmd_use"
+  },{
+    "cmd":"feeder",
+    "desc":"!feeder <add/remove> <item> - Add or remove an item to the kennel feeder. Animals will eat from this feeder first. Must be a food/bait item.",
+    "anywhere":true,
+    "tavern":false,
+    "informational":true,
+    "args":2,
+    "function":"cmd_feeder"
+  },{
+    "cmd":"attune",
+    "req":["research","Mana Attunement"],
+    "desc":"!attune <item> <gem> - Attune an item to a school of magic corresponding to a gemstone. If the target has a matching attunement already, that attunement will become stronger; otherwise it will override any existing attunement. Costs 2 mana and 1 gem times the target level of attunement.",
+    "args":2,
+    "anywhere":true,
+    "tavern":false,
+    "min_age":0,
+    "target":"item",
+    "targ_arg":1,
+    "function":"cmd_attune"
+  },{
+    "cmd":"bury",
+    "desc":"!bury <kobold> - 1 AP. Requires a Graveyard. Bury a dead kobold, reducing heat by 1.",
+    "req":[["building","Graveyard"]],
+    "cost":1,
+    "min_age":3,
+    "target":"item",
+    "target_type":"corpse",
+    "function":"cmd_bury"
+  },{
+    "cmd":"epitaph",
+    "desc":"!epitaph <kobold> <message> - Write an epitaph on a dead kobold's gravestone. Once something is written, it cannot be erased.",
+    "args":2,
+    "req":[["building","Graveyard"]],
+    "confirm_prompt":"Note: Once you write an epitaph for a kobold, it will be forever etched into their grave. Is this the legacy you want to leave them?",
+    "function":"cmd_epitaph"
+  },{
+    "cmd":"graveyard",
+    "desc":"!graveyard - View the graveyard, if one exists in the den. Shows all kobolds buried there and their epitaphs.",
+    "args":0,
+    "req":[["building","Graveyard"]],
+    "informational":true,
+    "function":"cmd_graveyard"
+  },{
+    "cmd":"watch",
+    "synonyms":["watchman","watchmen"],
+    "animal_training":"guard",
+    "desc":"!watch - Join the watchmen. You will contribute your offensive strength with your currently equipped weapon to the tribe's defense by putting yourself at risk.",
+    "args":0,
+    "anywhere":true,
+    "tavern":false,
+    "function":"cmd_watch"
+  },{
+    "cmd":"recruit",
+    "desc":"!recruit <kobold> - 1 AP. Attempt to recruit a tribeless kobold. Success depends on your Charisma and Negotiation skill. If successful, the kobold will become a member of your tribe, and join your party.",
+    "target":"kobold",
+    "anywhere":true,
+    "tavern":false,
+    "combat":false,
+    "cost":1,
+    "function":"cmd_recruit"
+  },{
+    "cmd":"mount",
+    "desc":"!mount <creature> - Mount a creature with 'mount' training.",
+    "target":"creature",
+    "overworld":true,
+    "combat":false,
+    "function":"cmd_mount"
+  },{
+    "cmd":"tame",
+    "desc":"!tame <creature> - 1 AP. Attempt to tame a non-hostile creature. This consumes a unit of bait/food appropriate to the target's diet. Charisma and Animals skill increases the chance of success. On a failed attempt, the creature may attack. This does not work on a creature with an INT score of 6 or higher.",
+    "target":"creature",
+    "overworld":true,
+    "combat":false,
+    "cost":1,
+    "async":true,
+    "function":"cmd_tame"
+  },{
+    "cmd":"train",
+    "desc":"!train <creature> <training> - 1 AP. Train a creature. Progress increases with your Charisma and Animals skill. You can give a number of types of training equal to the creature's INT score. Possible training types:\ncombat - Enables !attack and !dodge commands.\nguard - Enables !guard and !watch commands.\nhaul - Enables !get, !drop, and !dropall commands.\nmount - Enables !carry and !setdown commands.\nsearch - Enables !search command.\ndomestic - Allows production and harvesting of resources.",
+    "task":true,
+    "target":"creature",
+    "anywhere":true,
+    "combat":false,
+    "cost":1,
+    "args":2,
+    "targ_arg":1,
+    "function":"cmd_train"
+  },{
+    "cmd":"milk",
+    "desc":"!milk <creature> - 1 AP. Milk a tamed creature. Creature must be domestically trained, capable of producing milk, and you must have a container which can hold it. The amount of milk received depends on your Charisma and Animals skill. Can only be done once per creature per day.",
+    "req":[["landmark","Pasture"]],
+    "task":true,
+    "target":"creature",
+    "anywhere":true,
+    "combat":false,
+    "cost":1,
+    "danger":2,
+    "function":"cmd_milk"
+  },{
+    "cmd":"shear",
+    "desc":"!shear <creature> - 1 AP. Shear a tamed creature. Creature must be domestically trained, and capable of producing wool. The amount of wool received depends on your Charisma and Animals skill. Can only be done once per creature per day.",
+    "req":[["landmark","Pasture"]],
+    "task":true,
+    "target":"creature",
+    "anywhere":true,
+    "combat":false,
+    "cost":1,
+    "danger":2,
+    "function":"cmd_shear"
+  },{
+    "cmd":"rename",
+    "desc":"!rename <creature> <new name> - Give a creature a new name.",
+    "target":"creature",
+    "anywhere":true,
+    "combat":false,
+    "free":true,
+    "args":2,
+    "targ_arg":1,
+    "function":"cmd_rename"
+  },{
+    "cmd":"slaughter",
+    "desc":"!slaughter <creature> - 1 AP. Slaughter a tamed creature, killing it instantly and leaving its corpse.",
+    "target":"creature",
+    "anywhere":true,
+    "combat":false,
+    "cost":1,
+    "confirm_prompt":"A slaughtered creature is dead forever - a very long time! Are you sure?",
+    "function":"cmd_slaughter"
+  },{
+    "cmd":"trade",
+    "desc":"!trade <kobold> - Hail a kobold from another tribe and see if they have anything to trade. That kobold's items and their prices will be shown. Your party member with the highest Charisma and Negotiation skill will reduce the price.",
+    "target":"kobold",
+    "anywhere":true,
+    "combat":false,
+    "function":"cmd_trade"
+  },{
+    "cmd":"buy",
+    "desc":"!buy <item> <kobold> - Buy <item> from <kobold>, if you can afford it.",
+    "args":2,
+    "target":"kobold",
+    "anywhere":true,
+    "combat":false,
+    "function":"cmd_buy"
+  },{
+    "cmd":"sell",
+    "desc":"!sell <item> <kobold> - Sell <item> from your inventory to <kobold>.",
+    "args":2,
+    "target":"kobold",
+    "anywhere":true,
+    "combat":false,
+    "function":"cmd_sell"
+  },{
+    "cmd":"negotiate",
+    "desc":"!negotiate - Chieftain command. Attempt to engage in peace talks with another faction. Must be able to speak their language. Success depends on the skill of the party's best negotiator.",
+    "args":0,
+    "overworld":true,
+    "chieftain":true,
+    "function":"cmd_negotiate"
+  },{
+    "cmd":"gift",
+    "desc":"!gift <item> - Give <item> as a gift to a nearby faction.",
+    "target":"item",
+    "overworld":true,
+    "function":"cmd_gift"
+  },{
+    "cmd":"write",
+    "desc":"!write <text> - Write something on a Stone Tablet, if you have one.",
+    "anywhere":true,
+    "args":1,
+    "req":[["research","Writing"]],
+    "function":"cmd_write"
+  },{
+    "cmd":"tribe",
+    "desc":"!tribe <action> <kobold> - Manage your tribe membership. Actions:\nnew - Create a new tribe, if you have none. Must be at a camp.\nleave - Leave your current tribe. You will no longer be able to enter their den.\ninvite - Invite <kobold> to your tribe (Chieftain only). A nameless kobold cannot switch tribes this way.\njoin - Join <kobold>'s tribe, if you have been invited.",
+    "args":2,
+    "args_optional":1,
+    "anywhere":true,
+    "free":true,
+    "combat":false,
+    "nameless":false,
+    "confirm_prompt":"This action is no trifling matter. A kobold's life often depends on their tribe, and the tribe on its individual members. Are you sure?",
+    "function":"cmd_tribe"
+  },{
+    "cmd":"party",
+    "desc":"!party <action> <kobold> - Manage your party. Actions:\nnew - Create a new party, if you have none.\nleave - Leave your current party.\nmembers - Show members of your current party.\njoin - Join <kobold>'s party, if you have been invited.\ninvite - Invite <kobold> to your party. A nameless kobold will join immediately.\nkick - Remove <kobold> from your party.\nleader - Transfer leadership to <kobold> (must be named)",
+    "args":2,
+    "args_optional":1,
+    "anywhere":true,
+    "free":true,
+    "combat":false,
+    "nameless":false,
+    "carry":false,
+    "function":"cmd_party"
+  },{
+    "cmd":"quit",
+    "desc":"!quit - Leave the game. Your kobold will become nameless. If you rejoin the game later, you will take control of the same kobold if they are still alive.",
+    "anywhere":true,
+    "args":0,
+    "nameless":false,
+    "os_order":false,
+    "free":true,
+    "confirm_prompt":"Quitting will revert your kobold back to a nameless, allowing them to be ordered around by anyone. In addition, when you rejoin, you'll be given this kobold again in whatever state they happen to be in (if they are still alive). If they die while you are not controlling them, you will receive no SP. Do you wish to continue?",
+    "function":"cmd_quit"
+  },{
+    "cmd":"join",
+    "desc":"!join <name> - Begin the process of joining the game. You will be given a random nameless adult from a random tribe, or if there are none in the world, a new tribe will be generated. If you have any Soul Points, you can spend these to increase the amount of kobolds you have to choose from.",
+    "args_optional":1,
+    "meta":true,
+    "function":"cmd_join"
+  },{
+    "cmd":"newtribe",
+    "desc":"!newtribe - 50 SP. Force the creation of a new tribe. You'll get your pick from all kobolds available in it, and you're guaranteed to be the chieftain.",
+    "args":0,
+    "sp":50,
+    "meta":true,
+    "function":"cmd_newtribe"
+  },{
+    "cmd":"name",
+    "desc":"!name <birth name> <new name> - Select a kobold from your selection, and give them the name <new name>. This will complete the joining process and give you control of your chosen kobold, placing you in their channels..",
+    "args":2,
+    "meta":true,
+    "function":"cmd_name"
+  },{
+    "cmd":"reroll",
+    "desc":"!reroll - 10 SP. Add another kobold to your join selection. Can have up to 4 total.",
+    "args":0,
+    "sp":10,
+    "meta":true,
+    "function":"cmd_reroll"
+  },{
+    "cmd":"wanderer",
+    "desc":"!wanderer <action> - Manage wanderer builds. Possible actions:\nnew - Create a new wanderer\nedit <wanderer> - Edit a wanderer you have saved (omit <wanderer> to resume editing the one you currently have open)\nsave <name> - Save the currently open wanderer, giving them the tribal name <name> (will overwrite existing wanderer by that name)\nclose - Close the currently open wanderer, discarding any new changes\nlist - Show all wanderers you have created\ndelete <name> - Delete a wanderer\njoin <wanderer> - Join as a wanderer. You will be placed in a random existing tribe.",
+    "args":2,
+    "args_optional":1,
+    "meta":true,
+    "function":"cmd_wanderer"
+  },{
+    "cmd":"task",
+    "synonyms":["tasks","directive","directives"],
+    "desc":"!task <action> - Manage tasks that will be carried out at the end of the month by kobolds with AP left. Possible actions:\nadd <task> - Add a task to the task list.\nremove <task> - Remove a task from the list.\nmove <1> <2> - Switch tasks <1> and <2> on the task list\ntool <true/false> - Set whether kobolds performing this task will use tools\nbreak <task> <type> <args> - Add a break to the task list under certain conditions. <type> can be `space` (waits for space to reach a certain amount), `items` (arg2 is the item, arg1 is the target amount in storage), `farm_prog` (arg2 is the crop, arg1 is the desired progress), `farm_cap` (arg is the desired farm capacity), `times` (arg is the max amount of times the command can be repeated).",
+    "args":3,
+    "args_optional":3,
+    "informational":true,
+    "function":"cmd_task"
+  },{
+    "cmd":"routine",
+    "desc":"!routine <action> - Manage and run routines. Possible actions:\nnew - Create a new routine for editing\nedit <routine> - Edit an existing routine you have\ndelete <routine> - Delete a routine\nview <routine> - View a routine's action list\nlist - List all routines you have saved\nadd <action> - Add an action to the current routine\nremove <action> - Remove action from routine (by number or action name)\nmove <1> <2> - Switch actions <1> and <2> on the action list\nsave <name> - Save routine as <name>, overwriting any existing by that name\nclose - Close current routine, discarding changes\nrun <routine> <kobold> - Run routine for the target kobold (if <kobold> is omitted, you will run it yourself)\nfinal <routine> <kobold> - Set final orders for the kobold to this routine (only if you are that kobold's Overseer, or are that kobold yourself; omit <kobold> to set your own). Final orders will be run right before month change",
+    "args":3,
+    "args_optional":2,
+    "meta":true,
+    "function":"cmd_routine"
+  },{
+    "cmd":"info",
+    "desc":"!info <search> - Look up an item, building, research, creature, or spell and print information about it.",
+    "args":1,
+    "meta":true,
+    "function":"cmd_info"
+  },{
+    "cmd":"spells",
+    "desc":"!spells <school> - Show a list of spells, sorted by level.",
+    "args":1,
+    "args_optional":1,
+    "meta":true,
+    "function":"cmd_spells"
+  },{
+    "cmd":"verify",
+    "desc":"!verify - Verify yourself and gain access to the server.",
+    "args":0,
+    "meta":true,
+    "function":"cmd_verify"
+  },{
+    "cmd":"sp",
+    "desc":"!sp - Show your current Soul Point balance.",
+    "args":0,
+    "meta":true,
+    "function":"cmd_sp"
+  },{
+    "cmd":"roll",
+    "desc":"!roll <stat> <mod> - Roll a virtual 20-sided die. <stat> can optionally specify a stat modifier (str, dex, etc) for your kobold to add to the roll. <mod> can optionally add or subtract a static number from the roll. This is for flavor/RP purposes and has no gameplay effect.",
+    "anywhere":true,
+    "min_age":0,
+    "args":1,
+    "args_optional":1,
+    "free":true,
+    "function":"cmd_roll"
+  },{
+    "cmd":"reset",
+    "console":true,
+    "args":0,
+    "function":"cmd_reset"
+  },{
+    "cmd":"reboot",
+    "console":true,
+    "args":0,
+    "function":"cmd_reboot"
+  },{
+    "cmd":"refresh",
+    "console":true,
+    "args":0,
+    "function":"cmd_refresh"
+  },{
+    "cmd":"mc",
+    "console":true,
+    "args":0,
+    "function":"cmd_mc"
+  },{
+    "cmd":"tribefix",
+    "console":true,
+    "args":2,
+    "function":"cmd_tribefix"
+  },{
+    "cmd":"partyfix",
+    "console":true,
+    "args":0,
+    "function":"cmd_partyfix"
+  },{
+    "cmd":"trait",
+    "args":2,
+    "console":true,
+    "function":"cmd_trait"
+  },{
+    "cmd":"spawne",
+    "args":2,
+    "args_optional":1,
+    "console":true,
+    "function":"cmd_spawne"
+  },{
+    "cmd":"forcebreed",
+    "args":2,
+    "console":true,
+    "function":"cmd_forcebreed"
+  },{
+    "cmd":"forceegg",
+    "args":2,
+    "console":true,
+    "function":"cmd_forceegg"
+  },{
+    "cmd":"forcehatch",
+    "console":true,
+    "function":"cmd_forcehatch"
+  },{
+    "cmd":"forcetunnel",
+    "console":true,
+    "function":"cmd_forcetunnel"
+  },{
+    "cmd":"agetoadult",
+    "console":true,
+    "function":"cmd_ageup"
+  },{
+    "cmd":"makechieftain",
+    "console":true,
+    "function":"cmd_makechief"
+  },{
+    "cmd":"spawn",
+    "console":true,
+    "args":2,
+    "function":"cmd_spawn"
+  },{
+    "cmd":"unlockall",
+    "console":true,
+    "args":0,
+    "function":"cmd_unlockall"
+  },{
+    "cmd":"familiarize",
+    "console":true,
+    "function":"cmd_familiarize"
+  },{
+    "cmd":"kvar",
+    "args":3,
+    "console":true,
+    "function":"cmd_kvar"
+  },{
+    "cmd":"tvar",
+    "args":3,
+    "console":true,
+    "function":"cmd_tvar"
+  },{
+    "cmd":"clone",
+    "args":0,
+    "console":true,
+    "function":"cmd_clone"
+  },{
+    "cmd":"setheat",
+    "args":3,
+    "console":true,
+    "function":"cmd_setheat"
+  },{
+    "cmd":"encounter",
+    "args":3,
+    "console":true,
+    "function":"cmd_spencounter"
+  },{
+    "cmd":"justgo",
+    "args":0,
+    "console":true,
+    "function":"cmd_justgo"
+  },{
+    "cmd":"findbold",
+    "console":true,
+    "function":"cmd_findbold"
+  },{
+    "cmd":"landmark",
+    "args":2,
+    "console":true,
+    "function":"cmd_landmark"
+  },{
+    "cmd":"givespell",
+    "args":2,
+    "console":true,
+    "function":"cmd_givespell"
+  },{
+    "cmd":"pdbackup",
+    "args":0,
+    "console":true,
+    "function":"cmd_pdbackup"
+  },{
+    "cmd":"loadbackup",
+    "args":0,
+    "console":true,
+    "function":"cmd_loadbackup"
+  },{
+    "cmd":"backup",
+    "args":0,
+    "console":true,
+    "function":"cmd_backup"
+  },{
+    "cmd":"seltest",
+    "args":0,
+    "console":true,
+    "function":"cmd_seltest"
+  },{
+    "cmd":"tasktest",
+    "args":0,
+    "console":true,
+    "function":"cmd_task_test"
+  },{
+    "cmd":"repopulate",
+    "args":0,
+    "console":true,
+    "function":"cmd_repopulate"
+  },{
+    "cmd":"refund",
+    "args":2,
+    "console":true,
+    "function":"cmd_refund"
+  }
+]

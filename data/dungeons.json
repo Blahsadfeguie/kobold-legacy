@@ -1,0 +1,30 @@
+{
+  "Ant Nest":{
+    "name":"Ant Nest",
+    "dimensions":[3,3,3],
+    "bosslength":8,
+    "spawns":["Worker Ant","Soldier Ant"],
+    "cr":12,
+    "boss":["Ant Queen","Slave Ant:12"],
+    "boss_landmark":"Nectar Reservoir",
+    "forage":[["Stone Chunk",1,2,10],["Raw Mushroom",1,4,10],["Bubblestool",1,3,5],["Bloodcap Mushroom",1,2,5],["Silkcap Mushroom",1,2,5],["Sweetroot",1,5,15],["Stone Pebble",10,20,10],["Bones",2,5,5],["Raw Meat",1,2,5],["Raw Bug Meat",1,2,5],["Raw Kobold Meat",1,2,5],["Kobold Egg",1,1,1],["Fiber",5,10,5]]
+  },"Goblin Camp":{
+    "name":"Goblin Camp",
+    "dimensions":[4,4,0],
+    "bosslength":6,
+    "spawns":["Goblin"],
+    "faction":"Goblin",
+    "cr":11,
+    "boss":["Goblin Boss","Goblin:15"],
+    "forage":[["Stone Chunk",1,2,10],["Sweetroot",1,1,5],["Stone Pebble",10,20,10],["Bones",2,5,5],["Raw Meat",1,1,5],["Grilled Steak",1,1,5],["Fiber",5,10,5],["Healmoss",1,1,10],["Copper Spear",1,1,1],["Copper Shortsword",1,1,1],["Copper Longsword",1,1,1],["Copper Maul",1,1,1],["Bronze Spear",1,1,1],["Bronze Shortsword",1,1,1],["Copper Armor",1,1,1],["Tin Bucket",1,1,1],["Leather Armor",1,1,1],["Leather Pouch",1,1,1],["Waterskin",1,1,1]]
+  },"Human Castle":{
+    "name":"Human Castle",
+    "dimensions":[5,5,3],
+    "bosslength":10,
+    "spawns":["Human Knight","Human Mage","Human Priest"],
+    "cr":20,
+    "boss":["Human Lord","Human Knight:10","Human Mage:12","Human Priest:12"],
+    "hazards":["Locked Doors"],
+    "forage":[["Bread",1,1,3],["Cheese",1,1,3],["Grilled Steak",1,1,3],["Medical Bandage",1,1,3],["Cloth Bandage",1,1,5],["Iron Spear",1,1,1],["Iron Shortsword",1,1,1],["Iron Longsword",1,1,1],["Iron Maul",1,1,1],["Iron Armor",1,1,1],["Iron Bolt",1,10,2],["Wooden Crossbow",1,1,1],["Wooden Barrel",1,1,1],["Wooden Bucket",1,1,1],["Leather Armor",1,1,2],["Leather Pouch",1,1,2],["Copper Coin",1,10,10],["Silver Coin",1,10,6],["Gold Coin",1,1,2],["Waterskin",1,1,2]]
+  }
+}

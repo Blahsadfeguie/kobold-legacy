@@ -1,0 +1,684 @@
+{
+  "starving":{
+    "desc":"You haven't eaten for a while and your body and mind are weak. You'd better fix that.",
+    "visible":true,
+    "display":"Starving",
+    "high":true,
+    "stats":{
+      "str":-2,
+      "dex":-2,
+      "con":-2,
+      "int":-2,
+      "wis":-2,
+      "cha":-2
+    }
+  },"fasting":{
+    "desc":"You have decided not to eat this month.",
+    "display":"Fasting",
+    "visible":true
+  },"resting":{
+    "desc":"You will rest at the end of the month instead of doing tasks.",
+    "display":"Resting",
+    "mc_reset":true,
+    "visible":true
+  },"fed":{
+    "desc":"Your stomach is full and starvation has been thwarted for the month.",
+    "display":"Well-Fed",
+    "high":true,
+    "visible":true
+  },"hydrated":{
+    "desc":"You have had a hydrating drink.",
+    "display":"Hydrated",
+    "high":true,
+    "visible":true,
+    "mc_reset":true
+  },"shade":{
+    "desc":"A magical enhancement shields you from bright sunlight.",
+    "display":"Shaded",
+    "visible":true,
+    "mc_reset":true
+  },"tool_broke":{
+    "desc":"A tool broke recently, your confirmation is required before performing an action.",
+    "mc_reset":true
+  },"breed":{
+    "desc":"You've made a breeding attempt this month.",
+    "mc_reset":true
+  },"poisoned":{
+    "desc":"Something toxic in your blood is slowly eating away at you.\nLose 1 HP each combat round, and for every AP you spend.",
+    "display":"Poisoned",
+    "visible":true,
+    "dmg_ap":1,
+    "dmg_combat":1,
+    "save_stat":"con",
+    "save":11,
+    "mc_save_to_cure":true,
+    "heal_save_to_cure":true,
+    "stats":{
+      "con":-2
+    }
+  },"paralyzed":{
+    "desc":"Your nervous system has all but shut down. Everything's numb and you can barely move.\nCan't act in combat. +1 AP per tile to move in the overworld.",
+    "display":"Paralyzed",
+    "visible":true,
+    "move_ap":1,
+    "save_stat":"con",
+    "save":11,
+    "mc_save_to_cure":true,
+    "heal_save_to_cure":true,
+    "turn_block":true,
+    "stats":{
+      "dex":-5
+    }
+  },"drunk":{
+    "desc":"Hic... You feel good, but the ground keeps moving...\nYou've had an alcoholic drink. Any more may lead to blackout.",
+    "display":"Drunk",
+    "visible":true,
+    "mc_reset":true,
+    "stats":{
+      "str":2,
+      "dex":-2
+    }
+  },"hungover":{
+    "desc":"Your head is pounding and your stomach is weak. This is why they say 'enjoy responsibly'.\nYou've had a blackout and cannot drink any more this month.",
+    "display":"Hungover",
+    "visible":true,
+    "mc_reset":true,
+    "stats":{
+      "str":-2,
+      "con":-2,
+      "wis":-2
+    }
+  },"strup":{
+    "desc":"Your strength is enhanced.",
+    "display":"Strength Up",
+    "visible":true,
+    "mc_reset":true,
+    "stats":{
+      "str":3
+    }
+  },"dexup":{
+    "desc":"Your dexterity is enhanced.",
+    "display":"Dexterity Up",
+    "visible":true,
+    "mc_reset":true,
+    "stats":{
+      "dex":3
+    }
+  },"conup":{
+    "desc":"Your constitution is enhanced.",
+    "display":"Constitution Up",
+    "visible":true,
+    "mc_reset":true,
+    "stats":{
+      "con":3
+    }
+  },"intup":{
+    "desc":"Your intelligence is enhanced.",
+    "display":"Intelligence Up",
+    "visible":true,
+    "mc_reset":true,
+    "stats":{
+      "int":3
+    }
+  },"wisup":{
+    "desc":"Your wisdom is enhanced.",
+    "display":"Wisdom Up",
+    "visible":true,
+    "mc_reset":true,
+    "stats":{
+      "wis":3
+    }
+  },"chaup":{
+    "desc":"Your charisma is enhanced.",
+    "display":"Charisma Up",
+    "visible":true,
+    "mc_reset":true,
+    "stats":{
+      "cha":3
+    }
+  },"nonbinary":{
+    "desc":"Your sex is somewhere between male and female. Or maybe off the spectrum entirely. Who's to say?",
+    "display":"Non-Binary",
+    "genetic":true
+  },"onearm":{
+    "desc":"You've lost an arm. That's half of your oomph gone, but there are worse fates...",
+    "display":"One Arm",
+    "contract_msg":"[n] has lost an arm!",
+    "visible":true,
+    "injury":true,
+    "regenerate":true,
+    "worse":"noarms",
+    "stats":{
+      "str":-4
+    }
+  },"noarms":{
+    "desc":"You've somehow lost both of your arms. You won't be able to pick anything up, except with your mouth... hope you don't have a strong sense of taste.",
+    "display":"No Arms",
+    "contract_msg":"[n] has lost their other arm!",
+    "visible":true,
+    "regenerate":true,
+    "stats":{
+      "str":-8,
+      "dex":-4
+    }
+  },"oneleg":{
+    "desc":"You've lost a leg. You're not getting very far without a crutch, and even then...",
+    "display":"One Leg",
+    "contract_msg":"[n] has lost a leg!",
+    "visible":true,
+    "injury":true,
+    "regenerate":true,
+    "worse":"nolegs",
+    "move_ap":1,
+    "stats":{
+      "dex":-2
+    }
+  },"nolegs":{
+    "desc":"You've somehow lost both of your legs. You don't have to stand for this! ...wait.",
+    "display":"No Legs",
+    "contract_msg":"[n] has lost their other leg!",
+    "visible":true,
+    "regenerate":true,
+    "move_ap":5,
+    "stats":{
+      "dex":-4
+    }
+  },"pegleg":{
+    "desc":"A crude prosthetic takes the place of your missing leg. It's better than hopping around on one foot.",
+    "display":"Peg Leg",
+    "visible":true,
+    "regenerate":true,
+    "removed_by":"oneleg",
+    "stats":{
+      "dex":-1
+    }
+  },"doublepegleg":{
+    "desc":"Two peg legs, because you have none of your own. You can walk, but it's stiff and awkward.",
+    "display":"Double Peg Leg",
+    "visible":true,
+    "regenerate":true,
+    "combine_with":"oneleg",
+    "combine_into":"nolegs",
+    "move_ap":1,
+    "stats":{
+      "dex":-2
+    }
+  },"oneeye":{
+    "desc":"You've lost an eye. Your perception takes a hit, but at least you've got a spare.",
+    "display":"One Eye",
+    "contract_msg":"[n] has lost an eye!",
+    "visible":true,
+    "injury":true,
+    "regenerate":true,
+    "worse":"noeyes",
+    "stats":{
+      "wis":-2
+    }
+  },"noeyes":{
+    "desc":"You've somehow lost both eyes. Bet you didn't see that one coming.",
+    "display":"No Eyes",
+    "contract_msg":"[n] has lost their other eye!",
+    "visible":true,
+    "regenerate":true,
+    "attack_adv":-1,
+    "stats":{
+      "wis":-4
+    }
+  },"amethysteye":{
+    "desc":"An enchanted and well-cut amethyst takes the place of one eye. Your vision is magically enhanced.",
+    "display":"Amethyst Eye",
+    "visible":true,
+    "regenerate":true,
+    "removed_by":"oneeye",
+    "stats":{
+      "wis":2,
+      "dex":1
+    }
+  },"amethysteyes":{
+    "desc":"An enchanted and well-cut amethyst takes the place of both eyes. Your vision is magically enhanced.",
+    "display":"Amethyst Eye",
+    "visible":true,
+    "regenerate":true,
+    "combine_with":"oneeye",
+    "combine_into":"noeyes",
+    "stats":{
+      "wis":4,
+      "dex":2
+    }
+  },"notail":{
+    "desc":"You've lost your tail. Turns out you rely on that to keep your balance, though it's not the most crippling thing to lose.",
+    "display":"No Tail",
+    "contract_msg":"[n] has lost their tail!",
+    "visible":true,
+    "injury":true,
+    "regenerate":true,
+    "stats":{
+      "dex":-2
+    }
+  },"bentnose":{
+    "desc":"Your snout is bent out of shape in an off-putting way. You won't be taken as seriously.",
+    "display":"Bent Nose",
+    "contract_msg":"[n]'s snout has been bent in an odd way...",
+    "visible":true,
+    "injury":true,
+    "regenerate":true,
+    "stats":{
+      "cha":-2
+    }
+  },"scars":{
+    "desc":"You've got some wicked battle scars. Any kobold who gets these and lives to tell the tale automatically earns some respect among their peers.",
+    "display":"Scars",
+    "contract_msg":"That will surely leave an impressive scar for [n].",
+    "visible":true,
+    "injury":true,
+    "regenerate":true,
+    "stats":{
+      "cha":2
+    }
+  },"onehorn":{
+    "desc":"A horn has broken off. This doesn't do much but make you look more battle-hardened.",
+    "display":"One Horn",
+    "contract_msg":"[n] has lost a horn.",
+    "visible":true,
+    "injury":true,
+    "regenerate":true,
+    "worse":"nohorns"
+  },"nohorns":{
+    "desc":"Both horns have broken off. Maybe one day they'll grow back. No kobold's lived long enough to know for sure...",
+    "display":"No Horns",
+    "contract_msg":"[n] has lost their other horn.",
+    "visible":true,
+    "regenerate":true,
+    "stats":{
+      "cha":-1
+    }
+  },"infertile":{
+    "desc":"You've been mutilated in a way you're too embarrassed to admit. The end result is you're never having children again - and your pride may never heal, either.",
+    "display":"Infertile",
+    "contract_msg":"[n] has been rendered infertile!",
+    "visible":true,
+    "injury":true,
+    "regenerate":true,
+    "stats":{
+      "cha":-2
+    }
+  },"internal_bleeding":{
+    "desc":"You're bleeding on the inside. That's not going to be easy to fix.",
+    "display":"Internal Bleeding",
+    "contract_msg":"[n] is coughing up blood after that one...",
+    "visible":true,
+    "injury":true,
+    "dmg_ap":1,
+    "regenerate":true,
+    "save_stat":"con",
+    "save":12,
+    "mc_save_to_cure":true,
+    "heal_save_to_cure":true,
+    "mc_lethal":true
+  },"infected_initial":{
+    "desc":"A recent wound has been infected, but you don't know this yet.",
+    "display":"Infection (Initial)",
+    "mc_change":"infected",
+    "save_stat":"con",
+    "save":11,
+    "mc_save_to_cure":true,
+    "heal_save_to_cure":true
+  },"infected":{
+    "desc":"An infection has become apparent in an older wound. You may overcome it with a strong enough constitution or proper medical care, but if you don't...",
+    "visible":true,
+    "high":true,
+    "display":"Infection",
+    "save_stat":"con",
+    "save":15,
+    "mc_save_to_cure":true,
+    "heal_save_to_cure":true,
+    "mc_lethal":true
+  },"plague_initial":{
+    "desc":"The early signs of a plague are easy to miss - barely any symptoms or hinderance.",
+    "display":"Plague (Initial)",
+    "mc_disease":true,
+    "mc_change":"plague_minor",
+    "save_stat":"con",
+    "save":14,
+    "mc_save_to_cure":true,
+    "heal_save_to_cure":true
+  },"plague_minor":{
+    "desc":"Cough, fever, lethargy... this doesn't look good. You need a doctor.",
+    "visible":true,
+    "high":true,
+    "display":"Plague (Minor)",
+    "mc_change":"plague_lethal",
+    "max_ap":-2,
+    "save_stat":"con",
+    "save":16,
+    "mc_save_to_cure":true,
+    "heal_save_to_cure":true,
+    "stats":{
+      "str":-2,
+      "dex":-2,
+      "con":-2
+    }
+  },"plague_lethal":{
+    "desc":"It's hard to even move now. Your body is shutting down before your eyes. If you don't get medical care soon, you're done for...",
+    "visible":true,
+    "high":true,
+    "display":"Plague (Major)",
+    "mc_lethal":true,
+    "max_ap":-4,
+    "save_stat":"con",
+    "save":18,
+    "mc_save_to_cure":true,
+    "heal_save_to_cure":true,
+    "stats":{
+      "str":-5,
+      "dex":-5,
+      "con":-5
+    }
+  },"cold":{
+    "desc":"You feel (and look) gross. It's not crippling, but you should probably get some rest regardless.",
+    "visible":true,
+    "high":true,
+    "mc_disease":true,
+    "display":"Cold",
+    "save_stat":"con",
+    "save":14,
+    "mc_save_to_cure":true,
+    "heal_save_to_cure":true,
+    "stats":{
+      "str":-2,
+      "dex":-2
+    }
+  },"flu_minor":{
+    "desc":"You've got a fever and a weak stomach, among other things. Left unchecked, this could develop into something even worse.",
+    "visible":true,
+    "high":true,
+    "mc_disease":true,
+    "display":"Flu (Minor)",
+    "mc_change":"flu_lethal",
+    "max_ap":-2,
+    "save_stat":"con",
+    "save":12,
+    "mc_save_to_cure":true,
+    "heal_save_to_cure":true,
+    "stats":{
+      "str":-2,
+      "dex":-2,
+      "con":-2
+    }
+  },"flu_lethal":{
+    "desc":"Everything hurts. It feels like you've got a ton of bricks on your chest. You won't be able to take much more...",
+    "visible":true,
+    "high":true,
+    "display":"Flu (Major)",
+    "mc_lethal":true,
+    "max_ap":-4,
+    "save_stat":"con",
+    "save":14,
+    "mc_save_to_cure":true,
+    "heal_save_to_cure":true,
+    "stats":{
+      "str":-4,
+      "dex":-4,
+      "con":-4
+    }
+  },"migraine":{
+    "desc":"Your head is pounding. It's hard to concencrate on anything.",
+    "visible":true,
+    "high":true,
+    "mc_disease":true,
+    "display":"Migraine",
+    "save_stat":"con",
+    "save":13,
+    "mc_reset":true,
+    "heal_save_to_cure":true,
+    "stats":{
+      "int":-2,
+      "wis":-2,
+      "cha":-2
+    }
+  },"stressed":{
+    "desc":"Life has taken a toll on you lately. The future is uncertain, but you know your time is fast approaching. You almost want it to come just so you don't have to feel this dread...",
+    "contract_msg":"[n] hyperventilates as a feeling of existential dread washes over them...",
+    "injury":true,
+    "visible":true,
+    "high":true,
+    "display":"Stressed",
+    "save_stat":"wis",
+    "save":12,
+    "max_ap":-2,
+    "mc_save_to_cure":true,
+    "comfort_save_to_cure":true,
+    "stats":{
+      "int":-4,
+      "wis":-4,
+      "cha":-4
+    }
+  },"relaxed":{
+    "desc":"Your worries have been washed away, leaving you in a mental state unhindered by the struggles of everyday life. Enjoy it while it lasts...",
+    "contract_msg":"[n] feels relaxed, their mind sharp and focused.",
+    "visible":true,
+    "display":"Relaxed",
+    "max_ap":2,
+    "stats":{
+      "int":2,
+      "wis":2,
+      "cha":2
+    },
+    "mc_reset":true
+  },"tripping":{
+    "desc":"The colors, man... It's impossible to focus on reality, but you feel as though the infinite knowledge of the cosmos is at your fingertips.",
+    "contract_msg":"[n] can see into forever...",
+    "visible":true,
+    "display":"Tripping",
+    "attack_adv":-1,
+    "stats":{
+      "int":8,
+      "wis":-8
+    },
+    "mc_reset":true
+  },"confused":{
+    "desc":"Your head isn't on straight and the room is spinning... Who is that horned figure? Kill them!",
+    "visible":true,
+    "display":"Confused",
+    "save_stat":"wis",
+    "save":15,
+    "turn_save_to_cure":true,
+    "end_combat":true
+  },"stunned":{
+    "desc":"You've been stunned by a strong attack and need to catch your breath to fight again.",
+    "visible":true,
+    "display":"Stunned",
+    "save_stat":"str",
+    "save":11,
+    "turn_reset":true,
+    "turn_block":true,
+    "add_on_remove":"antistunlock",
+    "end_combat":true
+  },"antistunlock":{
+    "desc":"You were stunned recently and have increased your focus, preventing you from getting stunned again for a little while.",
+    "turn_reset":true,
+    "immune":["stunned"],
+    "end_combat":true
+  },"manacite":{
+    "desc":"You've absorbed some manacite recently. Any more too soon and it might backfire on you.\nUsing Manacite or a Mana Cell will inflict HP damage via mana burn.",
+    "mc_reset":true,
+    "visible":true,
+    "display":"Mana-saturated"
+  },"overworked":{
+    "desc":"You've been magically energized recently, but the body can only take so much abuse.",
+    "mc_reset":true,
+    "visible":true,
+    "display":"Overworked"
+  },"chief_overseer":{
+    "desc":"You've appointed an overseer recently.",
+    "mc_reset":true
+  },"chief_exile":{
+    "desc":"You've exiled a member of your tribe recently.",
+    "mc_reset":true
+  },"tribe_leave":{
+    "desc":"You've left a tribe recently.",
+    "mc_reset":true
+  },"tribe_join":{
+    "desc":"You've joined a tribe recently.",
+    "mc_reset":true
+  },"goblin_talks":{
+    "desc":"You've tried to negotiate with the goblins recently.",
+    "mc_reset":true
+  },"marked":{
+    "desc":"Your enemy has marked you this turn, you'll be the target of all of their attacks.",
+    "turn_reset":true
+  },"milked":{
+    "desc":"This creature was milked recently.",
+    "visible":true,
+    "display":"Milked",
+    "mc_reset":true
+  },"shorn":{
+    "desc":"This creature was shorn recently.",
+    "visible":true,
+    "display":"Shorn",
+    "mc_reset":true
+  },"surprised":{
+    "desc":"You've been ambushed! Your enemy gets a free turn on you.",
+    "turn_reset":true,
+    "turn_block":true
+  },"blinded":{
+    "desc":"You're blinded and have disadvantage on attack rolls.",
+    "display":"Blinded",
+    "visible":true,
+    "attack_adv":-1,
+    "turn_reset":true
+  },"summoned":{
+    "desc":"Has recently joined the battle and needs some time to warm up.",
+    "turn_reset":true,
+    "turn_block":true
+  },"frozen":{
+    "desc":"You're encased in ice.",
+    "turn_reset":true,
+    "turn_block":true
+  },"sleep":{
+    "desc":"You're asleep.",
+    "contract_msg":"[n] falls into a deep, magical slumber.",
+    "save_stat":"wis",
+    "save":12,
+    "turn_save_to_cure":true,
+    "damage_to_cure":true,
+    "turn_block":true,
+    "end_combat":true
+  },"charmed":{
+    "desc":"You've been charmed by a charismatic (or magical) individual...",
+    "save_stat":"cha",
+    "save":12,
+    "turn_save_to_cure":true,
+    "damage_to_cure":true,
+    "mc_reset":true,
+    "end_combat":true
+  },"dodging":{
+    "desc":"You're preparing to dodge.",
+    "target_adv":-1,
+    "turn_reset":true
+  },"notrace":{
+    "desc":"Magical shadows surround you, making you nigh-undetectable to those around you.",
+    "contract_msg":"[n] is engulfed in shadows. You can hardly see them anymore.",
+    "display":"No Trace",
+    "visible":true,
+    "mc_reset":true,
+    "turn_reset":true
+  },"invisible":{
+    "desc":"You and anything immediately on your person are completely invisible.",
+    "contract_msg":"[n] seems to completely disappear.",
+    "display":"Invisible",
+    "visible":true,
+    "mc_reset":true,
+    "target_adv":-1,
+    "attack_reset":true
+  },"inspired":{
+    "desc":"You're feeling inspired. Your attacks will be more likely to hit.",
+    "display":"Inspired",
+    "attack_reset":true,
+    "end_combat":true,
+    "attack_adv":1,
+    "visible":true
+  },"polished":{
+    "desc":"Any stone you touch shimmers like marble. Traders will never know the difference...",
+    "contract_msg":"[n]'s scales shimmer like marble for a moment...",
+    "display":"Rock Polish",
+    "mc_reset":true,
+    "visible":true
+  },"haste":{
+    "desc":"Time seems to have slowed down around you. You'll get an extra combat turn this round.",
+    "contract_msg":"[n] is feeling invigorated!",
+    "display":"Haste",
+    "end_combat":true,
+    "visible":true
+  },"greased":{
+    "desc":"You're covered in thick, slippery grease. It's unpleasant, not to mention flammable...",
+    "contract_msg":"[n] is covered in grease!",
+    "display":"Greased",
+    "end_combat":true,
+    "visible":true
+  },"pacified":{
+    "desc":"A pacified creature is no longer hostile.",
+    "display":"Pacified",
+    "end_combat":true,
+    "damage_to_cure":true,
+    "turn_block":true
+  },"barrier":{
+    "desc":"A magical barrier surrounds you which seems to reflect anything coming at you.",
+    "contract_msg":"[n] is surrounded by a reflective barrier.",
+    "display":"Barrier",
+    "end_combat":true,
+    "visible":true
+  },"magearmor":{
+    "desc":"A shimmering purple coat surrounds you, occasionally protecting you from attacks.",
+    "contract_msg":"[n] is surrounded by a shimmering purple coat of energy.",
+    "ac":3,
+    "display":"Mage Armor",
+    "end_combat":true,
+    "visible":true
+  },"poisoner":{
+    "desc":"Your attacks might poison your target."
+  },"paralyzer":{
+    "desc":"Your attacks might paralyze your target."
+  },"shaker":{
+    "desc":"You reduce the stability of the area each round, possibly causing a cave-in."
+  },"protected":{
+    "desc":"You are an important figure, your allies will protect you if they can."
+  },"inactive":{
+    "desc":"You haven't done anything in a while. Thanks to your extreme boredom, you'll listen to anyone's commands without a second thought.",
+    "visible":true,
+    "display":"Inactive"
+  },"relentless":{
+    "desc":"The next time you fall to 0 HP on an attack that doesn't deal more than half of your max HP, you will survive with 1 HP."
+  },"dead":{
+    "desc":"Not big surprise."
+  },"locked":{
+    "desc":"Locked nameless have given up all sense of identity in order to serve the tribe."
+  },"trader":{
+    "desc":"Willing to trade.",
+    "visible":true,
+    "display":"Merchant"
+  },"rescues":{
+    "desc":"Rescues are allowed.",
+    "visible":true,
+    "display":"Need Rescue",
+    "mc_reset":true
+  },"gemsight":{
+    "desc":"Boosts chance of finding gems to 20% per mine action.",
+    "visible":true,
+    "display":"Gemsight",
+    "mc_reset":true
+  },"carried":{
+    "desc":"Being carried.",
+    "visible":true,
+    "display":"Carried"
+  },"bound":{
+    "desc":"Bound up with some kind of restraint, indicating they are a prisoner.",
+    "visible":true,
+    "display":"Bound"
+  },"broken":{
+    "desc":"The prisoner's will has been broken for the month. You can command them freely.",
+    "visible":true,
+    "display":"Broken",
+    "mc_reset":true
+  }
+}

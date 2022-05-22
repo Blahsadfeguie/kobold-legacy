@@ -1,0 +1,259 @@
+[
+  {
+    "name":"Agriculture",
+    "desc":"Those juicy, luminous mushrooms we keep finding are a nice little snack. If only we had a way to bring them home and start growing them close by.\nWith this research, we can build farms to start growing food.",
+    "diff":100,
+    "req":[["item","*mushroom"]]
+  },{
+    "name":"Home Cooking",
+    "desc":"One time, Kaybis dropped a half-eaten bat chop into the campfire... and by the time he finally got it out, it had gotten a little crispy. Apparently it wasn't half-bad. Maybe we should do this more often...\nEnables grilling meat and mushrooms to make more AP-efficient foods.",
+    "diff":100
+  },{
+    "name":"Basic Tools",
+    "desc":"Pounding at this rock all day is murder on the claws. Maybe we should try hitting it with something else?\nUnlocks several crafting recipes for tools to make menial labor easier.",
+    "diff":100
+  },{
+    "name":"Writing",
+    "desc":"This might sound a bit controversial, but we could probably benefit from storing information somewhere other than our own disposable brains.\nAllows crafting stone tablets which can be written on to store information.",
+    "diff":150
+  },{
+    "name":"Basic Medicine",
+    "desc":"Initial observations show that we need blood inside of us to live. Now how do we keep it in?\nAllows crafting of bandages using common resources.",
+    "diff":150
+  },{
+    "name":"Animal Companionship",
+    "desc":"Animals are simple creatures; they'll follow anything capable of tending to their needs. That's not to say their needs are always realistic...\nAllows crafting of bait and kibble, as well as animal taming.",
+    "diff":200,
+    "req":[["research","Home Cooking"]]
+  },{
+    "name":"Animal Husbandry",
+    "desc":"Killing an animal gives you a one-time harvest, but there are some that produce things that make keeping them alive much more valuable.\nAllows the construction of pastures and collection/processing of resources produced by animals.",
+    "diff":500,
+    "req":[["research","Animal Companionship"],["research","Verticality"]]
+  },{
+    "name":"Plant Domestication",
+    "desc":"All you need to grow mushrooms is more mushrooms, right? Let's do that with other stuff!\nEnables domestication of other forms of plant and fungal life, and a tool to make farming easier. (The `!farming` command shows progress on each crop and domesication effort.)",
+    "diff":200,
+    "req":[["research","Agriculture"]]
+  },{
+    "name":"Irrigation",
+    "desc":"Hey, mushrooms aren't the only thing that grow down here. Other plants require a more controlled environment, however...\nAllows construction of wells, and a farm that can grow other underground plants.",
+    "diff":250,
+    "req":[["research","Agriculture"]]
+  },{
+    "name":"Farm Infrastructure",
+    "desc":"Our farms could use some defense against the elements, and the goblins.\nUnlocks Scarecrow and Farm Fencing buildings, which reduce the deterioration of farms.",
+    "diff":300,
+    "req":[["research","Agriculture"],["research","Building Blocks"]]
+  },{
+    "name":"Liquid Transport",
+    "desc":"Water is an important resource, apparently - we keep running out of it! We'll have to build something to fix that.\nAllows construction of Aqueducts on water source tiles, and Reservoirs in the den.",
+    "diff":400,
+    "req":[["research","Irrigation"],["research","Excavation"]]
+  },{
+    "name":"Weaving",
+    "desc":"Some of us have taken to using bandages as makeshift rags or rope. Can't we make something better for those purposes?\nAllows building a Loom which we can use to craft rope and silk.",
+    "diff":200,
+    "req":[["research","Basic Medicine"]]
+  },{
+    "name":"Headwear",
+    "desc":"With a little design, and a little fashion sense, we can make articles that fit on the head for both style and substance.\nAllows crafting of hats and other headwear that gives various skill buffs.",
+    "diff":300,
+    "req":[["research","Weaving"]]
+  },{
+    "name":"Food Preservation",
+    "desc":"There must be a way to keep food fresh longer... our old tribe gave us these rations after all.\nUnlocks crafts to preserve perishable foods with salt.",
+    "diff":150,
+    "req":[["research","Home Cooking"]]
+  },{
+    "name":"Brewing",
+    "desc":"Our founders told tales of a wondrous liquid which gives you courage and strength to accomplish anything...\nUnlocks the Brewery, which allows you to craft booze and other liquids.",
+    "diff":250,
+    "req":[["research","Home Cooking"],["research","Building Blocks"]]
+  },{
+    "name":"Herblore",
+    "desc":"Our medics have noted the curative properties of certain organic ingredients.\nUnlocks potions that grant a wide variety of useful effects.",
+    "diff":400,
+    "req":[["research","Brewing"],["research","Basic Medicine"]]
+  },{
+    "name":"Attribute Enhancements",
+    "desc":"The apothecaries among us have taken a special interest in this leaf. Apparently it's full of chemicals which can bring out a kobold's full potential.\nUnlocks several potions that grant temporary boosts to base stats.",
+    "diff":800,
+    "req":[["research","Herblore"],["item","Adren Leaf"]]
+  },{
+    "name":"Leather Tanning",
+    "desc":"Salting and drying meat makes it tougher. What if you apply that concept to the hides of animals?\nUnlocks crafting recipes to tan hides into leather, and craft that leather into armor and other useful items.",
+    "diff":250,
+    "req":[["research","Food Preservation"]]
+  },{
+    "name":"Packaged Foods",
+    "desc":"With a bit of cooking know-how, we can combine two types of foods into one convenient (and high-calorie) meal.\nUnlocks the ability to craft rations out of mushrooms and meat.",
+    "diff":200,
+    "req":[["research","Food Preservation"]]
+  },{
+    "name":"Cartography",
+    "desc":"Here is the map. Where do you wish to go?\nAllows you to turn a Stone Tablet into a map and keep track of your surroundings on the go.",
+    "diff":200,
+    "req":[["research","Writing"]]
+  },{
+    "name":"Education",
+    "desc":"Learning by example is fine, but what if you want to learn something without all that pesky hands-on experience?\nAllows building a Study, which enables kobolds to learn technology and write theses.",
+    "diff":300,
+    "req":[["research","Writing"]]
+  },{
+    "name":"Scientific Method",
+    "desc":"Our researchers have discovered that the process goes a lot more smoothly if you go in with a plan.\nUnlocks the Research Lab building which boosts progress while researching and studying.",
+    "diff":600,
+    "req":[["research","Education"]]
+  },{
+    "name":"Building Blocks",
+    "desc":"If there's one thing that quickly becomes obvious when building, it's that stacking boulders can only get you so far.\nUnlocks the ability to refine stone chunks into blocks more suitable for building.",
+    "diff":100,
+    "req":[["research","Basic Tools"]]
+  },{
+    "name":"Archery",
+    "desc":"Take the basic concept of the sling and make it throw something deadlier than rocks. Boom, hunting solved.\nUnlocks crafting bows and arrows out of bones.",
+    "diff":200,
+    "req":[["research","Basic Tools"]]
+  },{
+    "name":"Excavation",
+    "desc":"Our scouts and hunters could benefit from shaping the tunnels outside the den for ease of travel.\nUnlocks building roads and quarries in the overworld.",
+    "diff":200,
+    "req":[["research","Building Blocks"]]
+  },{
+    "name":"Simple Machines",
+    "desc":"How do these tools do what they do? What if we tried making them bigger?\nUnlocks defensive buildings and traps that exploit fundamental laws of physics.",
+    "diff":300,
+    "req":[["research","Basic Tools"]]
+  },{
+    "name":"Pottery",
+    "desc":"It's easy to discover the usefulness of clay even by accident, which is good because discovering things by accident is our forte.\nUnlocks the Kiln and clay crafting.",
+    "diff":200,
+    "req":[["item","Clay"]]
+  },{
+    "name":"Cooking Utensils",
+    "desc":"We should probably try to find a way to keep from ruining the stuff that keeps us alive.\nUnlocks tools that improve outcomes for cooking recipes, as well as a Butcher Table to make butchering easier.",
+    "diff":300,
+    "req":[["research","Home Cooking"],["research","Pottery"]]
+  },{
+    "name":"Culinary Arts",
+    "desc":"Our chefs have had some ambitious ideas for combining food in different ways, but we'll need some better equipment to make that a reality.\nUnlocks the Kitchen, which enables cooking advanced dishes that have a multitude of benefits.",
+    "diff":500,
+    "req":[["research","Cooking Utensils"],["research","Smithing"]]
+  },{
+    "name":"Smithing",
+    "desc":"Some of the rocks we've seen are orange and harder to chip. If we can find out how to shape it, we could end up with some much better equipment.\nUnlocks the Furnace which you can use to smelt Copper and Tin into metallic form.",
+    "diff":250,
+    "req":[["research","Building Blocks"]]
+  },{
+    "name":"Glassblowing",
+    "desc":"We thought sand was useless, so we kept throwing it into the furnace. You won't believe what we found when cleaning it out one day...\nUnlocks glass crafting recipes.",
+    "diff":400,
+    "req":[["research","Smithing"]]
+  },{
+    "name":"Complex Metalworking",
+    "desc":"Our people speculate that some shapes would make for some really effective metal equipment. The hard part is getting it into those shapes.\nUnlocks the Anvil building which allows crafting of advanced metal weapons and armor.",
+    "diff":400,
+    "req":[["research","Smithing"]]
+  },{
+    "name":"Sorcery 101",
+    "desc":"If you touch this funny blue rock long enough, you start to hear voices... what happens if you listen to them?\nUnlocks the ability to refine Manacite and awaken kobolds to become mages.",
+    "diff":200,
+    "req":[["item","*mana_source"]]
+  },{
+    "name":"Mana Manipulation",
+    "desc":"Manacite has really interesting properties. It glows more brightly when a more powerful mage holds it. Maybe the magic within can be used for other things?\nUnlocks various crafts that utilize mana.",
+    "diff":400,
+    "req":[["item","Manacite"],["research","Sorcery 101"]]
+  },{
+    "name":"Mana Attunement",
+    "desc":"Gems seem to be natural conduits for mana, but interestingly that mana appears to 'change' when passing through a gemstone, kind of like a filtered lens. This has to be useful for something.\nEnables attunement of Manacite with gems (with the `!attune` command), forcing it to adhere to a specific school of magic.",
+    "diff":800,
+    "req":[["item","*gem"],["research","Mana Manipulation"]]
+  },{
+    "name":"Goblin Language",
+    "desc":"We might be able to come to an understanding if we learn how to communicate.\nUnlocks the ability to enter negotiations with the goblins.",
+    "diff":500,
+    "req":[["research","Writing"],["item","Goblin Script"]]
+  },{
+    "name":"Common Language",
+    "desc":"We might be able to come to an understanding if we learn how to communicate.\nUnlocks the ability to enter negotiations with surface factions.",
+    "diff":1200,
+    "req":[["research","Writing"],["item","Common Script"]]
+  },{
+    "name":"Alloys",
+    "desc":"What is this strange metal? It doesn't resemble anything we've dug up before...\nUnlocks the secrets of Bronze.",
+    "diff":500,
+    "req":[["research","Smithing"],["item","Bronze Ingot"]]
+  },{
+    "name":"Mechanics",
+    "desc":"Our ability to precisely control the shape of metal components should come in handy...\nUnlocks more advanced defensive buildings and traps.",
+    "diff":1000,
+    "req":[["research","Simple Machines"],["research","Complex Metalworking"]]
+  },{
+    "name":"Woodcutting",
+    "desc":"What is this weird brown stuff? It could make a nice building material if we can get more of it. Lots more.\nUnlocks crafting recipes for axes and wood processing.",
+    "diff":600,
+    "req":[["item","Wooden Stick"]]
+  },{
+    "name":"Crossbows",
+    "desc":"In the chaos of battle, it's hard to keep a steady hand when drawing a bow. Our researchers have pondered this and might have a solution.\nUnlocks Crossbows and corresponding ammunition.",
+    "diff":1000,
+    "req":[["research","Archery"],["research","Woodcutting"]]
+  },{
+    "name":"Iron Refining",
+    "desc":"This metal is quite a bit tougher than copper and tin, and is comparable to bronze on its own. Problem is, it's much harder to refine properly...\nUnlocks Iron smithing.",
+    "diff":1000,
+    "req":[["item","Iron Ore"],["research","Smithing"]]
+  },{
+    "name":"Cultural Expansion",
+    "desc":"Work on building our culture, so we appear less savage to the world.\nReduces heat. This research can be repeated, but the cost goes up each time it's completed.",
+    "diff":100,
+    "repeatable":true
+  },{
+    "name":"Verticality",
+    "desc":"It's a hard concept to grasp for us kobolds, but there's more stuff to explore above and below us! We just need to figure out how to get there safely.\nUnlocks the ability to build stairs in the overworld leading to upper and lower levels.",
+    "diff":500,
+    "req":[["research","Verticality"]]
+  },{
+    "name":"Surface Farming",
+    "desc":"Turns out plants can grow even more diverse and strong with sunlight. It goes against our nature, but perhaps we can harness this.\nUnlocks the ability to build and use surface farms.",
+    "diff":750,
+    "req":[["research","Irrigation"],["item","*surface_plant"]]
+  },{
+    "name":"Deep Farming",
+    "desc":"It's difficult to replicate the conditions for these strange plants to grow, but it can be done.\nUnlocks the ability to build farms deep underground.",
+    "diff":1000,
+    "req":[["research","Irrigation"],["item","*deep_plant"]]
+  },{
+    "name":"Milling",
+    "desc":"Processing all these new plants by hand is not really practical, but we could design a structure that can do all the hard work for us.\nUnlocks the Mill, which allows processing of plants such as wheat and cotton.",
+    "diff":800,
+    "req":[["research","Surface Farming"],["research","Mechanics"]]
+  },{
+    "name":"Intermediate Medicine",
+    "desc":"With our knowledge of surface plants, there are so many ways we can apply that to what we know.\nUnlocks recipes for better medicine.",
+    "diff":1000,
+    "req":[["research","Herblore"],["research","Milling"]]
+  },{
+    "name":"Bricklaying",
+    "desc":"Stacking blocks is a great way to build, but keeping them stacked is another ordeal entirely.\nUnlocks several defensive and practical buildings.",
+    "diff":800,
+    "req":[["research","Excavation"]]
+  },{
+    "name":"Organized Worship",
+    "desc":"We have no interest in the humans' gods, but studying their religious rites might help us reconnect with our draconic ancestors.\nAllows us to properly honor our Dragon overlords, and possibly gain their aid in return.",
+    "diff":1500,
+    "req":[["research","Common Language"],["item","Holy Scripture"]]
+  },{
+    "name":"Druidcraft",
+    "desc":"This wand is imbued with a magic we've never seen before. It feels stronger on the surface, near natural plants and animals. What secrets were the elves hiding?\nAllows kobolds to become Druids, harnessing the power of nature into unique spells.",
+    "diff":1500,
+    "req":[["research","Mana Attunement"],["item","Yew Wand"]]
+  },{
+    "name":"Steel Refining",
+    "desc":"Our blacksmiths assure us that this is a ferrous metal, but it's clearly much stronger than iron. Let's find out how this is possible...\nUnlocks the Blast Furnace, which allows the smelting of iron into steel.",
+    "diff":1500,
+    "req":[["research","Iron Refining"],["item","Steel Ingot"]]
+  }
+]

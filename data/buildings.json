@@ -1,0 +1,454 @@
+[
+  {
+    "name":"Stone Gates",
+    "desc":"Really just two slabs of rough-cut stone and barricades to keep it shut, but it's better than having a wide-open tunnel into the den.",
+    "work":50,
+    "materials":["Stone Chunk:2"],
+    "space":1,
+    "defense":5
+  },{
+    "name":"Mushroom Farm",
+    "landmark":true,
+    "farm":true,
+    "desc":"By hauling in some soft mud and clay from around the cavern, we should be able to grow mushrooms here. We just need a few specimens to get started.",
+    "req":[["research","Agriculture"],["minlevel",1]],
+    "materials":["*mushroom:2"],
+    "space":2,
+    "work":100
+  },{
+    "name":"Guard Platforms",
+    "desc":"Raised platforms from which guards can chuck projectiles at would-be attackers. We have the high ground!",
+    "work":100,
+    "materials":["Stone Chunk:3"],
+    "space":1,
+    "defense":10
+  },{
+    "name":"Pitfalls",
+    "desc":"An easy and effective way to defend an area: just dig holes around it and let gravity do the work!",
+    "work":150,
+    "space":1,
+    "destructible":false,
+    "defense":10
+  },{
+    "name":"Bone Spikes",
+    "desc":"The biggest problem with pitfalls is that the fall doesn't usually kill things like spears do. The solution: combine the two!",
+    "req":[["building","Pitfalls"]],
+    "work":100,
+    "materials":["Bones:10"],
+    "defense":10
+  },{
+    "name":"Rib Cage",
+    "desc":"Building a wall of bones around the den sounds hardcore, and it's fairly sturdy if you do it right.",
+    "work":200,
+    "materials":["Bones:30"],
+    "space":1,
+    "defense":20
+  },{
+    "name":"Rockfall Trap",
+    "desc":"It's like a cave-in but weaponized! Careful not to set it off early...",
+    "req":[["research","Simple Machines"]],
+    "work":250,
+    "materials":["Stone Chunk:5","Fiber:20"],
+    "space":2,
+    "defense":20
+  },{
+    "name":"Tripwires",
+    "desc":"Wires tightened such that if a foot knocks it loose, it'll immediately snap back and ensnare the poor sod.",
+    "req":[["research","Simple Machines"]],
+    "work":200,
+    "materials":["*rope:4"],
+    "space":1,
+    "defense":15
+  },{
+    "name":"Trapdoors",
+    "desc":"The SECOND biggest problem with pitfalls is that you have to be blind to fall into them. But if you cover and disguise the hole, they become surprisingly effective.",
+    "req":[["research","Simple Machines"],["building","Pitfalls"]],
+    "work":200,
+    "materials":["*shaft:10","Fiber:20","Stone Pebble:100"],
+    "defense":20
+  },{
+    "name":"Arrow Traps",
+    "desc":"Hey, the floor's a little uneven he- SHUNK SHUNK SHUNK SHUNK",
+    "req":[["research","Mechanics"],["research","Archery"]],
+    "work":500,
+    "space":2,
+    "materials":["*block:4","Copper Mechanism:4","*arrow:20","*bow:4"],
+    "defense":40
+  },{
+    "name":"Swinging Blades",
+    "desc":"A little tension here, a deadly blade there, one wrong step and you can say goodbye to your head!",
+    "req":[["research","Mechanics"]],
+    "work":500,
+    "space":2,
+    "materials":["*block:2","Copper Mechanism:4","*big_blade:2"],
+    "defense":40
+  },{
+    "name":"Drawbridge",
+    "desc":"A stone slab over a pit that can raise up to both remove the bridge and provide an extra layer of wall.",
+    "req":[["research","Mechanics"]],
+    "work":350,
+    "space":1,
+    "materials":["Stone Block:6","Copper Mechanism:2","*rope:2"],
+    "defense":30
+  },{
+    "name":"Brewery",
+    "desc":"A collection of vats, valves, and firepits which enable the mixing and distillation of ingredients into liquid form.",
+    "req":[["research","Brewing"]],
+    "work":150,
+    "materials":["Copper Ingot:2/Clay Pot:2","Tin Ingot:2/Clay Pot:2"],
+    "space":1
+  },{
+    "name":"Tavern",
+    "desc":"A place where kobolds from other tribes can rest, drink, and make merry. Our tavern will attract nameless kobolds based on what drinks we have available. They'll pay us, of course, and we might be able to trade with or recruit some of them.",
+    "req":[["research","Brewing"]],
+    "work":200,
+    "materials":["*block:2","Mug:4/Clay Mug:4/Tin Flask:4"],
+    "space":2
+  },{
+    "name":"Kitchen",
+    "desc":"Provides a range, larder, smooth surfaces, and many other things that make cooking advanced dishes possible.",
+    "req":[["research","Culinary Arts"]],
+    "work":400,
+    "materials":["*block:2","*ingot:2","*fuel:2"],
+    "space":2
+  },{
+    "name":"Kennel",
+    "desc":"An open space where animals can be housed; required if you want to keep animals at the den. Contains all of the facilities necessary for a kobold to care for an animal, including a feeder, from which stored animals will eat first (use `!feeder` to add or remove things from it).",
+    "req":[["research","Animal Companionship"]],
+    "work":200,
+    "materials":["*block:3"],
+    "space":2
+  },{
+    "name":"Prison",
+    "desc":"A place for keeping and exploiting kobolds who refuse to submit to our ways. Having a prison enables us to capture tribeless kobolds and force them to do our bidding.",
+    "req":[["research","Smithing"]],
+    "work":200,
+    "materials":["*block:2","*ingot:2"],
+    "space":2
+  },{
+    "name":"Nursery",
+    "desc":"A nice fortified structure for the small ones to play and mind their own business. With this, children will be safe if invaders breach our defenses.",
+    "work":150,
+    "materials":["*block:2"],
+    "space":1
+  },{
+    "name":"Graveyard",
+    "desc":"A final resting place for our fallen brothers and sisters. If we show our own some respect, we might remind our attackers that we're not so different.",
+    "req":[["research","Writing"]],
+    "work":150,
+    "materials":["Stone Tablet:10"],
+    "destructible":false,
+    "space":2
+  },{
+    "name":"Study",
+    "desc":"A nice little nook where we can organize our thoughts, take notes, and read notes taken by others.",
+    "req":[["research","Education"]],
+    "work":150,
+    "materials":["Stone Tablet:5","Stone Chunk:4"],
+    "space":1
+  },{
+    "name":"Butcher Table",
+    "desc":"A flat, (mostly) clean surface with a few tools for handy butchering. Halves cost of butchering dead creatures, and reduces the chance of destroying materials.",
+    "req":[["research","Cooking Utensils"]],
+    "work":150,
+    "materials":["*block:2","*knife"],
+    "space":1
+  },{
+    "name":"Research Lab",
+    "desc":"A station filled with tools and equipment to do... sciencey things. Boosts progress gained by researching and studying.",
+    "req":[["research","Scientific Method"]],
+    "work":400,
+    "materials":["*block:3","Vial:4/Tin Flask:4"],
+    "space":2
+  },{
+    "name":"Stone Walls",
+    "desc":"Putting more stone in between the raiders and ourselves seems like a no-brainer.",
+    "work":200,
+    "materials":["Stone Block:4"],
+    "space":1,
+    "defense":20
+  },{
+    "name":"Reinforced Walls",
+    "desc":"Build the walls taller and thicker using new technology to keep it all together!",
+    "req":[["research","Bricklaying"],["building","Stone Walls"]],
+    "work":500,
+    "materials":["*block:4"],
+    "space":1,
+    "defense":30
+  },{
+    "name":"Stone Pillars",
+    "desc":"A bit of bracing should mostly keep the rocks from falling on our miners' heads. Mostly.",
+    "work":150,
+    "materials":["Stone Block:2"],
+    "space":1
+  },{
+    "name":"Well",
+    "desc":"Well this should get us a steady supply of water. It's kind of a pain to get set up though.",
+    "req":[["research","Irrigation"]],
+    "work":250,
+    "materials":["*block:2","*rope:1","*bucket:1"],
+    "space":1
+  },{
+    "name":"Subterranean Farm",
+    "landmark":true,
+    "farm":true,
+    "desc":"Building a farm that grows something other than mushrooms takes a bit of effort. A proper water source, for one.",
+    "req":[["research","Irrigation"],["minlevel",1]],
+    "work":200,
+    "space":2,
+    "materials":["Fiber:20"]
+  },{
+    "name":"Marble Statues",
+    "desc":"This display should convey a message: we're not as barbaric as they think we are! Our appreciation of the fine arts should lower our heat level a bit.",
+    "work":250,
+    "materials":["Marble Block:2"],
+    "space":2,
+    "heat":-10
+  },{
+    "name":"Furnace",
+    "desc":"A nice hollow brick which is capable of producing enough heat to melt softer metals.",
+    "req":[["research","Smithing"]],
+    "work":250,
+    "materials":["Stone Block:1/Granite Block:1","Stone Block:1/Granite Block:1","Stone Block:1/Granite Block:1","*fuel:3"],
+    "space":1
+  },{
+    "name":"Blast Furnace",
+    "desc":"A sturdy construction capable of holding a ton of heat and keeping the contents under pressure. Reduces the AP cost of smelting recipes by 1, and required for the production of advanced metals like steel.",
+    "req":[["research","Steel Refining"]],
+    "work":600,
+    "materials":["Iron Ingot:3","*fuel:3"],
+    "counts_as":["Furnace"],
+    "space":1
+  },{
+    "name":"Kiln",
+    "desc":"A workstation where clay can be shaped and fired.",
+    "req":[["research","Pottery"]],
+    "work":200,
+    "materials":["Stone Block:2/Granite Block:2","*fuel:2"],
+    "space":1
+  },{
+    "name":"Copper Anvil",
+    "desc":"A basic anvil with a copper surface for durability. Makes it easier to beat hot metal into shape.",
+    "req":[["research","Complex Metalworking"]],
+    "work":150,
+    "materials":["Stone Block:3","Copper Ingot:1"],
+    "space":1
+  },{
+    "name":"Iron Anvil",
+    "desc":"To work metals like iron, you need something capable of taking a few more hits.",
+    "req":[["research","Iron Refining"]],
+    "work":450,
+    "materials":["Iron Ingot:4"],
+    "counts_as":["Copper Anvil"],
+    "space":1
+  },{
+    "name":"Dragon Shrine",
+    "desc":"An intricate shrine with a silver dragon statue as the centerpiece. With any luck, praying here should get the attention of our Dragon overlords.",
+    "req":[["research","Organized Worship"]],
+    "work":500,
+    "materials":["Silver Ingot:2","*block:4"],
+    "space":1
+  },{
+    "name":"Loom",
+    "desc":"A workstation which allows processing fiber, cobwebs and the like into ropes and textiles.",
+    "req":[["research","Weaving"]],
+    "materials":["Fiber:10","*shaft:5"],
+    "work":100,
+    "space":1
+  },{
+    "name":"Training Dummies",
+    "desc":"Sturdy person-shaped structures that we can hit over and over to practice hitting real living things. Enables `!practice` for physical combat skills at the cost of AP.",
+    "req":[["research","Weaving"]],
+    "materials":["*textile:2","*shaft:4"],
+    "work":150,
+    "enable_training":["melee","marksman"],
+    "space":1
+  },{
+    "name":"Magic Box",
+    "desc":"Mounting gems in the walls in just the right arrangement creates a zone where magic is heightened. Enables `!practice` for magic-oriented skills at the cost of mana.",
+    "req":[["research","Mana Manipulation"]],
+    "materials":["*gem:8"],
+    "enable_training":["sorcery","arcana"],
+    "work":200
+  },{
+    "name":"Spinning Poles",
+    "desc":"Poles rigged together with rope, pulleys, and mechanisms to create a sort of miniature obstacle course. Enables `!practice` for defensive skills at the cost of AP.",
+    "req":[["research","Mechanics"]],
+    "materials":["*shaft:10","*rope:1","Copper Mechanism:2"],
+    "enable_training":["vitality","resilience"],
+    "work":250,
+    "space":1
+  },{
+    "name":"Mill",
+    "desc":"A series of grindstones and rollers which can pulverize material en masse. Don't stick your hand in...",
+    "req":[["research","Milling"]],
+    "materials":["*block:3","Copper Mechanism:4"],
+    "work":400,
+    "space":2
+  },{
+    "name":"Bunk Beds",
+    "desc":"As a solution to kobolds taking up space, this is the best idea short of throwing everyone into a big pile. Even if some of us wouldn't mind that...",
+    "req":[["research","Weaving"]],
+    "materials":["*textile:2","*shaft:8"],
+    "repeatable":true,
+    "work":100
+  },{
+    "name":"Reservoir",
+    "desc":"A large tank in which we can store extra water. Increases maximum water storage in the den by 25, and allows us to see how much water is remaining.",
+    "req":[["research","Liquid Transport"]],
+    "materials":["*ingot:3","*block:2"],
+    "repeatable":true,
+    "space":1,
+    "work":250
+  },{
+    "name":"Outer Walls",
+    "desc":"One positive to building on the surface is that you don't have to dig out walls and risk cave-ins to make more room - you just need to expand the walls. Each instance of this building increases space by 2.",
+    "req":[["research","Bricklaying"],["maxlevel",0]],
+    "materials":["*block:2"],
+    "space":-2,
+    "repeatable":true,
+    "work":100
+  },{
+    "name":"Thatched Roof",
+    "desc":"If only there was some way to exist on the surface without that pesky sun ruining everyone's day... why not just build a massive roof over the whole dang settlement?",
+    "req":[["research","Bricklaying"],["maxlevel",0]],
+    "materials":["Fiber:100","*block:5"],
+    "work":1000
+  },{
+    "name":"Surface Farm",
+    "landmark":true,
+    "farm":true,
+    "desc":"It's not as easy to convert this soil into a farm as you'd think. There's all this green stuff in the way...",
+    "req":[["research","Surface Farming"],["maxlevel",0]],
+    "work":400,
+    "space":2,
+    "materials":["Fiber:20"]
+  },{
+    "name":"Deep Farm",
+    "landmark":true,
+    "farm":true,
+    "desc":"Till some land deep underground... or rather, make land that can be tilled and *then* till it...",
+    "req":[["research","Deep Farming"],["minlevel",4]],
+    "work":500,
+    "space":2,
+    "materials":["Fiber:20"]
+  },{
+    "name":"Farm Fencing",
+    "landmark":true,
+    "desc":"Build a fence around the farm to keep critters and invaders out. This causes the farm to deteriorate half as quickly each month, but has a chance of breaking down.",
+    "req":[["research","Farm Infrastructure"]],
+    "work":200,
+    "materials":["*block:3"]
+  },{
+    "name":"Scarecrow",
+    "landmark":true,
+    "desc":"A fake kobold standing in the middle of the field should deter invaders, assuming they don't get close enough to recognize it. Has a chance to prevent farm deterioration entirely each month, but has a chance of breaking down.",
+    "req":[["research","Farm Infrastructure"]],
+    "work":200,
+    "materials":["*textile:1","Fiber:10"]
+  },{
+    "name":"Pasture",
+    "landmark":true,
+    "desc":"Enclose an open field on the surface so that animals can roam around without getting lost. A barn would also be useful to store tools and facilities that are necessary to collect their resources.",
+    "req":[["research","Animal Husbandry"],["maxlevel",0],["tribe",false]],
+    "work":400,
+    "space":2,
+    "materials":["*block:4"]
+  },{
+    "name":"Road",
+    "landmark":true,
+    "desc":"Smooth and straighten the land or cavern in this area. Moving through a tile with a basic road occasionally saves AP (about once every 5 moves).",
+    "req":[["research","Excavation"]],
+    "work":100
+  },{
+    "name":"Paved Road",
+    "landmark":true,
+    "desc":"Lay down some flat bricks in this area. Moving through a tile with a paved road only costs AP every other tile.",
+    "req":[["research","Bricklaying"],["landmark","Road"]],
+    "work":300,
+    "materials":["*block:2"]
+  },{
+    "name":"Bracing",
+    "landmark":true,
+    "desc":"Put up some bracing to increase the stability of the cavern in the local area, allowing you to mine for longer.",
+    "req":[["research","Excavation"],["minlevel",1]],
+    "materials":["*block:1"],
+    "repeatable":true,
+    "work":100
+  },{
+    "name":"Warding Lantern",
+    "landmark":true,
+    "desc":"An enchanted lantern which radiates a strong warding mana field, repelling creatures.",
+    "req":[["research","Mana Attunement"]],
+    "materials":["Topaz:1","Charged Mana Cell:1","*block:1"],
+    "work":400
+  },{
+    "name":"Artificial Hot Spring",
+    "landmark":true,
+    "desc":"Create a pool of water and magically enhance it such that it always stays at the perfect temperature for de-stressing.",
+    "req":[["research","Mana Attunement"],["liquid","Water"]],
+    "materials":["Ruby:1","Charged Mana Cell:1"],
+    "work":500
+  },{
+    "name":"Quarry",
+    "landmark":true,
+    "desc":"Dig out a huge section of rock. Great for getting a lot of stone fast, and possibly exposing other minerals.",
+    "req":[["research","Excavation"],["minlevel",1]],
+    "destructible":false,
+    "work":200
+  },{
+    "name":"Aqueduct",
+    "landmark":true,
+    "desc":"Build a channel for water to flow that leads straight back to the den, increasing water generation per month by 5.",
+    "req":[["research","Liquid Transport"],["liquid","Water"]],
+    "materials":["Stone Block:2"],
+    "destructible":false,
+    "work":200
+  },{
+    "name":"Stairs Up",
+    "landmark":true,
+    "desc":"Build stairs that lead to the level above.",
+    "req":[["research","Verticality"],["minlevel",1]],
+    "destructible":false,
+    "work":500
+  },{
+    "name":"Stairs Down",
+    "landmark":true,
+    "desc":"Build stairs that lead to the level below.",
+    "req":[["research","Verticality"],["maxlevel",4]],
+    "destructible":false,
+    "work":500
+  },{
+    "name":"Fortifications",
+    "desc":"Slap some fortifications around the base. Who has time for structural engineering when the invasion is right around the corner? Just don't expect it to last...",
+    "req":[["research","Building Blocks"]],
+    "work":50,
+    "materials":["*block:1"],
+    "temporary":true,
+    "defense":5
+  },{
+    "name":"Fortifications, Mark II",
+    "desc":"Put blocks on top of blocks. At least then it might come crumbling down on the enemy when it inevitably breaks.",
+    "req":[["research","Building Blocks"],["building","Fortifications"]],
+    "work":100,
+    "materials":["*block:2"],
+    "temporary":true,
+    "defense":10
+  },{
+    "name":"Fortifications, Mark III",
+    "desc":"This tower you're building is an abomination, but maybe, just maybe, it'll make your attackers lose interest.",
+    "req":[["research","Building Blocks"],["building","Fortifications, Mark II"]],
+    "work":150,
+    "materials":["*block:3"],
+    "temporary":true,
+    "defense":15
+  },{
+    "name":"Fortifications, Mark IV",
+    "desc":"Alright, let's be honest, this is just a pile of bricks.",
+    "req":[["research","Building Blocks"],["building","Fortifications, Mark III"]],
+    "work":200,
+    "materials":["*block:4"],
+    "temporary":true,
+    "defense":20
+  }
+]

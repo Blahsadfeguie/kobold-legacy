@@ -1,0 +1,137 @@
+{
+  "mining":{
+    "name":"Mining",
+    "stat":"str",
+    "icon":":pick:",
+    "desc":"Increases progress made when mining using the !mine command."
+  },"construction":{
+    "name":"Construction",
+    "stat":"str",
+    "icon":":hammer:",
+    "desc":"Increases progress made when building using the !build command."
+  },"melee":{
+    "name":"Melee",
+    "stat":"str",
+    "icon":":punch:",
+    "desc":"Increases accuracy in combat using melee/finesse weapons."
+  },"woodcutting":{
+    "name":"Woodcutting",
+    "stat":"str",
+    "icon":":axe:",
+    "desc":"Increases progress made when mining using the !chop command."
+  },"fishing":{
+    "name":"Fishing",
+    "stat":"dex",
+    "icon":":fishing_pole_and_fish:",
+    "desc":"Increases chance and maximum size of fish caught using the !fish command."
+  },"stealth":{
+    "name":"Stealth",
+    "stat":"dex",
+    "icon":":ninja:",
+    "desc":"Increases the chance of remaining undetected while performing actions in the overworld near hostiles."
+  },"crafting":{
+    "name":"Crafting",
+    "stat":"dex",
+    "icon":":carpentry_saw:",
+    "desc":"Increases the quality of items crafted using the !craft command."
+  },"marksman":{
+    "name":"Marksman",
+    "stat":"dex",
+    "icon":":bow_and_arrow:",
+    "desc":"Increases accuracy in combat using ranged weapons."
+  },"farming":{
+    "name":"Farming",
+    "stat":"con",
+    "icon":":mushroom:",
+    "desc":"Increases effectiveness when farming using the !farm command."
+  },"vitality":{
+    "name":"Vitality",
+    "stat":"con",
+    "icon":":muscle:",
+    "desc":"Increases saving throws against physical conditions."
+  },"resilience":{
+    "name":"Resilience",
+    "stat":"con",
+    "icon":":sparkling_heart:",
+    "desc":"Increases maximum health and monthly regeneration rate."
+  },"smithing":{
+    "name":"Smithing",
+    "stat":"con",
+    "icon":":fire:",
+    "desc":"Increases effectiveness when smelting or crafting metal items."
+  },"research":{
+    "name":"Research",
+    "stat":"int",
+    "icon":":mag:",
+    "desc":"Increases progress made when researching using the !research command."
+  },"arcana":{
+    "name":"Arcana",
+    "stat":"int",
+    "icon":":magic_wand:",
+    "magic":true,
+    "desc":"Increases effectiveness when crafting or using magic items."
+  },"sorcery":{
+    "name":"Sorcery",
+    "stat":"int",
+    "icon":":star2:",
+    "magic":true,
+    "desc":"Increases strength of cast spells, in combat or otherwise."
+  },"geology":{
+    "name":"Geology",
+    "stat":"int",
+    "icon":":gem:",
+    "desc":"Increases chance of finding resource nodes with the !prospect command, as well as gemstones."
+  },"medicine":{
+    "name":"Medicine",
+    "stat":"wis",
+    "icon":":adhesive_bandage:",
+    "desc":"Increases HP healed and the chance of curing status effects with the !heal command."
+  },"survival":{
+    "name":"Survival",
+    "stat":"wis",
+    "icon":":dagger:",
+    "desc":"Increases effectiveness when foraging, butchering, and tracking."
+  },"willpower":{
+    "name":"Willpower",
+    "stat":"wis",
+    "icon":":pray:",
+    "desc":"Increases saving throws against mental conditions."
+  },"cooking":{
+    "name":"Cooking",
+    "stat":"wis",
+    "icon":":meat_on_bone:",
+    "desc":"Increases effectiveness when crafting edible items."
+  },"druid":{
+    "name":"Druid",
+    "stat":"wis",
+    "icon":":herb:",
+    "magic":true,
+    "desc":"Increases strength of druidic spells."
+  },"negotiation":{
+    "name":"Negotiation",
+    "stat":"cha",
+    "icon":":handshake:",
+    "desc":"Increases effectiveness when trading, recruiting, or conducting diplomatic actions."
+  },"intimidation":{
+    "name":"Intimidation",
+    "stat":"cha",
+    "icon":":anger_right:",
+    "desc":"Increases ability to take and convert prisoners."
+  },"command":{
+    "name":"Command",
+    "stat":"cha",
+    "icon":":military_helmet:",
+    "desc":"Increases leadership ability in combat and when supervising work."
+  },"animals":{
+    "name":"Animals",
+    "stat":"cha",
+    "icon":":wolf:",
+    "desc":"Increases ability to tame, train, and command animals."
+  },"faith":{
+    "name":"Faith",
+    "stat":"cha",
+    "icon":":place_of_worship:",
+    "magic":true,
+    "desc":"Increases ability to use and benefit from draconic boons."
+  }
+}

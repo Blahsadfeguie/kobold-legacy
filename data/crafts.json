@@ -1,0 +1,1429 @@
+[
+  {
+    "result":"Stone Pebble",
+    "amount":25,
+    "tool":"chisel",
+    "materials":["Stone Chunk/Stone Block"],
+    "work":2
+  },{
+    "result":"Jade Pebble",
+    "amount":25,
+    "tool":"chisel",
+    "materials":["Jade"],
+    "work":3
+  },{
+    "result":"Marble Pebble",
+    "amount":25,
+    "tool":"chisel",
+    "materials":["Marble Chunk/Marble Block"],
+    "work":2
+  },{
+    "result":"Stone Block",
+    "materials":["Stone Chunk"],
+    "work":2,
+    "ignore_quality":true,
+    "req":[["research","Building Blocks"],["tool","chisel"]]
+  },{
+    "result":"Granite Block",
+    "amount":2,
+    "materials":["Granite Chunk"],
+    "work":3,
+    "ignore_quality":true,
+    "req":[["research","Building Blocks"],["tool","chisel"]]
+  },{
+    "result":"Wooden Plank",
+    "amount":4,
+    "materials":["Wooden Log"],
+    "work":3,
+    "ignore_quality":true,
+    "skill":"woodcutting",
+    "req":[["research","Woodcutting"],["tool","woodcutting"]]
+  },{
+    "result":"Wooden Stick",
+    "amount":4,
+    "materials":["Wooden Plank"],
+    "work":3,
+    "ignore_quality":true,
+    "skill":"woodcutting",
+    "req":[["research","Woodcutting"],["tool","woodcutting"]]
+  },{
+    "result":"Wooden Block",
+    "materials":["Wooden Plank:4"],
+    "work":2,
+    "ignore_quality":true,
+    "skill":"woodcutting",
+    "req":[["research","Woodcutting"],["tool","construction"]]
+  },{
+    "result":"Charcoal",
+    "amount":5,
+    "materials":["Wooden Log/Wooden Plank:4/Wooden Stick:16/Wooden Block","*fuel"],
+    "work":2,
+    "ignore_quality":true,
+    "skill":"woodcutting",
+    "req":[["building","Furnace"]]
+  },{
+    "result":"Copper Ingot",
+    "materials":["Copper Ore","*fuel"],
+    "work":2,
+    "skill":"smithing",
+    "blast_processing":true,
+    "req":[["research","Smithing"],["building","Furnace"]]
+  },{
+    "result":"Tin Ingot",
+    "materials":["Tin Ore","*fuel"],
+    "work":2,
+    "skill":"smithing",
+    "blast_processing":true,
+    "req":[["research","Smithing"],["building","Furnace"]]
+  },{
+    "result":"Silver Ingot",
+    "materials":["Silver Ore","*fuel"],
+    "work":2,
+    "skill":"smithing",
+    "blast_processing":true,
+    "req":[["research","Smithing"],["building","Furnace"]]
+  },{
+    "result":"Gold Ingot",
+    "materials":["Gold Ore","*fuel"],
+    "work":2,
+    "skill":"smithing",
+    "blast_processing":true,
+    "req":[["research","Smithing"],["building","Furnace"]]
+  },{
+    "result":"Bronze Ingot",
+    "materials":["Copper Ore/Copper Ingot","Tin Ore/Tin Ingot","*fuel"],
+    "work":2,
+    "skill":"smithing",
+    "blast_processing":true,
+    "req":[["research","Alloys"],["building","Furnace"]]
+  },{
+    "result":"Iron Ingot",
+    "materials":["Iron Ore","*fuel:2"],
+    "work":2,
+    "skill":"smithing",
+    "blast_processing":true,
+    "req":[["research","Iron Refining"],["building","Furnace"]]
+  },{
+    "result":"Steel Ingot",
+    "materials":["Iron Ore","*fuel:3"],
+    "work":3,
+    "skill":"smithing",
+    "blast_processing":true,
+    "req":[["research","Steel Refining"],["building","Blast Furnace"]]
+  },{
+    "result":"Stone Tablet",
+    "amount":5,
+    "tool":"chisel",
+    "materials":["Stone Chunk"],
+    "work":1,
+    "ignore_quality":true,
+    "req":[["research","Writing"]]
+  },{
+    "result":"Crude Map",
+    "materials":["Stone Tablet"],
+    "work":0,
+    "req":[["research","Cartography"]]
+  },{
+    "result":"Marble Block",
+    "materials":["Marble Chunk"],
+    "work":2,
+    "req":[["research","Building Blocks"],["tool","chisel"]]
+  },{
+    "result":"Manacite",
+    "materials":["Raw Manacite"],
+    "work":5,
+    "req":[["research","Sorcery 101"],["tool","chisel"]],
+    "skill":"geology"
+  },{
+    "result":"Charged Mana Cell",
+    "materials":["Jade:3","Tin Ingot:3"],
+    "mana":10,
+    "skill":"arcana",
+    "ignore_quality":true,
+    "req":[["research","Mana Manipulation"]]
+  },{
+    "result":"Crystal Ball",
+    "materials":["Jade:5","Sand:10"],
+    "mana":5,
+    "skill":"arcana",
+    "ignore_quality":true,
+    "req":[["research","Mana Manipulation"],["research","Glassblowing"],["building","Furnace"]]
+  },{
+    "result":"Flare Wand",
+    "materials":["Jade:2","Coal:2"],
+    "mana":3,
+    "skill":"arcana",
+    "ignore_quality":true,
+    "req":[["research","Mana Manipulation"]]
+  },{
+    "result":"Stone Spear",
+    "materials":["Stone Chunk","*shaft:2"],
+    "tool":"chisel",
+    "work":2
+  },{
+    "result":"Stone Knife",
+    "materials":["Stone Chunk","*shaft"],
+    "work":2,
+    "tool":"chisel",
+    "req":[["research","Basic Tools"]]
+  },{
+    "result":"Stone Hammer",
+    "materials":["Stone Chunk","*shaft"],
+    "tool":"chisel",
+    "work":2,
+    "req":[["research","Basic Tools"]]
+  },{
+    "result":"Stone Pick",
+    "materials":["Stone Chunk","*shaft:2"],
+    "tool":"chisel",
+    "work":2,
+    "req":[["research","Basic Tools"]]
+  },{
+    "result":"Stone Chisel",
+    "materials":["Stone Chunk","*shaft"],
+    "tool":"chisel",
+    "work":2,
+    "req":[["research","Building Blocks"]]
+  },{
+    "result":"Stone Hoe",
+    "materials":["Stone Chunk","*shaft:3"],
+    "tool":"chisel",
+    "work":2,
+    "req":[["research","Plant Domestication"]]
+  },{
+    "result":"Stone Axe",
+    "materials":["Stone Chunk","*shaft:2"],
+    "tool":"chisel",
+    "work":2,
+    "req":[["research","Woodcutting"]]
+  },{
+    "result":"Stone Pan",
+    "materials":["Stone Chunk","*shaft"],
+    "tool":"chisel",
+    "work":2,
+    "req":[["research","Cooking Utensils"]]
+  },{
+    "result":"Jade Spear",
+    "materials":["Jade","*shaft:2"],
+    "tool":"chisel",
+    "work":2
+  },{
+    "result":"Jade Knife",
+    "materials":["Jade","*shaft"],
+    "work":2,
+    "tool":"chisel",
+    "req":[["research","Basic Tools"]]
+  },{
+    "result":"Granite Spear",
+    "materials":["Granite Chunk","*shaft:2"],
+    "tool":"chisel",
+    "work":3
+  },{
+    "result":"Granite Knife",
+    "materials":["Granite Chunk","*shaft"],
+    "work":3,
+    "tool":"chisel",
+    "req":[["research","Basic Tools"]]
+  },{
+    "result":"Granite Hammer",
+    "materials":["Granite Chunk","*shaft"],
+    "tool":"chisel",
+    "work":3,
+    "req":[["research","Basic Tools"]]
+  },{
+    "result":"Granite Pick",
+    "materials":["Granite Chunk","*shaft:2"],
+    "tool":"chisel",
+    "work":3,
+    "req":[["research","Basic Tools"]]
+  },{
+    "result":"Granite Chisel",
+    "materials":["Granite Chunk","*shaft"],
+    "tool":"chisel",
+    "work":3,
+    "req":[["research","Building Blocks"]]
+  },{
+    "result":"Granite Hoe",
+    "materials":["Granite Chunk","*shaft:3"],
+    "tool":"chisel",
+    "work":3,
+    "req":[["research","Plant Domestication"]]
+  },{
+    "result":"Granite Pan",
+    "materials":["Granite Chunk","*shaft"],
+    "tool":"chisel",
+    "work":3,
+    "req":[["research","Cooking Utensils"]]
+  },{
+    "result":"Granite Axe",
+    "materials":["Granite Chunk","*shaft:2"],
+    "tool":"chisel",
+    "work":3,
+    "req":[["research","Woodcutting"]]
+  },{
+    "result":"Peg Leg",
+    "materials":["*shaft:5","Fiber:5"],
+    "work":2,
+    "skill":"medicine",
+    "req":[["research","Basic Medicine"]]
+  },{
+    "result":"Amethyst Eye",
+    "materials":["Amethyst"],
+    "mana":5,
+    "skill":"arcana",
+    "req":[["research","Mana Attunement"]]
+  },{
+    "result":"Bandage",
+    "materials":["*bandage_material:5"],
+    "work":1,
+    "skill":"medicine",
+    "req":[["research","Basic Medicine"]]
+  },{
+    "result":"Cloth Bandage",
+    "amount":2,
+    "materials":["Cloth"],
+    "work":1,
+    "skill":"medicine",
+    "req":[["research","Intermediate Medicine"]]
+  },{
+    "result":"Mossy Bandage",
+    "materials":["Fiber:5/Bandage/Cloth Bandage","Healmoss"],
+    "work":1,
+    "skill":"medicine",
+    "req":[["research","Basic Medicine"]]
+  },{
+    "result":"Medical Bandage",
+    "materials":["Cloth Bandage","Earthen Ale/Moss Bitter"],
+    "work":1,
+    "skill":"medicine",
+    "req":[["research","Intermediate Medicine"]]
+  },{
+    "result":"Copper Bucket",
+    "materials":["Copper Ingot:2"],
+    "tool":"construction",
+    "work":4,
+    "skill":"smithing",
+    "req":[["research","Smithing"]]
+  },{
+    "result":"Copper Spear",
+    "materials":["Copper Ingot","*shaft:2"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Smithing"]]
+  },{
+    "result":"Copper Shortsword",
+    "materials":["Copper Ingot"],
+    "tool":"construction",
+    "work":3,
+    "skill":"smithing",
+    "req":[["research","Complex Metalworking"],["building","Copper Anvil"]]
+  },{
+    "result":"Copper Longsword",
+    "materials":["Copper Ingot:2"],
+    "tool":"construction",
+    "work":3,
+    "skill":"smithing",
+    "req":[["research","Complex Metalworking"],["building","Copper Anvil"]]
+  },{
+    "result":"Copper Maul",
+    "materials":["Copper Ingot:2"],
+    "tool":"construction",
+    "work":3,
+    "skill":"smithing",
+    "req":[["research","Complex Metalworking"],["building","Copper Anvil"]]
+  },{
+    "result":"Copper Armor",
+    "materials":["Copper Ingot:4"],
+    "tool":"construction",
+    "work":5,
+    "skill":"smithing",
+    "req":[["research","Complex Metalworking"],["building","Copper Anvil"]]
+  },{
+    "result":"Copper Knife",
+    "materials":["Copper Ingot","*shaft"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Smithing"]]
+  },{
+    "result":"Copper Hammer",
+    "materials":["Copper Ingot","*shaft"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Smithing"]]
+  },{
+    "result":"Copper Pick",
+    "materials":["Copper Ingot","*shaft:2"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Smithing"]]
+  },{
+    "result":"Copper Chisel",
+    "materials":["Copper Ingot","*shaft"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Smithing"]]
+  },{
+    "result":"Copper Hoe",
+    "materials":["Copper Ingot","*shaft:3"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Plant Domestication"]]
+  },{
+    "result":"Copper Axe",
+    "materials":["Copper Ingot","*shaft:2"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Smithing"],["research","Woodcutting"]]
+  },{
+    "result":"Copper Pan",
+    "materials":["Copper Ingot","*shaft"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Smithing"],["research","Cooking Utensils"]]
+  },{
+    "result":"Copper Mechanism",
+    "amount":2,
+    "materials":["Copper Ingot"],
+    "tool":"construction",
+    "work":4,
+    "ignore_quality":true,
+    "skill":"smithing",
+    "req":[["research","Mechanics"]]
+  },{
+    "result":"Bronze Spear",
+    "materials":["Bronze Ingot","*shaft:2"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Alloys"]]
+  },{
+    "result":"Bronze Shortsword",
+    "materials":["Bronze Ingot"],
+    "tool":"construction",
+    "work":3,
+    "skill":"smithing",
+    "req":[["research","Complex Metalworking"],["research","Alloys"],["building","Copper Anvil"]]
+  },{
+    "result":"Bronze Longsword",
+    "materials":["Bronze Ingot:2"],
+    "tool":"construction",
+    "work":3,
+    "skill":"smithing",
+    "req":[["research","Complex Metalworking"],["research","Alloys"],["building","Copper Anvil"]]
+  },{
+    "result":"Bronze Maul",
+    "materials":["Bronze Ingot:2"],
+    "tool":"construction",
+    "work":3,
+    "skill":"smithing",
+    "req":[["research","Complex Metalworking"],["research","Alloys"],["building","Copper Anvil"]]
+  },{
+    "result":"Bronze Armor",
+    "materials":["Bronze Ingot:4"],
+    "tool":"construction",
+    "work":5,
+    "skill":"smithing",
+    "req":[["research","Complex Metalworking"],["research","Alloys"],["building","Copper Anvil"]]
+  },{
+    "result":"Bronze Knife",
+    "materials":["Bronze Ingot","*shaft"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Alloys"]]
+  },{
+    "result":"Bronze Hammer",
+    "materials":["Bronze Ingot","*shaft"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Alloys"]]
+  },{
+    "result":"Bronze Pick",
+    "materials":["Bronze Ingot","*shaft:2"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Alloys"]]
+  },{
+    "result":"Bronze Chisel",
+    "materials":["Bronze Ingot","*shaft"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Alloys"]]
+  },{
+    "result":"Bronze Hoe",
+    "materials":["Bronze Ingot","*shaft:3"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Alloys"],["research","Plant Domestication"]]
+  },{
+    "result":"Bronze Axe",
+    "materials":["Bronze Ingot","*shaft:2"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Alloys"],["research","Woodcutting"]]
+  },{
+    "result":"Iron Spear",
+    "materials":["Iron Ingot","*shaft:2"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Iron Refining"],["building","Iron Anvil"]]
+  },{
+    "result":"Iron Shortsword",
+    "materials":["Iron Ingot"],
+    "tool":"construction",
+    "work":3,
+    "skill":"smithing",
+    "req":[["research","Complex Metalworking"],["research","Iron Refining"],["building","Iron Anvil"]]
+  },{
+    "result":"Iron Longsword",
+    "materials":["Iron Ingot:2"],
+    "tool":"construction",
+    "work":3,
+    "skill":"smithing",
+    "req":[["research","Complex Metalworking"],["research","Iron Refining"],["building","Iron Anvil"]]
+  },{
+    "result":"Iron Maul",
+    "materials":["Iron Ingot:2"],
+    "tool":"construction",
+    "work":3,
+    "skill":"smithing",
+    "req":[["research","Complex Metalworking"],["research","Iron Refining"],["building","Iron Anvil"]]
+  },{
+    "result":"Iron Armor",
+    "materials":["Iron Ingot:4"],
+    "tool":"construction",
+    "work":5,
+    "skill":"smithing",
+    "req":[["research","Complex Metalworking"],["research","Iron Refining"],["building","Iron Anvil"]]
+  },{
+    "result":"Iron Knife",
+    "materials":["Iron Ingot","*shaft"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Iron Refining"],["building","Iron Anvil"]]
+  },{
+    "result":"Iron Hammer",
+    "materials":["Iron Ingot","*shaft"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Iron Refining"],["building","Iron Anvil"]]
+  },{
+    "result":"Iron Pick",
+    "materials":["Iron Ingot","*shaft:2"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Iron Refining"],["building","Iron Anvil"]]
+  },{
+    "result":"Iron Chisel",
+    "materials":["Iron Ingot","*shaft"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Iron Refining"],["building","Iron Anvil"]]
+  },{
+    "result":"Iron Hoe",
+    "materials":["Iron Ingot","*shaft:3"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Iron Refining"],["building","Iron Anvil"],["research","Plant Domestication"]]
+  },{
+    "result":"Iron Axe",
+    "materials":["Iron Ingot","*shaft:2"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Iron Refining"],["building","Iron Anvil"],["research","Woodcutting"]]
+  },{
+    "result":"Iron Pan",
+    "materials":["Iron Ingot","*shaft"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Iron Refining"],["building","Iron Anvil"],["research","Cooking Utensils"]]
+  },{
+    "result":"Tin Flask",
+    "materials":["Tin Ingot"],
+    "tool":"construction",
+    "amount":3,
+    "work":2,
+    "ignore_quality":true,
+    "skill":"smithing",
+    "req":[["research","Smithing"]]
+  },{
+    "result":"Tin Bucket",
+    "materials":["Tin Ingot:2"],
+    "tool":"construction",
+    "work":3,
+    "skill":"smithing",
+    "req":[["research","Smithing"]]
+  },{
+    "result":"Tin Rod",
+    "materials":["Tin Ingot"],
+    "tool":"construction",
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Smithing"]]
+  },{
+    "result":"Tin Wand",
+    "materials":["Tin Rod"],
+    "work":0,
+    "mana":2,
+    "req":[["research","Sorcery 101"]],
+    "skill":"arcana"
+  },{
+    "result":"Tin Scepter",
+    "materials":["Tin Wand","Manacite"],
+    "work":0,
+    "mana":4,
+    "req":[["research","Sorcery 101"]],
+    "skill":"arcana"
+  },{
+    "result":"Sling",
+    "materials":["Fiber:10/Fibrous Rope"],
+    "work":4
+  },{
+    "result":"Bone Bow",
+    "materials":["Fiber:10","Bones:3"],
+    "work":4,
+    "tool":"chisel",
+    "req":[["research","Archery"]]
+  },{
+    "result":"Copper Bow",
+    "materials":["Fiber:10","Copper Ingot"],
+    "tool":"construction",
+    "work":4,
+    "skill":"smithing",
+    "req":[["research","Archery"],["research","Complex Metalworking"],["building","Copper Anvil"]]
+  },{
+    "result":"Wooden Bow",
+    "materials":["Fiber:10","Wooden Stick:3"],
+    "tool":"butchering",
+    "work":4,
+    "req":[["research","Archery"],["research","Woodcutting"]]
+  },{
+    "result":"Wooden Crossbow",
+    "materials":["Fiber:10","Wooden Stick:2","Wooden Plank"],
+    "tool":"butchering",
+    "work":4,
+    "req":[["research","Crossbows"]]
+  },{
+    "result":"Bone Arrow",
+    "amount":5,
+    "tool":"chisel",
+    "materials":["Bones"],
+    "work":1,
+    "req":[["research","Archery"]]
+  },{
+    "result":"Copper Arrow",
+    "amount":25,
+    "tool":"construction",
+    "materials":["*shaft:5","Copper Ingot"],
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Archery"],["research","Smithing"]]
+  },{
+    "result":"Bronze Arrow",
+    "amount":25,
+    "tool":"construction",
+    "materials":["*shaft:5","Bronze Ingot"],
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Archery"],["research","Alloys"]]
+  },{
+    "result":"Iron Arrow",
+    "amount":25,
+    "tool":"construction",
+    "materials":["*shaft:5","Iron Ingot"],
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Archery"],["research","Iron Refining"],["building","Iron Anvil"]]
+  },{
+    "result":"Bone Bolt",
+    "amount":5,
+    "tool":"chisel",
+    "materials":["Bones"],
+    "work":1,
+    "req":[["research","Crossbows"]]
+  },{
+    "result":"Copper Bolt",
+    "amount":25,
+    "tool":"construction",
+    "materials":["Copper Ingot"],
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Crossbows"],["research","Smithing"]]
+  },{
+    "result":"Bronze Bolt",
+    "amount":25,
+    "tool":"construction",
+    "materials":["Bronze Ingot"],
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Crossbows"],["research","Alloys"]]
+  },{
+    "result":"Iron Bolt",
+    "amount":25,
+    "tool":"construction",
+    "materials":["Iron Ingot"],
+    "work":2,
+    "skill":"smithing",
+    "req":[["research","Crossbows"],["research","Iron Refining"],["building","Iron Anvil"]]
+  },{
+    "result":"Fibrous Rope",
+    "materials":["Fiber:10"],
+    "work":2,
+    "req":[["research","Weaving"]],
+    "skill":"crafting"
+  },{
+    "result":"Cloth",
+    "materials":["Cotton:5"],
+    "work":2,
+    "req":[["research","Weaving"],["research","Milling"],["building","Loom"],["building","Mill"]],
+    "skill":"crafting"
+  },{
+    "result":"Wool Fabric",
+    "materials":["Wool:5"],
+    "work":2,
+    "req":[["research","Weaving"],["research","Animal Husbandry"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Cloth Pouch",
+    "materials":["Cloth:2"],
+    "work":2,
+    "req":[["research","Weaving"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Cloth Rope",
+    "materials":["Cloth:2"],
+    "work":2,
+    "req":[["research","Weaving"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Silk",
+    "materials":["Cobwebs:5"],
+    "work":2,
+    "req":[["research","Weaving"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Silk Robes",
+    "materials":["Silk:3"],
+    "work":2,
+    "req":[["research","Weaving"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Tin-Banded Robes",
+    "materials":["Silk Robes","Tin Ingot:2","Jade"],
+    "mana":6,
+    "req":[["research","Mana Manipulation"]],
+    "skill":"arcana"
+  },{
+    "result":"Straw Hat",
+    "materials":["Fiber:20"],
+    "work":2,
+    "req":[["research","Headwear"]],
+    "skill":"crafting"
+  },{
+    "result":"Outback Hat",
+    "materials":["Leather"],
+    "work":2,
+    "req":[["research","Headwear"],["research","Leather Tanning"]],
+    "skill":"crafting"
+  },{
+    "result":"Copper Helmet",
+    "materials":["Copper Ingot"],
+    "work":2,
+    "req":[["research","Headwear"],["research","Complex Metalworking"],["building","Copper Anvil"]],
+    "skill":"smithing"
+  },{
+    "result":"Bronze Helmet",
+    "materials":["Bronze Ingot"],
+    "work":2,
+    "req":[["research","Headwear"],["research","Complex Metalworking"],["research","Alloys"],["building","Copper Anvil"]],
+    "skill":"smithing"
+  },{
+    "result":"Iron Helmet",
+    "materials":["Iron Ingot"],
+    "work":2,
+    "req":[["research","Headwear"],["research","Complex Metalworking"],["research","Iron Refining"],["building","Iron Anvil"]],
+    "skill":"smithing"
+  },{
+    "result":"Steel Helmet",
+    "materials":["Steel Ingot"],
+    "work":2,
+    "req":[["research","Headwear"],["research","Complex Metalworking"],["research","Steel Refining"],["building","Iron Anvil"]],
+    "skill":"smithing"
+  },{
+    "result":"Wizard Hat",
+    "materials":["Silk:2"],
+    "work":2,
+    "req":[["research","Headwear"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Tinfoil Hat",
+    "materials":["Tin Ingot"],
+    "work":2,
+    "req":[["research","Headwear"]],
+    "skill":"smithing"
+  },{
+    "result":"Mining Helmet",
+    "materials":["Copper Ingot","Quartz"],
+    "work":2,
+    "req":[["research","Headwear"],["building","Copper Anvil"]],
+    "skill":"smithing"
+  },{
+    "result":"Headdress",
+    "materials":["Silk","Bones:5"],
+    "work":2,
+    "req":[["research","Headwear"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Skull Helmet",
+    "materials":["Bones:10"],
+    "work":2,
+    "req":[["research","Headwear"]],
+    "skill":"crafting"
+  },{
+    "result":"Hard Hat",
+    "materials":["Copper Ingot","Stone Chunk"],
+    "work":2,
+    "req":[["research","Headwear"],["building","Copper Anvil"]],
+    "skill":"smithing"
+  },{
+    "result":"Black Hood",
+    "materials":["*textile","Coal"],
+    "work":2,
+    "req":[["research","Headwear"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Chef's Hat",
+    "materials":["*textile"],
+    "work":2,
+    "req":[["research","Headwear"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Silken Rope",
+    "materials":["Silk:2"],
+    "work":2,
+    "req":[["research","Weaving"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Silk Pouch",
+    "materials":["Silk:2"],
+    "work":2,
+    "req":[["research","Weaving"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Silk Parasol",
+    "materials":["Silk:2","*shaft:3"],
+    "work":3,
+    "req":[["research","Weaving"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Leather",
+    "materials":["Raw Hide","Rock Salt"],
+    "work":3,
+    "req":[["research","Leather Tanning"]],
+    "skill":"crafting"
+  },{
+    "result":"Leather Coif",
+    "materials":["Leather"],
+    "work":2,
+    "req":[["research","Headwear"],["research","Leather Tanning"]],
+    "skill":"crafting"
+  },{
+    "result":"Chitin",
+    "materials":["Raw Chitin","Rock Salt"],
+    "work":3,
+    "req":[["research","Leather Tanning"]],
+    "skill":"crafting"
+  },{
+    "result":"Leather Strips",
+    "materials":["Leather"],
+    "amount":10,
+    "work":1,
+    "req":[["research","Weaving"]],
+    "skill":"crafting"
+  },{
+    "result":"Leather Rope",
+    "materials":["Leather Strips:5"],
+    "work":2,
+    "req":[["research","Weaving"],["building","Loom"]],
+    "skill":"crafting"
+  },{
+    "result":"Leather Armor",
+    "materials":["Leather:2","Fiber:5"],
+    "work":2,
+    "req":[["research","Leather Tanning"]],
+    "skill":"crafting"
+  },{
+    "result":"Leather Pouch",
+    "materials":["Leather","Leather Strips:4"],
+    "work":2,
+    "req":[["research","Leather Tanning"]],
+    "skill":"crafting"
+  },{
+    "result":"Waterskin",
+    "materials":["Leather"],
+    "work":2,
+    "ignore_quality":true,
+    "req":[["research","Leather Tanning"]],
+    "skill":"crafting"
+  },{
+    "result":"Wooden Armor",
+    "materials":["Wooden Plank:8"],
+    "work":3,
+    "req":[["research","Woodcutting"],["tool","woodcutting"]],
+    "skill":"crafting"
+  },{
+    "result":"Wooden Bucket",
+    "materials":["Wooden Plank:2"],
+    "tool":"construction",
+    "work":2,
+    "req":[["research","Woodcutting"]],
+    "skill":"crafting"
+  },{
+    "result":"Wooden Barrel",
+    "materials":["Wooden Plank:10","*ingot"],
+    "tool":"construction",
+    "work":3,
+    "req":[["research","Woodcutting"]],
+    "skill":"crafting"
+  },{
+    "result":"Work Gear",
+    "materials":["Leather","Copper Ingot:2"],
+    "work":4,
+    "req":[["research","Leather Tanning"],["research","Smithing"]],
+    "skill":"crafting"
+  },{
+    "result":"Clay Canteen",
+    "materials":["Clay:2","Water:1"],
+    "work":2,
+    "ignore_quality":true,
+    "req":[["research","Pottery"],["building","Kiln"]],
+    "skill":"crafting"
+  },{
+    "result":"Clay Pail",
+    "materials":["Clay:4","Water:1"],
+    "work":2,
+    "ignore_quality":true,
+    "req":[["research","Pottery"],["building","Kiln"]],
+    "skill":"crafting"
+  },{
+    "result":"Clay Pot",
+    "materials":["Clay:5","Water:1"],
+    "work":2,
+    "ignore_quality":true,
+    "req":[["research","Pottery"],["building","Kiln"]],
+    "skill":"crafting"
+  },{
+    "result":"Clay Bowl",
+    "materials":["Clay"],
+    "work":1,
+    "ignore_quality":true,
+    "req":[["research","Pottery"],["building","Kiln"]],
+    "skill":"crafting"
+  },{
+    "result":"Clay Brick",
+    "materials":["Clay:2"],
+    "work":2,
+    "ignore_quality":true,
+    "req":[["research","Pottery"],["building","Kiln"]],
+    "skill":"crafting"
+  },{
+    "result":"Clay Pan",
+    "materials":["Clay:2","*shaft","Water:1"],
+    "work":2,
+    "req":[["research","Cooking Utensils"],["research","Pottery"],["building","Kiln"]]
+  },{
+    "result":"Mug",
+    "amount":2,
+    "materials":["Sand:5"],
+    "work":1,
+    "ignore_quality":true,
+    "req":[["research","Glassblowing"],["building","Furnace"]],
+    "skill":"crafting"
+  },{
+    "result":"Clay Mug",
+    "amount":2,
+    "materials":["Clay:2","Water:1"],
+    "work":1,
+    "ignore_quality":true,
+    "req":[["research","Pottery"],["building","Kiln"]],
+    "skill":"crafting"
+  },{
+    "result":"Vial",
+    "amount":4,
+    "materials":["Sand:5"],
+    "work":1,
+    "ignore_quality":true,
+    "req":[["research","Glassblowing"],["building","Furnace"]],
+    "skill":"crafting"
+  },{
+    "result":"Bottle",
+    "materials":["Sand:5"],
+    "work":1,
+    "ignore_quality":true,
+    "req":[["research","Glassblowing"],["building","Furnace"]],
+    "skill":"crafting"
+  },{
+    "result":"Sunglasses",
+    "materials":["Sand:2","Onyx:2"],
+    "work":1,
+    "ignore_quality":true,
+    "req":[["research","Glassblowing"],["building","Furnace"]],
+    "skill":"crafting"
+  },{
+    "result":"Sand",
+    "liquid":true,
+    "amount":5,
+    "materials":["Quartz"],
+    "work":2,
+    "ignore_quality":true,
+    "req":[["research","Glassblowing"],["tool","construction"]],
+    "skill":"crafting"
+  },{
+    "result":"Chitinous Armor",
+    "materials":["Chitin:3","Fiber:5"],
+    "work":2,
+    "req":[["research","Leather Tanning"]],
+    "skill":"crafting"
+  },{
+    "result":"Meat Bait",
+    "materials":["*meat"],
+    "amount":3,
+    "work":1,
+    "ignore_quality":true,
+    "req":[["research","Animal Companionship"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Veggie Bait",
+    "materials":["*veggie"],
+    "amount":3,
+    "work":1,
+    "ignore_quality":true,
+    "req":[["research","Animal Companionship"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Kibble",
+    "materials":["*meat","*veggie"],
+    "amount":6,
+    "work":1,
+    "ignore_quality":true,
+    "req":[["research","Animal Companionship"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Grilled Mushroom",
+    "materials":["Raw Mushroom"],
+    "work":1,
+    "req":[["research","Home Cooking"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Ghost Sauce",
+    "materials":["Ghostberry:2"],
+    "work":1,
+    "req":[["research","Home Cooking"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Grilled Steak",
+    "materials":["Raw Meat"],
+    "work":1,
+    "req":[["research","Home Cooking"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Grilled Meat Chunks",
+    "materials":["Chunked Meat"],
+    "work":1,
+    "req":[["research","Home Cooking"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Seasoned Snail",
+    "materials":["Snail","Rock Salt"],
+    "work":1,
+    "req":[["research","Home Cooking"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Grilled Fish",
+    "materials":["Raw Fish"],
+    "work":1,
+    "req":[["research","Home Cooking"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Grilled Bug Steak",
+    "materials":["Raw Bug Meat"],
+    "work":1,
+    "req":[["research","Home Cooking"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Grilled Kobold Steak",
+    "materials":["Raw Kobold Meat"],
+    "work":1,
+    "req":[["research","Home Cooking"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Baked Potato",
+    "materials":["Potato"],
+    "work":1,
+    "req":[["research","Home Cooking"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Flour",
+    "liquid":true,
+    "materials":["Wheat:4"],
+    "work":1,
+    "req":[["research","Milling"],["building","Mill"]],
+    "skill":"crafting"
+  },{
+    "result":"Rice Ball",
+    "materials":["Rice Grass:10"],
+    "work":1,
+    "req":[["research","Milling"],["building","Mill"]],
+    "skill":"crafting"
+  },{
+    "result":"Fried Rice",
+    "materials":["Rice Ball"],
+    "work":1,
+    "req":[["research","Milling"],["research","Home Cooking"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Scrambled Eggs",
+    "materials":["Egg"],
+    "work":1,
+    "req":[["research","Home Cooking"],["tool","cooking"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Cheese",
+    "materials":["Milk"],
+    "work":2,
+    "req":[["research","Animal Husbandry"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Bread",
+    "materials":["Flour","Water"],
+    "work":1,
+    "req":[["building","Kitchen"],["research","Culinary Arts"],["research","Milling"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Hardtack",
+    "materials":["Flour","Water","Rock Salt"],
+    "work":1,
+    "req":[["building","Kitchen"],["research","Culinary Arts"],["research","Milling"],["research","Food Preservation"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Pickled Mushrooms",
+    "materials":["Raw Mushroom","Rock Salt"],
+    "work":1,
+    "req":[["research","Food Preservation"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Meat Jerky",
+    "materials":["Raw Meat","Rock Salt"],
+    "work":1,
+    "req":[["research","Food Preservation"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Salted Fish",
+    "materials":["Raw Fish","Rock Salt"],
+    "work":1,
+    "req":[["research","Food Preservation"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Bug Jerky",
+    "materials":["Raw Bug Meat","Rock Salt"],
+    "work":1,
+    "req":[["research","Food Preservation"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Kobold Jerky",
+    "materials":["Raw Kobold Meat","Rock Salt"],
+    "work":1,
+    "req":[["research","Food Preservation"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Ration",
+    "materials":["*vegetable","*raw_meat/Raw Bug Meat:2","Rock Salt"],
+    "work":1,
+    "req":[["research","Packaged Foods"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Hearty Stew",
+    "materials":["Potato","*raw_meat/Raw Bug Meat:2","Clay Bowl"],
+    "work":1,
+    "req":[["building","Kitchen"],["research","Culinary Arts"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Steakburger",
+    "materials":["*raw_meat/Raw Bug Meat:2","Bread/Hardtack"],
+    "work":1,
+    "req":[["building","Kitchen"],["research","Culinary Arts"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Mushroom Stir-Fry",
+    "materials":["Raw Mushroom","*mushroom","Rock Salt"],
+    "work":1,
+    "req":[["building","Kitchen"],["research","Culinary Arts"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Sushi",
+    "materials":["Raw Fish","Rice Ball","*veggie"],
+    "work":1,
+    "req":[["building","Kitchen"],["research","Culinary Arts"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Escargot",
+    "materials":["Snail:2","Goodberry Wine/Ghostberry Wine"],
+    "work":1,
+    "req":[["building","Kitchen"],["research","Culinary Arts"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Cheese Omelette",
+    "materials":["Cheese","Egg:2"],
+    "work":1,
+    "req":[["building","Kitchen"],["research","Culinary Arts"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Cake",
+    "materials":["Flour","Egg","Milk","Sweetroot"],
+    "work":1,
+    "req":[["building","Kitchen"],["research","Culinary Arts"]],
+    "tool":"cooking",
+    "skill":"cooking"
+  },{
+    "result":"Bubble Tea",
+    "liquid":true,
+    "amount":2,
+    "materials":["Bubblestool","Water"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Brewing"]],
+    "skill":"cooking"
+  },{
+    "result":"Blood",
+    "liquid":true,
+    "amount":3,
+    "materials":["Raw Meat"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Brewing"]],
+    "skill":"cooking"
+  },{
+    "result":"Kobold Blood",
+    "liquid":true,
+    "amount":3,
+    "materials":["Raw Kobold Meat"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Brewing"]],
+    "skill":"cooking"
+  },{
+    "result":"Earthen Ale",
+    "liquid":true,
+    "amount":2,
+    "materials":["Raw Mushroom","Sweetroot","Water"],
+    "work":2,
+    "req":[["building","Brewery"],["research","Brewing"]],
+    "skill":"cooking"
+  },{
+    "result":"Wheat Whisky",
+    "liquid":true,
+    "amount":2,
+    "materials":["Wheat:4","Sweetroot","Water"],
+    "work":2,
+    "req":[["building","Brewery"],["research","Brewing"],["building","Mill"],["research","Milling"]],
+    "skill":"cooking"
+  },{
+    "result":"Moss Bitter",
+    "liquid":true,
+    "materials":["Healmoss","Water"],
+    "work":1,
+    "req":[["building","Brewery"],["building","Mill"],["research","Brewing"],["research","Intermediate Medicine"]],
+    "skill":"cooking"
+  },{
+    "result":"Antibiotic Elixir",
+    "liquid":true,
+    "materials":["Bloodcap Mushroom","Moss Bitter"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Herblore"],["research","Intermediate Medicine"]],
+    "skill":"medicine"
+  },{
+    "result":"Death Waltz",
+    "liquid":true,
+    "amount":2,
+    "materials":["Grim Agaric","Sweetroot","Water"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Brewing"]],
+    "skill":"cooking"
+  },{
+    "result":"Blood Wine",
+    "liquid":true,
+    "materials":["Blood","Sweetroot","Water"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Brewing"]],
+    "skill":"cooking"
+  },{
+    "result":"Cold-Blooded Wine",
+    "liquid":true,
+    "materials":["Kobold Blood","Sweetroot","Water"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Brewing"]],
+    "skill":"cooking"
+  },{
+    "result":"Goodberry Wine",
+    "liquid":true,
+    "materials":["Goodberry:4","Sweetroot","Water"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Brewing"]],
+    "skill":"cooking"
+  },{
+    "result":"Ghostberry Wine",
+    "liquid":true,
+    "amount":2,
+    "materials":["Ghostberry:2","Sweetroot","Water:2"],
+    "work":2,
+    "req":[["building","Brewery"],["research","Brewing"]],
+    "skill":"cooking"
+  },{
+    "result":"Lesser Health Potion",
+    "liquid":true,
+    "materials":["Bloodcap Mushroom","Batwing","Water"],
+    "work":2,
+    "req":[["building","Brewery"],["research","Herblore"]],
+    "skill":"medicine"
+  },{
+    "result":"Lesser Mana Potion",
+    "liquid":true,
+    "materials":["Silkcap Mushroom","Batwing","Water"],
+    "work":2,
+    "req":[["building","Brewery"],["research","Herblore"]],
+    "skill":"medicine"
+  },{
+    "result":"Standard Health Potion",
+    "liquid":true,
+    "materials":["Bloodcap Mushroom","Sungazer","Water"],
+    "work":2,
+    "req":[["building","Brewery"],["research","Herblore"]],
+    "skill":"medicine"
+  },{
+    "result":"Standard Mana Potion",
+    "liquid":true,
+    "materials":["Silkcap Mushroom","Sungazer","Water"],
+    "work":2,
+    "req":[["building","Brewery"],["research","Herblore"]],
+    "skill":"medicine"
+  },{
+    "result":"Greater Health Potion",
+    "liquid":true,
+    "materials":["Bloodcap Mushroom","Devil's Eye","Blood"],
+    "work":2,
+    "req":[["building","Brewery"],["research","Herblore"]],
+    "skill":"medicine"
+  },{
+    "result":"Greater Mana Potion",
+    "liquid":true,
+    "materials":["Silkcap Mushroom","Devil's Eye","Manaqua"],
+    "work":2,
+    "req":[["building","Brewery"],["research","Herblore"]],
+    "skill":"medicine"
+  },{
+    "result":"Antidote",
+    "amount":2,
+    "liquid":true,
+    "materials":["Grim Agaric","Raw Mushroom","Water"],
+    "work":2,
+    "req":[["building","Brewery"],["research","Herblore"]],
+    "skill":"medicine"
+  },{
+    "result":"Calming Potion",
+    "amount":2,
+    "liquid":true,
+    "materials":["Bubblestool","Batwing","Water"],
+    "work":2,
+    "req":[["building","Brewery"],["research","Herblore"]],
+    "skill":"medicine"
+  },{
+    "result":"Bull's Strength",
+    "liquid":true,
+    "materials":["Raw Meat","Adren Leaf","Water"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Attribute Enhancements"]],
+    "skill":"medicine"
+  },{
+    "result":"Crane's Finesse",
+    "liquid":true,
+    "materials":["Feather","Adren Leaf","Water"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Attribute Enhancements"]],
+    "skill":"medicine"
+  },{
+    "result":"Camel's Endurance",
+    "liquid":true,
+    "materials":["Sand:2","Adren Leaf","Water"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Attribute Enhancements"]],
+    "skill":"medicine"
+  },{
+    "result":"Owl's Wit",
+    "liquid":true,
+    "materials":["Cobwebs:3","Adren Leaf","Water"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Attribute Enhancements"]],
+    "skill":"medicine"
+  },{
+    "result":"Hawk's Perception",
+    "liquid":true,
+    "materials":["Broccoli","Adren Leaf","Water"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Attribute Enhancements"]],
+    "skill":"medicine"
+  },{
+    "result":"Snake's Charm",
+    "liquid":true,
+    "materials":["Sweetroot","Adren Leaf","Water"],
+    "work":1,
+    "req":[["building","Brewery"],["research","Attribute Enhancements"]],
+    "skill":"medicine"
+  }
+]

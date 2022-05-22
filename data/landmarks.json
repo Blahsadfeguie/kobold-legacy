@@ -1,0 +1,289 @@
+{
+  "Spring":{
+    "name":"Spring",
+    "mark":"w",
+    "desc":"A bubbling spring of fresh water, culminating in a small pool.",
+    "level":[0,-1],
+    "weight":30,
+    "foragechance":10,
+    "forage":[["Ghostberry",1,5,10]],
+    "liquid_source":"Water"
+  },"Hot Spring":{
+    "name":"Hot Spring",
+    "mark":"h",
+    "desc":"A pool of steaming hot water, highly sought after by kobolds as a place of much-needed respite from the stress of survival. `!use` it for 1 AP to cure the Stressed condition and become Relaxed.",
+    "level":[0,-1],
+    "weight":15,
+    "foragechance":10,
+    "forage":[["Ghostberry",1,5,10]],
+    "liquid_source":"Water"
+  },"Artificial Hot Spring":{
+    "name":"Artificial Hot Spring",
+    "mark":"h",
+    "desc":"A kobold-made pool of water made hot indefinitely through the power of magic. `!use` it for 1 AP to cure the Stressed condition and become Relaxed.",
+    "level":[-1,-1],
+    "weight":0
+  },"Mana Fountain":{
+    "name":"Mana Fountain",
+    "mark":"f",
+    "desc":"An ever-flowing wellspring of manaqua. It's unknown how these occur, but they're a lifesaver for wandering mages.",
+    "level":[1,-1],
+    "weight":5,
+    "liquid_source":"Manaqua"
+  },"Sand Deposit":{
+    "name":"Sand Deposit",
+    "mark":"s",
+    "desc":"Part of the wall and/or floor consists of a fine granular mineral.",
+    "level":[0,-1],
+    "weight":30,
+    "liquid_source":"Sand"
+  },"Spider Nest":{
+    "name":"Spider Nest",
+    "mark":"S",
+    "stealth_bonus":5,
+    "desc":"Full of fresh webs that cover entire passageways. Their owners can't be far...",
+    "spawns":["Wolf Spider"],
+    "level":[1,-1],
+    "forage":[["Cobwebs",15,20,10],["Desiccated Ant Corpse",1,1,1]],
+    "weight":10,
+    "foragechance":50
+  },"Ant Nest":{
+    "name":"Ant Nest",
+    "mark":"A",
+    "desc":"An entrance to a sprawling, maze-like cavern where ants make their home.",
+    "spawns":["Worker Ant","Soldier Ant"],
+    "level":[0,-1],
+    "dungeon":"Ant Nest",
+    "weight":2
+  },"Abandoned Ant Nest":{
+    "name":"Abandoned Ant Nest",
+    "mark":"a",
+    "desc":"Ants used to make their home here, but the tunnels are in disrepair. They've all been gone for quite some time, but they've left their nectar behind...",
+    "level":[-1,-1],
+    "weight":0,
+    "liquid_source":"Nectar"
+  },"Nectar Reservoir":{
+    "name":"Nectar Reservoir",
+    "mark":"N",
+    "desc":"A stash of nectar created by ants. Maybe you can sneak a sip...",
+    "level":[-1,-1],
+    "weight":0,
+    "liquid_source":"Nectar"
+  },"Goblin Camp":{
+    "name":"Goblin Camp",
+    "mark":"G",
+    "stealth_bonus":-20,
+    "desc":"The goblins have set up an encampment here from which they can launch raids. This is our opportunity to deal with them.",
+    "spawns":["Goblin"],
+    "faction":"Goblin",
+    "level":[0,1],
+    "dungeon":"Goblin Camp",
+    "weight":2
+  },"Human Castle":{
+    "name":"Human Castle",
+    "mark":"C",
+    "stealth_bonus":-20,
+    "desc":"A castle belonging to humans. A lord or lady resides here and plans out raids against 'monsters' like us. We might be able to do something about that.",
+    "spawns":["Human Knight"],
+    "faction":"Human",
+    "level":[0,0],
+    "dungeon":"Human Castle",
+    "weight":2
+  },"Farmlands":{
+    "name":"Farmlands",
+    "mark":"F",
+    "stealth_bonus":-10,
+    "desc":"Lush, expansive fields home to a community of human farmers. Our own farms look pitiful by comparison...",
+    "spawns":["Human Peasant"],
+    "faction":"Human",
+    "level":[0,0],
+    "weight":4
+  },"Elven Sanctuary":{
+    "name":"Elven Sanctuary",
+    "mark":"E",
+    "stealth_bonus":-20,
+    "desc":"A complex built by elves to honor and co-exist with nature, and plot against those who would desecrate it. We can engage with their leaders here.",
+    "spawns":["Elf Ranger"],
+    "faction":"Elf",
+    "level":[0,0],
+    "weight":2
+  },"Dwarven Mountainhome":{
+    "name":"Dwarven Mountainhome",
+    "mark":"D",
+    "stealth_bonus":-20,
+    "desc":"A sprawling network of tunnels built into a mountain by dwarves. They don't take kindly to sharing minerals, but maybe we can reach an 'agreement'...",
+    "spawns":["Dwarf Guard"],
+    "faction":"Dwarf",
+    "level":[0,0],
+    "weight":2
+  },"Gnoll Den":{
+    "name":"Gnoll Den",
+    "mark":"N",
+    "stealth_bonus":-20,
+    "desc":"Home to gnolls, the most brutal and savage of underground-dwellers. They'll stomp us out if we don't stomp them first.",
+    "spawns":["Gnoll"],
+    "faction":"Gnoll",
+    "level":[2,5],
+    "weight":2
+  },"Underground Brook":{
+    "name":"Underground Brook",
+    "mark":"F",
+    "desc":"A source of flowing fresh water. You can occasionally see things swimming around in it.",
+    "level":[1,-1],
+    "fish":true,
+    "weight":25,
+    "foragechance":10,
+    "forage":[["Ghostberry",1,5,10]],
+    "liquid_source":"Water"
+  },"River":{
+    "name":"River",
+    "mark":"R",
+    "desc":"A mighty stream of flowing water, home to many kinds of fish.",
+    "level":[0,0],
+    "fish":true,
+    "weight":15,
+    "liquid_source":"Water"
+  },"Lake":{
+    "name":"Lake",
+    "mark":"L",
+    "desc":"A sizable body of water. Fish live here.",
+    "level":[0,0],
+    "fish":true,
+    "weight":20,
+    "liquid_source":"Water"
+  },"Mushroom Haven":{
+    "name":"Mushroom Haven",
+    "mark":"M",
+    "desc":"A damp section of cave, the walls are lined with mushrooms of all sorts.",
+    "spawns":["Fuzzshroom"],
+    "spawnchance":50,
+    "level":[1,-1],
+    "forage":[["Raw Mushroom",1,1,40],["Bloodcap Mushroom",1,1,20],["Bubblestool",1,1,20],["Silkcap Mushroom",1,1,15],["Grim Agaric",1,1,15]],
+    "weight":15,
+    "foragechance":75
+  },"Overgrown Cavern":{
+    "name":"Overgrown Cavern",
+    "mark":"P",
+    "stealth_bonus":5,
+    "desc":"Sunlight trickles down through small holes in the ceiling, giving rise to vines and various greenery.",
+    "level":[1,-1],
+    "forage":[["Fiber",10,20,40],["Healmoss",1,1,15],["Ghostberry",1,5,15],["Sweetroot",1,1,20],["Batwing",1,1,10],["Sungazer",1,1,5]],
+    "weight":15,
+    "foragechance":75
+  },"Ruined Den":{
+    "name":"Ruined Den",
+    "mark":"X",
+    "stealth_bonus":5,
+    "desc":"The remains of a kobold tribe that was wiped out. Mostly picked clean, but there may be something of use.",
+    "level":[1,1],
+    "forage":[["Bones",2,20,30],["Stone Spear",1,1,15],["Stone Knife",1,1,15],["Sling",1,1,15],["Marble Pebble",10,50,40],["Ration",1,1,5],["Stone Block",1,1,20]],
+    "weight":20,
+    "foragechance":50
+  },"Road":{
+    "name":"Road",
+    "mark":"+",
+    "desc":"A smoothed and straightened stretch of land/tunnel. Moving through here is easier.",
+    "level":[-1,-1],
+    "weight":0,
+    "move_cost":0.8
+  },"Paved Road":{
+    "name":"Paved Road",
+    "mark":"+",
+    "desc":"A road that has been paved and smoothed such that movement through here is streamlined.",
+    "level":[-1,-1],
+    "weight":0,
+    "move_cost":0.5
+  },"Quarry":{
+    "name":"Quarry",
+    "mark":"U",
+    "stealth_bonus":5,
+    "desc":"A large hollowed-out section of cave, exposing rocks and possibly other minerals.",
+    "level":[-1,-1],
+    "weight":0,
+    "forage":[["Stone Chunk",1,1,30],["Stone Pebble",20,50,25],["Marble Chunk",1,1,5],["Marble Pebble",20,50,5],["Coal",1,5,3],["Rock Salt",1,5,3],["Copper Ore",1,1,3],["Tin Ore",1,1,3]],
+    "foragechance":80
+  },"Aqueduct":{
+    "name":"Aqueduct",
+    "mark":"=",
+    "desc":"A carefully-dug and -housed channel through which water can flow from this source to a distant den.",
+    "level":[-1,-1],
+    "weight":0
+  },"Bracing":{
+    "name":"Bracing",
+    "mark":"O",
+    "desc":"Interlocking pillars and blocks braced against the cavern walls and ceiling, increasing stability.",
+    "level":[-1,-1],
+    "weight":0
+  },"Warding Lantern":{
+    "name":"Warding Lantern",
+    "mark":"I",
+    "desc":"A lantern made from enchanted topaz. A strong abjuration field helps keep creatures away.",
+    "level":[-1,-1],
+    "weight":0
+  },"Stairs Up":{
+    "name":"Stairs Up",
+    "mark":"<",
+    "desc":"A staircase leading up to the previous level.",
+    "level":[-1,-1],
+    "weight":0
+  },"Stairs Down":{
+    "name":"Stairs Down",
+    "mark":">",
+    "desc":"A staircase leading down to the next level.",
+    "level":[-1,-1],
+    "weight":0
+  },"Dungeon Exit":{
+    "name":"Dungeon Exit",
+    "mark":"X",
+    "desc":"The way out of the dungeon.",
+    "level":[-1,-1],
+    "weight":0
+  },"Farm Fencing":{
+    "name":"Farm Fencing",
+    "mark":"H",
+    "desc":"A sturdy fence wrapped around the whole farm. Doesn't keep everything out, but the farm will last longer. Might be destroyed on month change.",
+    "level":[-1,-1],
+    "weight":0
+  },"Scarecrow":{
+    "name":"Scarecrow",
+    "mark":"I",
+    "desc":"A straw kobold, meant to intimidate critters into staying away. Has a chance to prevent farm deterioration. Might be destroyed on month change.",
+    "level":[-1,-1],
+    "weight":0
+  },"Pasture":{
+    "name":"Pasture",
+    "mark":"H",
+    "desc":"A large fenced-in area where tamed animals can roam. Comes with a barn/coop which contains facilities for animal care and harvesting product.",
+    "level":[-1,-1],
+    "weight":0
+  },"Mushroom Farm":{
+    "name":"Mushroom Farm",
+    "farm":true,
+    "mark":"^",
+    "desc":"A kobold-made farm optimized for growing mushrooms. Well, I say 'optimized', it's really just a clear open space of muddy cavern.",
+    "level":[-1,-1],
+    "weight":0
+  },"Subterranean Farm":{
+    "name":"Subterranean Farm",
+    "farm":true,
+    "mark":"^",
+    "desc":"A kobold-made farm optimized for growing underground plants.",
+    "level":[-1,-1],
+    "weight":0
+  },"Surface Farm":{
+    "name":"Surface Farm",
+    "farm":true,
+    "mark":"^",
+    "desc":"A kobold-made farm for growing surface crops. It took us a while to figure this out and we still don't perfectly understand it, but it works.",
+    "level":[-1,-1],
+    "weight":0
+  },"Deep Farm":{
+    "name":"Deep Farm",
+    "farm":true,
+    "mark":"^",
+    "desc":"A kobold-made farm for growing crops found deep underground.",
+    "level":[-1,-1],
+    "weight":0
+  }
+}
+    

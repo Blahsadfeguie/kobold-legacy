@@ -1,0 +1,2934 @@
+[
+  {
+    "name":"Default",
+    "type":"none",
+    "cat":[],
+    "desc":"You should never see this.",
+    "value":0,
+    "minelevel":0,
+    "chance":0,
+    "veinsize":1,
+    "school":"none",
+    "dmg":[0,0,0],
+    "dmgtype":"bludgeoning",
+    "toolpower":0,
+    "tool":"none",
+    "ammunition":"default",
+    "magic":false,
+    "magic_level":0,
+    "stack":1,
+    "ap":0,
+    "hp":0,
+    "mp":0,
+    "heat":0,
+    "add_trait":[],
+    "del_trait":[],
+    "skill_boost":{},
+    "yield":[],
+    "size":1,
+    "durability":0,
+    "noquality":false,
+    "sealable":true,
+    "foreign":false,
+    "ac":0,
+    "gain":[],
+    "heavy":false,
+    "twohands":false,
+    "eqslot":"none",
+    "liquid_capacity":0,
+    "inv_size":0,
+    "perishable":false,
+    "rot_into":"none",
+    "forage":{
+      "level":[-1,-1],
+      "weight":0,
+      "amount":[0,0]
+    },
+    "farming":{
+      "type":"None",
+      "prog":0,
+      "diff":0
+    },"recycle":{
+      "into":[],
+      "chance":0,
+      "req":[]
+    }
+  },{
+    "name":"Wooden Log",
+    "type":"material",
+    "cat":["fuel"],
+    "desc":"Brown and rough, not quite stone but it's a bit more reliable and easy to work with.",
+    "foreign":true,
+    "forage":{
+      "level":[0,0],
+      "weight":5
+    }
+  },{
+    "name":"Yew Log",
+    "type":"material",
+    "cat":["fuel"],
+    "desc":"A log from a Yew tree. It can be used in construction like any other, but it might have other uses...",
+    "foreign":true
+  },{
+    "name":"Wooden Plank",
+    "type":"material",
+    "value":10,
+    "stack":4,
+    "noquality":true,
+    "foreign":true,
+    "desc":"A log that has been diced and smoothed to a pleasant degree."
+  },{
+    "name":"Wooden Block",
+    "type":"material",
+    "cat":["block"],
+    "value":20,
+    "noquality":true,
+    "foreign":true,
+    "desc":"Some wood that has been nailed together into an ideal shape for building."
+  },{
+    "name":"Wooden Stick",
+    "type":"material",
+    "cat":["shaft"],
+    "noquality":true,
+    "foreign":true,
+    "desc":"A hefty wooden stick. Something primal within you urges you to swing this around.",
+    "stack":20,
+    "forage":{
+      "level":[0,0],
+      "amount":[1,5],
+      "weight":15
+    }
+  },{
+    "name":"Stone Chunk",
+    "type":"material",
+    "desc":"A nice big chunk of stone.",
+    "forage":{
+      "level":[1,-1],
+      "weight":20
+    }
+  },{
+    "name":"Granite Chunk",
+    "type":"material",
+    "value":10,
+    "noquality":true,
+    "desc":"A dense, reddish stone. Kobolds recognize it as one of the most reliable building materials available.",
+    "forage":{
+      "level":[1,5],
+      "weight":5
+    },
+    "minelevel":1,
+    "chance":12
+  },{
+    "name":"Clay",
+    "type":"material",
+    "value":10,
+    "stack":10,
+    "noquality":true,
+    "desc":"A soil with unique properties; when wet it becomes malleable, and then with heat it hardens. This has plenty of applications.",
+    "forage":{
+      "level":[1,5],
+      "weight":5
+    },
+    "minelevel":1,
+    "chance":15
+  },{
+    "name":"Stone Block",
+    "type":"material",
+    "cat":["block"],
+    "value":5,
+    "noquality":true,
+    "desc":"A big slab of stone, smoothed and shaped for construction.",
+    "recycle":{
+      "into":["Stone Chunk"],
+      "chance":75,
+      "req":[["tool","chisel"]]
+    }
+  },{
+    "name":"Granite Block",
+    "type":"material",
+    "cat":["block"],
+    "value":10,
+    "noquality":true,
+    "desc":"A slab of granite. Its density makes it ideal for construction."
+  },{
+    "name":"Clay Brick",
+    "type":"material",
+    "cat":["block"],
+    "value":10,
+    "noquality":true,
+    "desc":"A brick of hardened clay, great for construction."
+  },{
+    "name":"Coal",
+    "type":"material",
+    "value":20,
+    "stack":10,
+    "cat":["fuel"],
+    "desc":"A clump of condensed, combustible carbon.",
+    "minelevel":1,
+    "chance":15
+  },{
+    "name":"Charcoal",
+    "type":"material",
+    "foreign":true,
+    "value":20,
+    "stack":10,
+    "cat":["fuel"],
+    "desc":"A clump of carbon crafted by cremating a c... piece of wood."
+  },{
+    "name":"Rock Salt",
+    "type":"material",
+    "value":20,
+    "stack":20,
+    "desc":"A white, brittle substance. Leaves a funny taste in the mouth.",
+    "minelevel":1,
+    "chance":15
+  },{
+    "name":"Stone Tablet",
+    "type":"utility",
+    "desc":"A thin slab of stone which is ideal for writing on."
+  },{
+    "name":"Thesis",
+    "type":"utility",
+    "desc":"An expert has written out instructions for a technology in a language that even the common folk can understand. Use it to make this technology available for your tribe, provided you have the requirements."
+  },{
+    "name":"Crude Map",
+    "type":"utility",
+    "desc":"A stone tablet with rough etchings of the underground. With this in your inventory, you'll automatically update the map when you explore a new tile. Use it to view the map.",
+    "recycle":{
+      "into":["Stone Tablet"],
+      "chance":90,
+      "req":[["tool","chisel"]]
+    }
+  },{
+    "name":"Jade",
+    "type":"material",
+    "stack":5,
+    "value":15,
+    "desc":"A greenish semi-precious stone.",
+    "minelevel":1,
+    "chance":8,
+    "veinsize":4
+  },{
+    "name":"Topaz",
+    "type":"gem",
+    "cat":["gem"],
+    "school":"abjuration",
+    "stack":5,
+    "value":25,
+    "desc":"A yellow gemstone. Holding it makes you feel safe."
+  },{
+    "name":"Ruby",
+    "type":"gem",
+    "cat":["gem"],
+    "school":"evocation",
+    "stack":5,
+    "value":25,
+    "desc":"A red gemstone. Holding it makes you feel powerful."
+  },{
+    "name":"Quartz",
+    "type":"gem",
+    "cat":["gem"],
+    "school":"conjuration",
+    "stack":5,
+    "value":25,
+    "desc":"A translucent gemstone. Holding it makes you feel creative."
+  },{
+    "name":"Onyx",
+    "type":"gem",
+    "cat":["gem"],
+    "school":"necromancy",
+    "stack":5,
+    "value":25,
+    "desc":"A black gemstone. Holding it makes you feel grim."
+  },{
+    "name":"Sapphire",
+    "type":"gem",
+    "cat":["gem"],
+    "school":"transmutation",
+    "stack":5,
+    "value":25,
+    "desc":"A blue gemstone. Holding it makes you feel adventurous."
+  },{
+    "name":"Amethyst",
+    "type":"gem",
+    "cat":["gem"],
+    "school":"divination",
+    "stack":5,
+    "value":25,
+    "desc":"A purple gemstone. Holding it makes you feel wise."
+  },{
+    "name":"Emerald",
+    "type":"gem",
+    "cat":["gem"],
+    "school":"enchantment",
+    "stack":5,
+    "value":25,
+    "desc":"A green gemstone. Holding it makes you feel sleepy."
+  },{
+    "name":"Opal",
+    "type":"gem",
+    "cat":["gem"],
+    "school":"illusion",
+    "stack":5,
+    "value":25,
+    "desc":"A white gemstone. Holding it makes you feel mysterious."
+  },{
+    "name":"Copper Ore",
+    "type":"material",
+    "value":10,
+    "noquality":true,
+    "desc":"A slab of unrefined copper.",
+    "minelevel":1,
+    "chance":10
+  },{
+    "name":"Copper Ingot",
+    "type":"material",
+    "cat":["ingot"],
+    "value":30,
+    "desc":"A bar of pure orange metal. Compared to stone, this is significantly tougher."
+  },{
+    "name":"Copper Mechanism",
+    "type":"material",
+    "value":60,
+    "desc":"A collection of gears and rods which allow for some intricate design."
+  },{
+    "name":"Tin Ore",
+    "type":"material",
+    "value":12,
+    "noquality":true,
+    "desc":"A slab of unrefined tin.",
+    "minelevel":1,
+    "chance":10
+  },{
+    "name":"Tin Ingot",
+    "type":"material",
+    "cat":["ingot"],
+    "value":35,
+    "desc":"A bar of pure silvery metal. Not terribly useful just yet, but it has potential."
+  },{
+    "name":"Silver Ore",
+    "type":"material",
+    "value":30,
+    "noquality":true,
+    "desc":"A slab of unrefined silver.",
+    "minelevel":3,
+    "chance":5
+  },{
+    "name":"Silver Ingot",
+    "type":"material",
+    "cat":["ingot"],
+    "value":90,
+    "desc":"A bar of pure silver metal. Widely considered by kobolds to be the shiniest (and therefore best) metal."
+  },{
+    "name":"Gold Ore",
+    "type":"material",
+    "value":50,
+    "noquality":true,
+    "desc":"A slab of unrefined gold.",
+    "minelevel":4,
+    "chance":5
+  },{
+    "name":"Gold Ingot",
+    "type":"material",
+    "cat":["ingot"],
+    "value":150,
+    "desc":"A bar of pure yellow metal. It's as valuable as it is heavy."
+  },{
+    "name":"Bronze Ingot",
+    "type":"material",
+    "cat":["ingot"],
+    "value":80,
+    "cat":["hardmetal"],
+    "desc":"An alloy of copper and tin, it's much tougher than both of its components."
+  },{
+    "name":"Iron Ore",
+    "type":"material",
+    "value":20,
+    "noquality":true,
+    "foreign":true,
+    "desc":"A slab of unrefined iron.",
+    "minelevel":2,
+    "chance":10
+  },{
+    "name":"Iron Ingot",
+    "type":"material",
+    "cat":["ingot"],
+    "value":60,
+    "cat":["hardmetal"],
+    "foreign":true,
+    "desc":"A bar of pure gray metal. It's heavy and hard."
+  },{
+    "name":"Steel Ingot",
+    "type":"material",
+    "cat":["ingot"],
+    "value":100,
+    "cat":["hardmetal"],
+    "foreign":true,
+    "desc":"A bar of light gray metal. It's smooth and shiny."
+  },{
+    "name":"Marble Chunk",
+    "type":"material",
+    "value":20,
+    "noquality":true,
+    "desc":"A chunk of marble. Could be made prettier.",
+    "minelevel":1,
+    "chance":20
+  },{
+    "name":"Raw Manacite",
+    "type":"material",
+    "cat":["mana_source"],
+    "value":50,
+    "noquality":true,
+    "desc":"A raw gemstone with a subtle blue glow. Someone reasonably skilled in arcana could bring out its potential.",
+    "minelevel":1,
+    "chance":5,
+    "veinsize":4
+  },{
+    "name":"Manacite",
+    "type":"material",
+    "cat":["mana_source"],
+    "school":"open",
+    "value":80,
+    "desc":"A well-sculpted specimen of Manacite. With its impurities stripped away, it glows a brilliant baby blue. It seems to gravitate towards your forehead..."
+  },{
+    "name":"Sunglasses",
+    "type":"armor",
+    "eqslot":"acc",
+    "value":120,
+    "desc":"A pair of kobold-sized lenses that will fit over your eyes and shield them from the harshness of the sun. Use them to put them on. !unshade to take them off."
+  },{
+    "name":"Inert Mana Cell",
+    "type":"utility",
+    "value":120,
+    "magic":true,
+    "desc":"Mana-attuned jade with a tin housing, designed to store mana for later use. This one is totally spent."
+  },{
+    "name":"Charged Mana Cell",
+    "type":"utility",
+    "value":120,
+    "magic":true,
+    "desc":"Mana-attuned jade with a tin housing, designed to store mana for later use. This one is full."
+  },{
+    "name":"Crystal Ball",
+    "type":"utility",
+    "value":120,
+    "magic":true,
+    "magic_level":5,
+    "desc":"A glass orb filled with mana. Looking into it invokes visions of a distant place..."
+  },{
+    "name":"Flare Wand",
+    "type":"utility",
+    "value":70,
+    "magic":true,
+    "magic_level":2,
+    "desc":"An enchanted jade rod with bands of coal on either end. Use it to emit sparks that travel through the caverns and alert all nearby dens to your exact location."
+  },{
+    "name":"Marble Block",
+    "type":"material",
+    "cat":["block"],
+    "value":40,
+    "noquality":true,
+    "desc":"A big slab of smooth, pretty marble.",
+    "recycle":{
+      "into":["Marble Chunk"],
+      "chance":75,
+      "req":[["tool","chisel"]]
+    }
+  },{
+    "name":"Silk Parasol",
+    "desc":"A great way to shield yourself from the harshness of the surface world. Also makes for a good beatstick in skilled hands.",
+    "type":"finesse",
+    "value":75,
+    "dmg":[4,2,0],
+    "dmgtype":"bludgeoning",
+    "durability":30
+  },{
+    "name":"Stone Spear",
+    "desc":"A crude but effective melee weapon.",
+    "type":"melee",
+    "tool":"fishing",
+    "toolpower":3,
+    "value":10,
+    "dmg":[1,6,0],
+    "dmgtype":"piercing",
+    "durability":30
+  },{
+    "name":"Stone Axe",
+    "desc":"Featuring a broad blade that is totally useless against stone, but is fantastic against cylindrical objects.",
+    "type":"melee",
+    "value":15,
+    "dmg":[1,6,0],
+    "dmgtype":"slashing",
+    "tool":"woodcutting",
+    "toolpower":3,
+    "durability":30
+  },{
+    "name":"Stone Pick",
+    "desc":"Digging made easy. No more punching rocks!",
+    "type":"melee",
+    "value":10,
+    "dmg":[1,4,0],
+    "dmgtype":"piercing",
+    "tool":"mining",
+    "toolpower":2,
+    "durability":15
+  },{
+    "name":"Test Hammer",
+    "desc":"You should not have this.",
+    "type":"melee",
+    "foreign":true,
+    "value":10,
+    "dmg":[1,4,0],
+    "dmgtype":"bludgeoning",
+    "tool":"construction",
+    "toolpower":2,
+    "durability":3
+  },{
+    "name":"Stone Hammer",
+    "desc":"This should make it a little easier to build things.",
+    "type":"melee",
+    "value":10,
+    "dmg":[1,4,0],
+    "dmgtype":"bludgeoning",
+    "tool":"construction",
+    "toolpower":2,
+    "durability":15
+  },{
+    "name":"Stone Knife",
+    "desc":"The perfect tool for disassembling a carcass.",
+    "type":"finesse",
+    "cat":["knife"],
+    "value":10,
+    "dmg":[1,4,0],
+    "dmgtype":"piercing",
+    "tool":"butchering",
+    "toolpower":2,
+    "durability":15
+  },{
+    "name":"Stone Chisel",
+    "desc":"For more precise stone work.",
+    "type":"finesse",
+    "value":10,
+    "dmg":[1,3,0],
+    "dmgtype":"piercing",
+    "tool":"chisel",
+    "toolpower":2,
+    "durability":20
+  },{
+    "name":"Stone Hoe",
+    "desc":"Want to streamline the farming process? Hoe about giving this a shot?",
+    "type":"melee",
+    "twohands":true,
+    "value":12,
+    "dmg":[1,5,0],
+    "dmgtype":"bludgeoning",
+    "tool":"farming",
+    "toolpower":2,
+    "durability":15
+  },{
+    "name":"Stone Pan",
+    "desc":"A more efficient way to cook food than impaling with a stick and holding it over an open flame.",
+    "type":"melee",
+    "value":12,
+    "dmg":[1,4,0],
+    "dmgtype":"bludgeoning",
+    "tool":"cooking",
+    "toolpower":2,
+    "durability":20
+  },{
+    "name":"Clay Pan",
+    "desc":"More durable (and cleaner) than stone, a great tool for any aspiring chef to carry around.",
+    "type":"melee",
+    "value":24,
+    "dmg":[1,4,0],
+    "dmgtype":"bludgeoning",
+    "tool":"cooking",
+    "toolpower":4,
+    "durability":40
+  },{
+    "name":"Jade Spear",
+    "desc":"A spear with a tip of brittle but sharp jade. It's a bit more effective at the cost of durability.",
+    "type":"melee",
+    "tool":"fishing",
+    "toolpower":4,
+    "value":25,
+    "dmg":[1,8,0],
+    "dmgtype":"piercing",
+    "durability":20
+  },{
+    "name":"Jade Knife",
+    "desc":"A knife with a sharper edge than your average stone, but it won't last as long.",
+    "type":"finesse",
+    "cat":["knife"],
+    "value":25,
+    "dmg":[1,6,0],
+    "dmgtype":"piercing",
+    "tool":"butchering",
+    "toolpower":4,
+    "durability":12
+  },{
+    "name":"Granite Spear",
+    "desc":"It's not as sharp, but it'll serve you long and well.",
+    "type":"melee",
+    "tool":"fishing",
+    "toolpower":3,
+    "value":30,
+    "dmg":[1,6,-1],
+    "dmgtype":"piercing",
+    "durability":90
+  },{
+    "name":"Granite Axe",
+    "desc":"Economical, which is good for a tool that is the polar opposite of ecological.",
+    "type":"melee",
+    "value":45,
+    "dmg":[1,6,-1],
+    "dmgtype":"slashing",
+    "tool":"woodcutting",
+    "toolpower":3,
+    "durability":90
+  },{
+    "name":"Granite Pick",
+    "desc":"This pick is ready to prove which rock is king!",
+    "type":"melee",
+    "value":30,
+    "dmg":[1,4,-1],
+    "dmgtype":"piercing",
+    "tool":"mining",
+    "toolpower":2,
+    "durability":45
+  },{
+    "name":"Granite Hammer",
+    "desc":"A solid core makes this a reliable building tool.",
+    "type":"melee",
+    "value":30,
+    "dmg":[1,4,1],
+    "dmgtype":"bludgeoning",
+    "tool":"construction",
+    "toolpower":2,
+    "durability":45
+  },{
+    "name":"Granite Knife",
+    "desc":"It's not as sharp, but don't take it for granite.",
+    "cat":["knife"],
+    "type":"finesse",
+    "value":30,
+    "dmg":[1,4,-1],
+    "dmgtype":"piercing",
+    "tool":"butchering",
+    "toolpower":2,
+    "durability":45
+  },{
+    "name":"Granite Chisel",
+    "desc":"Not as pointy as common stone, but its rigidity makes it just as effective for carving it.",
+    "type":"finesse",
+    "value":30,
+    "dmg":[1,3,-1],
+    "dmgtype":"piercing",
+    "tool":"chisel",
+    "toolpower":2,
+    "durability":60
+  },{
+    "name":"Granite Hoe",
+    "desc":"The farmer's best friend. With this in your hands, you won't want for much when you're toiling on the fields.",
+    "type":"melee",
+    "twohands":true,
+    "value":36,
+    "dmg":[1,5,1],
+    "dmgtype":"bludgeoning",
+    "tool":"farming",
+    "toolpower":2,
+    "durability":45
+  },{
+    "name":"Granite Pan",
+    "desc":"Heavy as sin, but it can take the heat much better.",
+    "type":"melee",
+    "value":36,
+    "dmg":[1,4,1],
+    "dmgtype":"bludgeoning",
+    "tool":"cooking",
+    "toolpower":2,
+    "durability":60
+  },{
+    "name":"Copper Spear",
+    "desc":"Pointier and more durable than its stone counterpart, this is a much more reliable means of attack.",
+    "type":"melee",
+    "value":40,
+    "dmg":[1,6,2],
+    "dmgtype":"piercing",
+    "tool":"fishing",
+    "toolpower":6,
+    "durability":80,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Copper Axe",
+    "desc":"If you plan on doing any serious deforesting, this is the tool for you.",
+    "cat":["big_blade"],
+    "type":"melee",
+    "value":50,
+    "dmg":[1,6,2],
+    "dmgtype":"slashing",
+    "tool":"woodcutting",
+    "toolpower":6,
+    "durability":80,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Copper Shortsword",
+    "desc":"Much shorter range than the spear, but lighter and easier to maneuver in combat.",
+    "type":"finesse",
+    "value":50,
+    "dmg":[1,6,2],
+    "dmgtype":"slashing",
+    "durability":80,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Copper Longsword",
+    "desc":"The longer the blade, the more of the enemy you can hit with it. Ah, the wonders of martial science.",
+    "cat":["big_blade"],
+    "type":"melee",
+    "value":60,
+    "dmg":[1,8,2],
+    "dmgtype":"slashing",
+    "durability":80,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Copper Maul",
+    "desc":"Big and heavy, capable of dealing a lot of damage if you can hit just right with it.",
+    "type":"melee",
+    "twohands":true,
+    "value":75,
+    "dmg":[1,12,0],
+    "dmgtype":"bludgeoning",
+    "durability":100,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Copper Pick",
+    "desc":"It sure is nice to have a pickaxe that doesn't chip on a rough stone wall.",
+    "type":"melee",
+    "value":40,
+    "dmg":[1,4,2],
+    "dmgtype":"piercing",
+    "tool":"mining",
+    "toolpower":5,
+    "durability":50,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Copper Hammer",
+    "desc":"Less likely to shatter when driving in a nail.",
+    "type":"melee",
+    "value":40,
+    "dmg":[1,4,2],
+    "dmgtype":"bludgeoning",
+    "tool":"construction",
+    "toolpower":5,
+    "durability":50,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Copper Knife",
+    "desc":"The much sharper and more consistent edge allows for more precision when butchering.",
+    "cat":["knife"],
+    "type":"finesse",
+    "value":40,
+    "dmg":[1,4,2],
+    "dmgtype":"piercing",
+    "tool":"butchering",
+    "toolpower":5,
+    "durability":50,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Copper Chisel",
+    "desc":"Chips away the rock and ensures that it doesn't chip back.",
+    "type":"finesse",
+    "value":40,
+    "dmg":[1,3,2],
+    "dmgtype":"piercing",
+    "tool":"chisel",
+    "toolpower":5,
+    "durability":60,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Copper Hoe",
+    "desc":"With this bad boy, you can farm till the break of dawn! What's dawn, you ask? No idea.",
+    "type":"melee",
+    "twohands":true,
+    "value":40,
+    "dmg":[1,5,2],
+    "dmgtype":"bludgeoning",
+    "tool":"farming",
+    "toolpower":5,
+    "durability":50,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Copper Pan",
+    "desc":"Smooth metal which gets hot very quickly and evenly, reducing cooking times and making better dishes overall.",
+    "type":"melee",
+    "value":40,
+    "dmg":[1,4,2],
+    "dmgtype":"bludgeoning",
+    "tool":"cooking",
+    "toolpower":6,
+    "durability":60,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Bronze Spear",
+    "desc":"On a quest to receive the longest and pointiest object, possibly out of some deep-seated desire for adequacy, but who's counting?",
+    "type":"melee",
+    "value":90,
+    "dmg":[1,6,4],
+    "dmgtype":"piercing",
+    "tool":"fishing",
+    "toolpower":8,
+    "durability":100,
+    "recycle":{
+      "into":["Bronze Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Bronze Axe",
+    "desc":"Come here, let me axe you a question: do you like my item descriptions? I wrote them myself.",
+    "cat":["big_blade"],
+    "type":"melee",
+    "value":100,
+    "dmg":[1,6,4],
+    "dmgtype":"slashing",
+    "tool":"woodcutting",
+    "toolpower":8,
+    "durability":100,
+    "recycle":{
+      "into":["Bronze Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Bronze Shortsword",
+    "desc":"A fine compromise between easy to use and painful to get hit with.",
+    "type":"finesse",
+    "value":100,
+    "dmg":[1,6,4],
+    "dmgtype":"slashing",
+    "durability":100,
+    "recycle":{
+      "into":["Bronze Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Bronze Longsword",
+    "desc":"The answer: use a blade. And if that don't work, use more blade.",
+    "cat":["big_blade"],
+    "type":"melee",
+    "value":120,
+    "dmg":[1,8,4],
+    "dmgtype":"slashing",
+    "durability":100,
+    "recycle":{
+      "into":["Bronze Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Bronze Maul",
+    "desc":"Induces serious blunt force trauma, especially to the noggin. Sometimes bronze really does trump brains.",
+    "type":"melee",
+    "twohands":true,
+    "value":150,
+    "dmg":[1,12,2],
+    "dmgtype":"bludgeoning",
+    "durability":120,
+    "recycle":{
+      "into":["Bronze Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Bronze Pick",
+    "desc":"It might not be your first pick, but it'll get you through.",
+    "type":"melee",
+    "value":80,
+    "dmg":[2,4,0],
+    "dmgtype":"piercing",
+    "tool":"mining",
+    "toolpower":7,
+    "durability":70,
+    "recycle":{
+      "into":["Bronze Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Bronze Hammer",
+    "desc":"Hamrr.",
+    "type":"melee",
+    "value":80,
+    "dmg":[2,4,0],
+    "dmgtype":"bludgeoning",
+    "tool":"construction",
+    "toolpower":7,
+    "durability":70,
+    "recycle":{
+      "into":["Bronze Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Bronze Knife",
+    "desc":"As far as knives go, I'd say this one takes third place.",
+    "cat":["knife"],
+    "type":"finesse",
+    "value":80,
+    "dmg":[2,4,0],
+    "dmgtype":"piercing",
+    "tool":"butchering",
+    "toolpower":7,
+    "durability":70,
+    "recycle":{
+      "into":["Bronze Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Bronze Chisel",
+    "desc":"Precision stone crafting and carving, this bronze boy has it all.",
+    "type":"finesse",
+    "value":80,
+    "dmg":[2,3,0],
+    "dmgtype":"piercing",
+    "tool":"chisel",
+    "toolpower":7,
+    "durability":80,
+    "recycle":{
+      "into":["Bronze Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Bronze Hoe",
+    "desc":"Use a hoe, (hoe!) use a hoe, (hoe!) use a hoe, I said to use a hoooooe.",
+    "type":"melee",
+    "twohands":true,
+    "value":80,
+    "dmg":[2,5,0],
+    "dmgtype":"bludgeoning",
+    "tool":"farming",
+    "toolpower":7,
+    "durability":70,
+    "recycle":{
+      "into":["Bronze Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Iron Spear",
+    "desc":"Iron so far away from you if you point this at me.",
+    "type":"melee",
+    "value":90,
+    "foreign":true,
+    "dmg":[2,6,0],
+    "dmgtype":"piercing",
+    "tool":"fishing",
+    "toolpower":10,
+    "durability":80,
+    "recycle":{
+      "into":["Iron Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Iron Axe",
+    "desc":"Iron for adventure in the deep forests of the surface world.",
+    "cat":["big_blade"],
+    "type":"melee",
+    "value":100,
+    "foreign":true,
+    "dmg":[2,6,0],
+    "dmgtype":"slashing",
+    "tool":"woodcutting",
+    "toolpower":10,
+    "durability":80,
+    "recycle":{
+      "into":["Iron Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Iron Shortsword",
+    "desc":"My sword is short but my will to fight is long!",
+    "type":"finesse",
+    "value":100,
+    "foreign":true,
+    "dmg":[2,6,0],
+    "dmgtype":"slashing",
+    "durability":80,
+    "recycle":{
+      "into":["Iron Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Iron Longsword",
+    "desc":"My sword is long but my will to fight is even longer!",
+    "cat":["big_blade"],
+    "type":"melee",
+    "value":120,
+    "foreign":true,
+    "dmg":[2,8,0],
+    "dmgtype":"slashing",
+    "durability":80,
+    "recycle":{
+      "into":["Iron Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Iron Maul",
+    "desc":"Now before you tell me this isn't balanced: yes, that's the point, it's hard to balance a heavy two-hander like this. It's going to fall pretty hard.",
+    "type":"melee",
+    "twohands":true,
+    "value":150,
+    "foreign":true,
+    "dmg":[1,16,0],
+    "dmgtype":"bludgeoning",
+    "durability":100,
+    "recycle":{
+      "into":["Iron Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Iron Pick",
+    "desc":"I'll pick you up and knock you down! -This pickaxe, probably.",
+    "type":"melee",
+    "value":80,
+    "foreign":true,
+    "dmg":[2,4,2],
+    "dmgtype":"piercing",
+    "tool":"mining",
+    "toolpower":9,
+    "durability":60,
+    "recycle":{
+      "into":["Iron Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Iron Hammer",
+    "desc":"20% stronger, and 40% more likely to land on your fingers or toes. A fair trade.",
+    "type":"melee",
+    "value":80,
+    "foreign":true,
+    "dmg":[2,4,2],
+    "dmgtype":"bludgeoning",
+    "tool":"construction",
+    "toolpower":9,
+    "durability":60,
+    "recycle":{
+      "into":["Iron Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Iron Knife",
+    "desc":"Knife to meat you! geddit cus you're cutting meat with a knife okay I'll stop",
+    "cat":["knife"],
+    "type":"finesse",
+    "value":80,
+    "foreign":true,
+    "dmg":[2,4,2],
+    "dmgtype":"piercing",
+    "tool":"butchering",
+    "toolpower":9,
+    "durability":60,
+    "recycle":{
+      "into":["Iron Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Iron Chisel",
+    "desc":"Chisel make a good topping on your pizza. A+ best description.",
+    "type":"finesse",
+    "value":80,
+    "foreign":true,
+    "dmg":[2,3,2],
+    "dmgtype":"piercing",
+    "tool":"chisel",
+    "toolpower":9,
+    "durability":70,
+    "recycle":{
+      "into":["Iron Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Iron Hoe",
+    "desc":"Are you ready for the hoe down? I hope so because that's where the farm is.",
+    "type":"melee",
+    "twohands":true,
+    "value":80,
+    "foreign":true,
+    "dmg":[2,5,2],
+    "dmgtype":"bludgeoning",
+    "tool":"farming",
+    "toolpower":9,
+    "durability":60,
+    "recycle":{
+      "into":["Iron Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Iron Pan",
+    "desc":"A stainless surface makes this easy to clean and hardly affects the flavor at all. Now you can truly be the iron chef.",
+    "type":"melee",
+    "value":80,
+    "foreign":true,
+    "dmg":[2,4,2],
+    "dmgtype":"bludgeoning",
+    "tool":"cooking",
+    "toolpower":8,
+    "durability":70,
+    "recycle":{
+      "into":["Iron Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Steel Spear",
+    "desc":"This feels like overkill for such a primitive shape, but you can't beat the classics.",
+    "type":"melee",
+    "value":150,
+    "foreign":true,
+    "dmg":[2,6,3],
+    "dmgtype":"piercing",
+    "tool":"fishing",
+    "toolpower":13,
+    "durability":120,
+    "recycle":{
+      "into":["Steel Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Steel Axe",
+    "desc":"Tears through wood and comes out mostly unscathed.",
+    "cat":["big_blade"],
+    "type":"melee",
+    "value":160,
+    "foreign":true,
+    "dmg":[2,6,3],
+    "dmgtype":"slashing",
+    "tool":"woodcutting",
+    "toolpower":13,
+    "durability":120,
+    "recycle":{
+      "into":["Steel Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Steel Shortsword",
+    "desc":"Light and maneuverable while staying sharp and rigid. A finesse fighter's dream.",
+    "type":"finesse",
+    "value":160,
+    "foreign":true,
+    "dmg":[2,6,3],
+    "dmgtype":"slashing",
+    "durability":120,
+    "recycle":{
+      "into":["Steel Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Steel Longsword",
+    "desc":"Steel yourself! Getting hit with this is gonna hurt!",
+    "cat":["big_blade"],
+    "type":"melee",
+    "value":180,
+    "foreign":true,
+    "dmg":[2,8,3],
+    "dmgtype":"slashing",
+    "durability":120,
+    "recycle":{
+      "into":["Steel Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Steel Maul",
+    "desc":"The best part about this is that it's easy to clean after each use. Though some opt not to anyway...",
+    "type":"melee",
+    "twohands":true,
+    "value":200,
+    "foreign":true,
+    "dmg":[1,16,3],
+    "dmgtype":"bludgeoning",
+    "durability":150,
+    "recycle":{
+      "into":["Steel Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Steel Pick",
+    "desc":"Walls are merely a suggestion for this tool.",
+    "type":"melee",
+    "value":120,
+    "foreign":true,
+    "dmg":[2,4,4],
+    "dmgtype":"piercing",
+    "tool":"mining",
+    "toolpower":12,
+    "durability":100,
+    "recycle":{
+      "into":["Steel Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Steel Hammer",
+    "desc":"Slam things into place with the power of hard steel.",
+    "type":"melee",
+    "value":120,
+    "foreign":true,
+    "dmg":[2,4,4],
+    "dmgtype":"bludgeoning",
+    "tool":"construction",
+    "toolpower":12,
+    "durability":100,
+    "recycle":{
+      "into":["Steel Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Steel Knife",
+    "desc":"Now THIS is a KNOIFE!",
+    "cat":["knife"],
+    "type":"finesse",
+    "value":120,
+    "foreign":true,
+    "dmg":[2,4,4],
+    "dmgtype":"piercing",
+    "tool":"butchering",
+    "toolpower":12,
+    "durability":100,
+    "recycle":{
+      "into":["Steel Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Steel Chisel",
+    "desc":"Carve out a niche for yourself with this solid, durable chisel.",
+    "type":"finesse",
+    "value":120,
+    "foreign":true,
+    "dmg":[2,3,4],
+    "dmgtype":"piercing",
+    "tool":"chisel",
+    "toolpower":12,
+    "durability":120,
+    "recycle":{
+      "into":["Steel Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Steel Hoe",
+    "desc":"You'd better not let anyone steel your hoe.",
+    "type":"melee",
+    "twohands":true,
+    "value":120,
+    "foreign":true,
+    "dmg":[2,5,4],
+    "dmgtype":"bludgeoning",
+    "tool":"farming",
+    "toolpower":12,
+    "durability":100,
+    "recycle":{
+      "into":["Steel Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Steel Pan",
+    "desc":"Very unlikely to bend out of shape when you inevitably bash someone's skull in with it.",
+    "type":"melee",
+    "value":120,
+    "foreign":true,
+    "dmg":[2,4,4],
+    "dmgtype":"bludgeoning",
+    "tool":"cooking",
+    "toolpower":11,
+    "durability":120,
+    "recycle":{
+      "into":["Steel Ingot"],
+      "chance":75,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Spectral Blade",
+    "desc":"A blade made of magical force. It's very well honed, but its magic won't hold for long.",
+    "type":"finesse",
+    "value":0,
+    "foreign":true,
+    "dmg":[2,6,0],
+    "dmgtype":"force",
+    "perishable":true,
+    "durability":20
+  },{
+    "name":"Spectral Bow",
+    "desc":"A bow made of magical force. It's strong, light, and flexible, but its magic won't hold for long.",
+    "type":"ranged",
+    "value":0,
+    "foreign":true,
+    "dmg":[2,4,0],
+    "dmgtype":"force",
+    "ammunition":"arrow",
+    "perishable":true,
+    "durability":20
+  },{
+    "name":"Spectral Arrow",
+    "desc":"An arrow made of magical force. It's very aerodynamic, but its magic won't hold for long.",
+    "type":"ammo",
+    "stack":20,
+    "value":0,
+    "foreign":true,
+    "dmg":[0,0,4],
+    "dmgtype":"force",
+    "ammunition":"arrow",
+    "perishable":true
+  },{
+    "name":"Tin Flask",
+    "desc":"A small flask that can hold liquid and is easy to drink from.",
+    "type":"container",
+    "liquid_capacity":1,
+    "value":10,
+    "noquality":true
+  },{
+    "name":"Clay Canteen",
+    "desc":"A hollow brick of clay which is easy to carry and holds a fair amount. Great for traveling with a friend.",
+    "type":"container",
+    "liquid_capacity":2,
+    "value":10,
+    "noquality":true
+  },{
+    "name":"Clay Bowl",
+    "desc":"A crudely-shaped bowl which can hold a small amount of liquid. Just be careful not to spill it; equipping it will help.",
+    "type":"container",
+    "sealable":false,
+    "liquid_capacity":1,
+    "value":20,
+    "noquality":true
+  },{
+    "name":"Clay Pail",
+    "desc":"A container capable of holding a modest amount of liquid. It's too small to fit on your head, so don't even try.",
+    "cat":["bucket"],
+    "type":"container",
+    "sealable":false,
+    "liquid_capacity":5,
+    "value":20,
+    "noquality":true
+  },{
+    "name":"Clay Pot",
+    "desc":"A large pot with a tight lid. Use the !fill command to store a food item in here. Food stored in a pot has a chance to not rot over month change. !empty a pot to remove its contents.",
+    "type":"container",
+    "value":30,
+    "noquality":true
+  },{
+    "name":"Copper Bucket",
+    "desc":"For holding liquids. This one is slightly more helmet-like but it still makes you look like an idiot.",
+    "cat":["bucket"],
+    "type":"container",
+    "sealable":false,
+    "liquid_capacity":10,
+    "value":40,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":80,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Tin Bucket",
+    "desc":"For holding liquids. No, it's not a helmet. Get it off of your head.",
+    "cat":["bucket"],
+    "type":"container",
+    "sealable":false,
+    "liquid_capacity":10,
+    "value":40,
+    "recycle":{
+      "into":["Tin Ingot"],
+      "chance":80,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Wooden Bucket",
+    "desc":"For holding liquids... seriously? Your horns just poked a hole through the bottom. Good job.",
+    "cat":["bucket"],
+    "type":"container",
+    "sealable":false,
+    "liquid_capacity":10,
+    "value":30,
+    "foreign":true,
+    "recycle":{
+      "into":["Wooden Plank","Wooden Plank"],
+      "chance":80
+    }
+  },{
+    "name":"Wooden Barrel",
+    "desc":"For holding a lot of liquid. Like, for real.",
+    "type":"container",
+    "liquid_capacity":20,
+    "value":50,
+    "foreign":true,
+    "recycle":{
+      "into":["Wooden Plank","Wooden Plank","Wooden Plank"],
+      "chance":80
+    }
+  },{
+    "name":"Ant Pheromonal Gland",
+    "desc":"A sac containing ant pheromones. It has a funny smell... Use it to release some pheromones; this will attract ants to your position, but if you pay attention, you can find out where they're coming from.",
+    "type":"utility",
+    "noquality":true,
+    "value":20
+  },{
+    "name":"Tin Rod",
+    "desc":"A half-meter-long rod of tin. It seems to pull towards a certain direction...",
+    "type":"utility",
+    "magic_level":1,
+    "value":40
+  },{
+    "name":"Tin Wand",
+    "desc":"A tin rod that has been enchanted with mana. It seems to channel it fairly effectively.",
+    "type":"magic",
+    "magic":true,
+    "dmg":[1,8,3],
+    "dmgtype":"force",
+    "value":80,
+    "durability":20
+  },{
+    "name":"Tin Scepter",
+    "desc":"A tin rod with a Manacite focus at the end of it, giving it increased channeling power.",
+    "type":"magic",
+    "magic":true,
+    "dmg":[1,8,6],
+    "dmgtype":"force",
+    "value":150,
+    "durability":100
+  },{
+    "name":"Yew Branch",
+    "desc":"A branch of an elusive yew tree, said to carry a deep connection with nature.",
+    "type":"utility",
+    "foreign":true,
+    "magic_level":1,
+    "value":50
+  },{
+    "name":"Yew Wand",
+    "desc":"A carefully-carved and imbued branch of yew wood, bearing a strong connection to nature and druidic magic.",
+    "type":"magic",
+    "foreign":true,
+    "magic":true,
+    "dmg":[2,8,0],
+    "dmgtype":"force",
+    "value":200,
+    "durability":100
+  },{
+    "name":"Vial",
+    "desc":"A vial of glass, perfect for containing something drinkable. And it's transparent so you can be sure of what's in it before chugging it down!",
+    "type":"container",
+    "liquid_capacity":1,
+    "noquality":true,
+    "value":5
+  },{
+    "name":"Bottle",
+    "desc":"A glass bottle with a large amount of capacity.",
+    "type":"container",
+    "liquid_capacity":4,
+    "noquality":true,
+    "value":20
+  },{
+    "name":"Mug",
+    "desc":"An open glass with a fair bit of capacity. Great for parties, not so great for travel.",
+    "type":"container",
+    "sealable":false,
+    "liquid_capacity":2,
+    "noquality":true,
+    "value":5
+  },{
+    "name":"Clay Mug",
+    "desc":"An open glass with a fair bit of capacity. Great for parties, not so great for travel.",
+    "type":"container",
+    "sealable":false,
+    "liquid_capacity":2,
+    "noquality":true,
+    "value":5
+  },{
+    "name":"Sling",
+    "desc":"A glorified rock thrower.",
+    "type":"ranged",
+    "value":25,
+    "dmg":[1,4,0],
+    "dmgtype":"bludgeoning",
+    "ammunition":"pebble",
+    "durability":50
+  },{
+    "name":"Bone Bow",
+    "desc":"A short bow using a flexible bone.",
+    "cat":["bow"],
+    "type":"ranged",
+    "twohands":true,
+    "value":40,
+    "dmg":[1,6,0],
+    "dmgtype":"piercing",
+    "ammunition":"arrow",
+    "durability":50,
+    "recycle":{
+      "into":["Bones"],
+      "chance":75,
+      "req":[]
+    }
+  },{
+    "name":"Copper Bow",
+    "desc":"Copper, stretched thin and curved. It's not so flexible, but it can launch arrows with more velocity.",
+    "cat":["bow"],
+    "type":"ranged",
+    "twohands":true,
+    "value":40,
+    "dmg":[1,6,2],
+    "dmgtype":"piercing",
+    "ammunition":"arrow",
+    "durability":40,
+    "recycle":{
+      "into":["Copper Ingot"],
+      "chance":75,
+      "req":[]
+    }
+  },{
+    "name":"Wooden Bow",
+    "desc":"A proper bow, shaped out of wood. Very durable and effective.",
+    "cat":["bow"],
+    "type":"ranged",
+    "twohands":true,
+    "value":50,
+    "foreign":true,
+    "dmg":[1,8,2],
+    "dmgtype":"piercing",
+    "ammunition":"arrow",
+    "durability":80,
+    "recycle":{
+      "into":["Wooden Stick"],
+      "chance":75,
+      "req":[]
+    }
+  },{
+    "name":"Wooden Crossbow",
+    "desc":"A handheld instrument capable of launching specially-made projectiles fast and steady.",
+    "cat":["bow"],
+    "type":"ranged",
+    "twohands":true,
+    "value":80,
+    "foreign":true,
+    "dmg":[1,10,2],
+    "dmgtype":"piercing",
+    "ammunition":"bolt",
+    "durability":80,
+    "recycle":{
+      "into":["Wooden Stick"],
+      "chance":75,
+      "req":[]
+    }
+  },{
+    "name":"Bone Arrow",
+    "desc":"A simple notched bone shaft with a sharpened point.",
+    "cat":["arrow"],
+    "type":"ammo",
+    "stack":100,
+    "dmg":[0,0,2],
+    "dmgtype":"piercing",
+    "recycle":{
+      "into":["Bones"],
+      "chance":25,
+      "req":[]
+    }
+  },{
+    "name":"Copper Arrow",
+    "desc":"A shaft with a nice and pointy copper arrowhead.",
+    "cat":["arrow"],
+    "type":"ammo",
+    "stack":100,
+    "dmg":[0,0,3],
+    "dmgtype":"piercing"
+  },{
+    "name":"Bronze Arrow",
+    "desc":"A shaft with a sturdy bronze arrowhead.",
+    "cat":["arrow"],
+    "type":"ammo",
+    "stack":100,
+    "dmg":[0,0,4],
+    "dmgtype":"piercing"
+  },{
+    "name":"Iron Arrow",
+    "desc":"A shaft with a tough iron arrowhead.",
+    "cat":["arrow"],
+    "type":"ammo",
+    "foreign":true,
+    "stack":100,
+    "dmg":[0,0,5],
+    "dmgtype":"piercing"
+  },{
+    "name":"Bone Bolt",
+    "desc":"A thick bone carved carefully into a shape suitable for a crossbow.",
+    "cat":["bolt"],
+    "type":"ammo",
+    "foreign":true,
+    "stack":100,
+    "dmg":[0,0,2],
+    "dmgtype":"piercing"
+  },{
+    "name":"Copper Bolt",
+    "desc":"Strikes a fine balance between cheap and effective.",
+    "cat":["bolt"],
+    "type":"ammo",
+    "foreign":true,
+    "stack":100,
+    "dmg":[0,0,3],
+    "dmgtype":"piercing"
+  },{
+    "name":"Bronze Bolt",
+    "desc":"A sturdier material allows it to be more aerodynamic without sacrificing damage.",
+    "cat":["bolt"],
+    "type":"ammo",
+    "foreign":true,
+    "stack":100,
+    "dmg":[0,0,4],
+    "dmgtype":"piercing"
+  },{
+    "name":"Iron Bolt",
+    "desc":"A strong, mass-produced piece of ammunition.",
+    "cat":["bolt"],
+    "type":"ammo",
+    "foreign":true,
+    "stack":100,
+    "dmg":[0,0,5],
+    "dmgtype":"piercing"
+  },{
+    "name":"Copper Coin",
+    "desc":"A piece of currency valued by the higher races. This one's the cheapest and most common.",
+    "type":"money",
+    "value":3,
+    "foreign":true,
+    "stack":100
+  },{
+    "name":"Silver Coin",
+    "desc":"A piece of currency valued by the higher races. This one's right in the middle in terms of value.",
+    "type":"money",
+    "value":30,
+    "foreign":true,
+    "stack":100
+  },{
+    "name":"Gold Coin",
+    "desc":"A piece of currency valued by the higher races. This one's worth quite a lot.",
+    "type":"money",
+    "value":300,
+    "foreign":true,
+    "stack":100
+  },{
+    "name":"Platinum Coin",
+    "desc":"A piece of currency valued by the higher races. This one's extremely rare but highly prized.",
+    "type":"money",
+    "value":3000,
+    "foreign":true,
+    "stack":100
+  },{
+    "name":"Stone Pebble",
+    "desc":"A pebble, slightly smoothed. Can be thrown with a sling.",
+    "type":"ammo",
+    "stack":100,
+    "dmg":[0,0,1],
+    "dmgtype":"bludgeoning",
+    "forage":{
+      "level":[1,-1],
+      "weight":20,
+      "amount":[5,20]
+    }
+  },{
+    "name":"Marble Pebble",
+    "desc":"A pretty, smooth piece of marble. Kobolds use this as basic currency, but higher races don't care for it.",
+    "type":"ammo",
+    "stack":100,
+    "dmg":[0,0,1],
+    "dmgtype":"bludgeoning",
+    "forage":{
+      "level":[1,-1],
+      "weight":18,
+      "amount":[1,10]
+    }
+  },{
+    "name":"Jade Pebble",
+    "desc":"A tiny piece of jade, lightweight and somewhat jagged. This would make a good sling shot.",
+    "type":"ammo",
+    "stack":100,
+    "dmg":[0,0,2],
+    "dmgtype":"piercing",
+    "forage":{
+      "level":[1,-1],
+      "weight":1,
+      "amount":[5,20]
+    }
+  },{
+    "name":"Manacite Pebble",
+    "desc":"A pebble of Manacite containing a fraction of the power it held while fully intact. Maybe that can still be useful.",
+    "type":"ammo",
+    "stack":100,
+    "dmg":[1,4,0],
+    "dmgtype":"bludgeoning"
+  },{
+    "name":"Bones",
+    "desc":"A long bone, somewhat brittle, but has a myriad of uses for a crafty kobold.",
+    "type":"material",
+    "cat":["shaft"],
+    "value":2,
+    "stack":20,
+    "forage":{
+      "level":[0,-1],
+      "weight":5,
+      "amount":[1,10]
+    }
+  },{
+    "name":"Feather",
+    "desc":"Left behind by a bird or fowl of some kind. Try not to sneeze.",
+    "type":"material",
+    "foreign":true,
+    "value":3,
+    "stack":20,
+    "forage":{
+      "level":[0,0],
+      "weight":4,
+      "amount":[1,10]
+    }
+  },{
+    "name":"Tusk",
+    "desc":"A long and sharp ivory tooth. This will fetch a handsome price.",
+    "type":"material",
+    "foreign":true,
+    "value":100
+  },{
+    "name":"Snake Fang",
+    "desc":"The fang of a venomous snake. It still contains a bit of the toxins within.",
+    "type":"material",
+    "foreign":true,
+    "value":50
+  },{
+    "name":"Fiber",
+    "desc":"An assortment of fibers from various plants and roots.",
+    "type":"material",
+    "cat":["bandage_material"],
+    "value":2,
+    "stack":20,
+    "forage":{
+      "level":[0,1],
+      "weight":15,
+      "amount":[1,10]
+    },
+    "farming":{
+      "type":"Subterranean",
+      "prog":5,
+      "diff":50
+    }
+  },{
+    "name":"Cobwebs",
+    "desc":"A collection of old webs made by a cave spider some time ago.",
+    "type":"material",
+    "cat":["bandage_material"],
+    "stack":20,
+    "forage":{
+      "level":[1,-1],
+      "weight":12,
+      "amount":[1,10]
+    }
+  },{
+    "name":"Cloth",
+    "desc":"A soft textile material made from cotton.",
+    "type":"material",
+    "foreign":true,
+    "cat":["textile"],
+    "value":30
+  },{
+    "name":"Wool Fabric",
+    "desc":"A warm textile material made from animal wool.",
+    "type":"material",
+    "foreign":true,
+    "cat":["textile"],
+    "value":35
+  },{
+    "name":"Silk",
+    "desc":"A fine textile material made from woven webbing.",
+    "type":"material",
+    "cat":["textile"],
+    "value":40
+  },{
+    "name":"Raw Hide",
+    "desc":"A skinned hide from some kind of beast. Not very useful in this form.",
+    "type":"material",
+    "noquality":true,
+    "value":20
+  },{
+    "name":"Raw Chitin",
+    "desc":"The carved exoskeleton of a large insectoid. A bit tougher than the average animal hide.",
+    "type":"material",
+    "noquality":true,
+    "value":30
+  },{
+    "name":"Leather",
+    "desc":"A hide that has been cured and tanned.",
+    "type":"material",
+    "cat":["textile"],
+    "value":40
+  },{
+    "name":"Chitin",
+    "desc":"Chitin that has been treated for long-term usage.",
+    "type":"material",
+    "value":50
+  },{
+    "name":"Leather Strips",
+    "desc":"Leather cut into strips. This should make a tougher binding agent.",
+    "type":"material",
+    "stack":10,
+    "value":4
+  },{
+    "name":"Leather Rope",
+    "desc":"Tough rope which can withstand a lot of wear and tear.",
+    "cat":["rope"],
+    "type":"binding",
+    "toolpower":10,
+    "value":40,
+    "recycle":{
+      "into":["Leather Strips","Leather Strips","Leather Strips"],
+      "chance":50,
+      "req":[]
+    }
+  },{
+    "name":"Waterskin",
+    "desc":"A flexible, watertight pouch for holding water or other liquids.",
+    "type":"container",
+    "liquid_capacity":3,
+    "value":40,
+    "recycle":{
+      "into":["Leather"],
+      "chance":75,
+      "req":[]
+    }
+  },{
+    "name":"Leather Pouch",
+    "desc":"A sturdy sack which can be strapped to one's hip or back and grants some extra storage.",
+    "type":"utility",
+    "inv_size":2,
+    "value":40,
+    "recycle":{
+      "into":["Leather"],
+      "chance":75,
+      "req":[]
+    }
+  },{
+    "name":"Work Gear",
+    "desc":"Tough leather gloves and vest with a copper helmet and banding. Doesn't prevent workplace accidents, but makes them less likely to maim.",
+    "type":"armor",
+    "eqslot":"body",
+    "value":50,
+    "ac":1,
+    "recycle":{
+      "into":["Leather","Copper Ingot"],
+      "chance":75,
+      "req":[]
+    }
+  },{
+    "name":"Straw Hat",
+    "desc":"A humbling hat woven of dried plant fibers. Really puts you in the mood to farm.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":30,
+    "skill_boost":{"farming":2}
+  },{
+    "name":"Outback Hat",
+    "desc":"A stitched leather hat with a wide brim, perfect for outdoor maneuvering.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":50,
+    "skill_boost":{"survival":2}
+  },{
+    "name":"Copper Helmet",
+    "desc":"Finally, a bucket you can wear on your head. Don't expect it to hold any liquids though, unless you count blood.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":70,
+    "skill_boost":{"resilience":1}
+  },{
+    "name":"Bronze Helmet",
+    "desc":"This tough metal won't warp as easily while you're getting clobbered.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":100,
+    "skill_boost":{"resilience":2}
+  },{
+    "name":"Iron Helmet",
+    "desc":"A bit lighter than bronze but almost as tough, this helmet lets you really get into the thick of melee combat.",
+    "type":"armor",
+    "foreign":true,
+    "eqslot":"head",
+    "value":140,
+    "skill_boost":{"resilience":2,"melee":1}
+  },{
+    "name":"Steel Helmet",
+    "desc":"With this helmet, you can literally charge in head-first and be quite a bit better off!",
+    "type":"armor",
+    "foreign":true,
+    "eqslot":"head",
+    "value":240,
+    "skill_boost":{"resilience":2,"melee":2}
+  },{
+    "name":"Leather Coif",
+    "desc":"A leather garment which helps the wearer focus on their target in ranged combat.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":90,
+    "skill_boost":{"marksman":2}
+  },{
+    "name":"Wizard Hat",
+    "desc":"A pointy silken hat which the wearer swears makes them better with magic. Hey, placebo is better than nothing.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":60,
+    "skill_boost":{"sorcery":2}
+  },{
+    "name":"Tinfoil Hat",
+    "desc":"A thin tin hat which reflects mana and other mental intrusions. At the very least, it makes the wearer more confident against such threats.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":60,
+    "skill_boost":{"willpower":2}
+  },{
+    "name":"Mining Helmet",
+    "desc":"A copper helmet with a bit of reflective quartz to amplify ambient light levels. This makes mining easier and safer.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":90,
+    "skill_boost":{"mining":2}
+  },{
+    "name":"Headdress",
+    "desc":"A headdress well-decorated with bits of bone and silk. This makes you look important and gives you better social impact.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":100,
+    "skill_boost":{"negotiation":2}
+  },{
+    "name":"Skull Helmet",
+    "desc":"A wicked-looking horned helmet of bone, sure to induce fear into all who gaze upon you.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":60,
+    "skill_boost":{"intimidation":2}
+  },{
+    "name":"Hard Hat",
+    "desc":"A thickly-layered copper helmet, meant to protect from workplace accidents.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":70,
+    "skill_boost":{"construction":2}
+  },{
+    "name":"Black Hood",
+    "desc":"A dark hood which should help the wearer blend into the shadows.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":60,
+    "skill_boost":{"stealth":2}
+  },{
+    "name":"Chef's Hat",
+    "desc":"The mark of culinary expertise. Increases respect among tribemates, so they'll be less likely to turn down your more experimental dishes.",
+    "type":"armor",
+    "eqslot":"head",
+    "value":60,
+    "skill_boost":{"cooking":2}
+  },{
+    "name":"Silk Robes",
+    "desc":"A fine garment which offers some protection without being too encumbering, or ugly for that matter.",
+    "type":"armor",
+    "eqslot":"body",
+    "magic":true,
+    "ac":1,
+    "value":100,
+    "recycle":{
+      "into":["Silk"],
+      "chance":75,
+      "req":[]
+    }
+  },{
+    "name":"Tin-Banded Robes",
+    "desc":"Robes banded with enchanted tin, increasing their protection. A jade circlet regulates the flow of mana within.",
+    "type":"armor",
+    "eqslot":"body",
+    "magic":true,
+    "ac":2,
+    "value":160,
+    "recycle":{
+      "into":["Silk","Tin Ingot"],
+      "chance":75,
+      "req":[]
+    }
+  },{
+    "name":"Silken Rope",
+    "desc":"A moderately-strong rope which has the bonus of being nice and smooth so it doesn't chafe.",
+    "cat":["rope"],
+    "type":"binding",
+    "toolpower":6,
+    "value":40,
+    "recycle":{
+      "into":["Silk"],
+      "chance":75,
+      "req":[]
+    }
+  },{
+    "name":"Silk Pouch",
+    "desc":"A fine sack which can be strapped to one's hip or back and grants some extra storage.",
+    "type":"utility",
+    "inv_size":2,
+    "value":80,
+    "recycle":{
+      "into":["Silk"],
+      "chance":75,
+      "req":[]
+    }
+  },{
+    "name":"Cloth Pouch",
+    "desc":"A plain sack which can be strapped to one's hip or back and grants some extra storage.",
+    "type":"utility",
+    "inv_size":2,
+    "value":60,
+    "recycle":{
+      "into":["Cloth"],
+      "chance":75,
+      "req":[]
+    }
+  },{
+    "name":"Fibrous Rope",
+    "desc":"A basic rope made of tightly-woven plant fibers. Not very strong, but it will do in a pinch.",
+    "cat":["rope"],
+    "type":"binding",
+    "toolpower":3,
+    "value":40,
+    "recycle":{
+      "into":["Fiber","Fiber","Fiber","Fiber","Fiber","Fiber","Fiber","Fiber"],
+      "chance":15,
+      "req":[]
+    }
+  },{
+    "name":"Cloth Rope",
+    "desc":"A sturdy rope made of cotton cloth. Decently strong.",
+    "cat":["rope"],
+    "type":"binding",
+    "toolpower":8,
+    "value":60
+  },{
+    "name":"Leather Armor",
+    "desc":"A tough leather body that provides a layer of protection against attacks.",
+    "type":"armor",
+    "eqslot":"body",
+    "ac":2,
+    "value":90,
+    "recycle":{
+      "into":["Leather"],
+      "chance":80,
+      "req":[]
+    }
+  },{
+    "name":"Wooden Armor",
+    "desc":"Wood is sturdy enough to protect you, light enough to not hold you back, and common enough to be mass produced. What more could you want?",
+    "type":"armor",
+    "eqslot":"body",
+    "ac":2,
+    "value":60,
+    "foreign":true,
+    "recycle":{
+      "into":["Wooden Plank","Wooden Plank","Wooden Plank","Wooden Plank"],
+      "chance":80,
+      "req":[]
+    }
+  },{
+    "name":"Chitinous Armor",
+    "desc":"Float like a butterfly, sting like a bee.",
+    "type":"armor",
+    "eqslot":"body",
+    "ac":3,
+    "value":150,
+    "recycle":{
+      "into":["Chitin"],
+      "chance":80,
+      "req":[]
+    }
+  },{
+    "name":"Copper Armor",
+    "desc":"More or less amounts to large copper plates strapped to the body. Unwieldy, but effective.",
+    "type":"armor",
+    "eqslot":"body",
+    "ac":3,
+    "heavy":true,
+    "value":120,
+    "recycle":{
+      "into":["Copper Ingot","Copper Ingot"],
+      "chance":60,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Bronze Armor",
+    "desc":"This armor doesn't bend or break nearly as easily, but it's still heavy as hell.",
+    "type":"armor",
+    "eqslot":"body",
+    "ac":4,
+    "heavy":true,
+    "value":200,
+    "recycle":{
+      "into":["Bronze Ingot","Bronze Ingot"],
+      "chance":60,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Iron Armor",
+    "desc":"Pow, ping, bam, that's the sound of everything hitting you and doing nothing because your armor is awesome.",
+    "type":"armor",
+    "eqslot":"body",
+    "ac":5,
+    "heavy":true,
+    "foreign":true,
+    "value":250,
+    "recycle":{
+      "into":["Iron Ingot","Iron Ingot"],
+      "chance":60,
+      "req":[["building","Furnace"]]
+    }
+  },{
+    "name":"Ration",
+    "desc":"A typical ration, prepared for shelf life and energy efficiency, not so much for taste.",
+    "type":"food",
+    "value":30,
+    "ap":10
+  },{
+    "name":"Raw Mushroom",
+    "desc":"A benign domesticated mushroom. Just about the only thing you can grow down here.",
+    "cat":["mushroom","vegetable","veggie"],
+    "type":"food",
+    "value":5,
+    "noquality":true,
+    "perishable":true,
+    "ap":4,
+    "forage":{
+      "level":[1,-1],
+      "weight":15
+    },
+    "farming":{
+      "type":"Mushroom",
+      "prog":40,
+      "diff":0
+    }
+  },{
+    "name":"Potato",
+    "desc":"A starchy tuber. Farming it presents its own set of challenges, but it's a very versatile food item and it doesn't spoil if stored correctly.",
+    "type":"food",
+    "cat":["vegetable","surface_plant","veggie"],
+    "value":10,
+    "noquality":true,
+    "foreign":true,
+    "ap":4,
+    "forage":{
+      "level":[0,0],
+      "weight":6
+    },
+    "farming":{
+      "type":"Surface",
+      "prog":50,
+      "diff":250
+    }
+  },{
+    "name":"Broccoli",
+    "desc":"A green branching vegetable. Very nutritious, even raw. As far as surface plants go, Kobolds like this because it resembles a mushroom, if you squint a little (and you probably will be, in the sunlight required to grow it).",
+    "type":"food",
+    "cat":["vegetable","surface_plant","veggie"],
+    "value":10,
+    "noquality":true,
+    "perishable":true,
+    "foreign":true,
+    "ap":5,
+    "forage":{
+      "level":[0,0],
+      "weight":6
+    },
+    "farming":{
+      "type":"Surface",
+      "prog":40,
+      "diff":150
+    }
+  },{
+    "name":"Wheat",
+    "desc":"A cereal grain, relatively easy to raise in the right conditions, but it's not edible on its own.",
+    "type":"material",
+    "cat":["surface_plant","grain"],
+    "value":2,
+    "stack":20,
+    "noquality":true,
+    "foreign":true,
+    "forage":{
+      "level":[0,0],
+      "amount":[1,5],
+      "weight":6
+    },
+    "farming":{
+      "type":"Surface",
+      "prog":10,
+      "diff":150
+    }
+  },{
+    "name":"Rice Grass",
+    "desc":"A highly versatile grain, very popular among surface dwellers. It's not edible on its own.",
+    "type":"material",
+    "cat":["surface_plant","grain"],
+    "value":1,
+    "stack":50,
+    "noquality":true,
+    "foreign":true,
+    "forage":{
+      "level":[0,0],
+      "amount":[5,10],
+      "weight":5
+    },
+    "farming":{
+      "type":"Surface",
+      "prog":5,
+      "diff":150
+    }
+  },{
+    "name":"Rice Ball",
+    "desc":"Milled and processed brown rice portioned into a sustainable ration, though there's so much more you can do with it from here.",
+    "type":"food",
+    "cat":["grain"],
+    "perishable":true,
+    "value":10,
+    "ap":5,
+    "noquality":true,
+    "foreign":true
+  },{
+    "name":"Cotton",
+    "desc":"A soft, fluffy plant. You could process this into a nice textile.",
+    "type":"material",
+    "cat":["surface_plant"],
+    "value":2,
+    "stack":20,
+    "noquality":true,
+    "foreign":true,
+    "forage":{
+      "level":[0,0],
+      "amount":[1,5],
+      "weight":6
+    },
+    "farming":{
+      "type":"Surface",
+      "prog":5,
+      "diff":200
+    }
+  },{
+    "name":"Wool",
+    "desc":"Thick, warm hairs shorn from a large animal. Needs some processing before it can be used as a textile.",
+    "type":"material",
+    "value":3,
+    "stack":20,
+    "noquality":true,
+    "foreign":true
+  },{
+    "name":"Bubblestool",
+    "desc":"A bulbous, turquoise mushroom infamous for its light and airy texture. Not much of substance, but it's easy to digest.",
+    "cat":["mushroom","veggie"],
+    "stack":5,
+    "type":"food",
+    "value":5,
+    "noquality":true,
+    "perishable":true,
+    "ap":1,
+    "forage":{
+      "level":[1,-1],
+      "weight":3
+    },
+    "farming":{
+      "type":"Mushroom",
+      "prog":20,
+      "diff":50
+    }
+  },{
+    "name":"Bloodcap Mushroom",
+    "desc":"A rare mushroom which stimulates the immune system and speeds up natural recovery.",
+    "cat":["mushroom","veggie"],
+    "type":"food",
+    "value":25,
+    "noquality":true,
+    "perishable":true,
+    "ap":2,
+    "hp":2,
+    "forage":{
+      "level":[1,-1],
+      "weight":3
+    },
+    "farming":{
+      "type":"Mushroom",
+      "prog":60,
+      "diff":100
+    }
+  },{
+    "name":"Silkcap Mushroom",
+    "desc":"A rare mushroom that glows a soft blue. It is silky smooth to the touch.",
+    "cat":["mushroom","veggie"],
+    "type":"food",
+    "value":50,
+    "noquality":true,
+    "perishable":true,
+    "ap":2,
+    "mp":2,
+    "forage":{
+      "level":[1,-1],
+      "weight":2
+    },
+    "farming":{
+      "type":"Mushroom",
+      "prog":80,
+      "diff":150
+    }
+  },{
+    "name":"Grim Agaric",
+    "desc":"Easily identifiable by its black coloration and lime-green spots, this mushroom is highly toxic when eaten raw, but a skilled apothecary can make use of its medical applications.",
+    "cat":["mushroom","veggie"],
+    "type":"food",
+    "value":30,
+    "noquality":true,
+    "perishable":true,
+    "ap":5,
+    "hp":-10,
+    "forage":{
+      "level":[1,-1],
+      "weight":2
+    },
+    "farming":{
+      "type":"Mushroom",
+      "prog":50,
+      "diff":150
+    }
+  },{
+    "name":"Violamanita",
+    "desc":"A mushroom which grows only in total darkness, but when exposed to light it glows a vibrant purple. It has strongly psychoactive properties.",
+    "cat":["mushroom","deep_plant","veggie"],
+    "type":"food",
+    "value":60,
+    "noquality":true,
+    "perishable":true,
+    "foreign":true,
+    "ap":3,
+    "hp":3,
+    "mp":3,
+    "add_trait":["tripping"],
+    "del_trait":["stressed"],
+    "forage":{
+      "level":[2,-1],
+      "weight":2
+    },
+    "farming":{
+      "type":"Deep",
+      "prog":100,
+      "diff":400
+    }
+  },{
+    "name":"Goodberry",
+    "desc":"A berry created from magic. It's small, but it provides enough nourishment to sustain a kobold for one month, and slightly heals them to boot.",
+    "type":"food",
+    "cat":["fruit"],
+    "value":20,
+    "stack":10,
+    "ap":1,
+    "hp":1
+  },{
+    "name":"Ghostberry",
+    "desc":"A fist-sized pale white berry which has adapted to low-light environments. The trade-off is that it requires a lot of water to grow properly.",
+    "type":"food",
+    "cat":["fruit"],
+    "value":10,
+    "stack":5,
+    "perishable":true,
+    "ap":2,
+    "farming":{
+      "type":"Subterranean",
+      "prog":20,
+      "diff":100
+    }
+  },{
+    "name":"Healmoss",
+    "desc":"A spongy, gauze-like mass of plant matter. When applied properly, it can stem bleeding, suppress pain, and disinfect wounds all in one.",
+    "type":"medicine",
+    "cat":["veggie"],
+    "value":25,
+    "noquality":true,
+    "hp":3,
+    "forage":{
+      "level":[1,1],
+      "weight":8
+    },
+    "farming":{
+      "type":"Subterranean",
+      "prog":100,
+      "diff":150
+    }
+  },{
+    "name":"Sweetroot",
+    "desc":"Crunchy and incredibly sweet, kobolds regard this as a fun snack. You can eat it raw and it will sustain you, but it's not very nutritious in this state.",
+    "type":"food",
+    "cat":["veggie"],
+    "value":20,
+    "noquality":true,
+    "ap":1,
+    "forage":{
+      "level":[1,1],
+      "weight":6
+    },
+    "farming":{
+      "type":"Subterranean",
+      "prog":40,
+      "diff":100
+    }
+  },{
+    "name":"Batwing",
+    "desc":"A semi-rare underground herb, so named for its shape and its almost black color. When crushed, it creates a viscous paste.",
+    "type":"material",
+    "cat":["veggie"],
+    "value":40,
+    "noquality":true,
+    "forage":{
+      "level":[1,-1],
+      "weight":4
+    },
+    "farming":{
+      "type":"Subterranean",
+      "prog":50,
+      "diff":100
+    }
+  },{
+    "name":"Snail",
+    "desc":"A small, shelled gastropod. It's not going anywhere. You can eat it, but without any sort of preparation it isn't very pleasant.",
+    "type":"food",
+    "cat":["meat"],
+    "value":10,
+    "noquality":true,
+    "ap":2,
+    "forage":{
+      "level":[0,-1],
+      "weight":3
+    }
+  },{
+    "name":"Sungazer",
+    "desc":"A small and almost perfectly round white flower which always seems to point towards sunlight.",
+    "type":"material",
+    "cat":["surface_plant","veggie"],
+    "value":80,
+    "noquality":true,
+    "forage":{
+      "level":[0,0],
+      "weight":4
+    },
+    "farming":{
+      "type":"Surface",
+      "prog":100,
+      "diff":200
+    }
+  },{
+    "name":"Adren Leaf",
+    "desc":"A six-pointed leaf with a bluish tint, full of various stimulating chemicals.",
+    "type":"material",
+    "cat":["surface_plant","veggie"],
+    "value":90,
+    "noquality":true,
+    "forage":{
+      "level":[0,0],
+      "weight":3
+    },
+    "farming":{
+      "type":"Surface",
+      "prog":100,
+      "diff":250
+    }
+  },{
+    "name":"Devil's Eye",
+    "desc":"A strange herb which glows a vivid red when exposed to any amount of light.",
+    "type":"material",
+    "cat":["deep_plant","veggie"],
+    "value":120,
+    "noquality":true,
+    "forage":{
+      "level":[4,-1],
+      "weight":4
+    },
+    "farming":{
+      "type":"Deep",
+      "prog":150,
+      "diff":400
+    }
+  },{
+    "name":"Peg Leg",
+    "desc":"A vaguely leg-sized piece of carved and reinforced bone. Use this to replace a lost leg, though it's not nearly as good as a real one.",
+    "type":"utility",
+    "value":20
+  },{
+    "name":"Amethyst Eye",
+    "desc":"An amethyst that has been smoothly cut and enchanted, granting its owner enhanced vision.",
+    "type":"utility",
+    "value":60
+  },{
+    "name":"Bandage",
+    "desc":"A rudimentary bandage woven of dried and absorbant fibers. It's not much, but it's way better than nothing.",
+    "type":"medicine",
+    "value":20,
+    "hp":2
+  },{
+    "name":"Cloth Bandage",
+    "desc":"A bandage, cut from clean cotton cloth.",
+    "type":"medicine",
+    "value":30,
+    "hp":3
+  },{
+    "name":"Mossy Bandage",
+    "desc":"The addition of healmoss makes this a more effective way to treat wounds.",
+    "type":"medicine",
+    "value":50,
+    "hp":5
+  },{
+    "name":"Medical Bandage",
+    "desc":"A bandage lightly soaked in alcohol as a primitive, but effective disinfectant.",
+    "type":"medicine",
+    "foreign":true,
+    "value":60,
+    "hp":6
+  },{
+    "name":"Grilled Mushroom",
+    "desc":"A bit more pleasant to the palette.",
+    "type":"food",
+    "cat":["veggie"],
+    "value":11,
+    "perishable":true,
+    "ap":6
+  },{
+    "name":"Fried Rice",
+    "desc":"You'll be hungry again by the time you successfully say its name 10 times fast.",
+    "type":"food",
+    "cat":["grain"],
+    "value":15,
+    "perishable":true,
+    "ap":8
+  },{
+    "name":"Ghost Sauce",
+    "desc":"Ghostberries, mashed and cooked until they have a thick jelly-like consistency. Very nutritious and filling.",
+    "type":"food",
+    "cat":["fruit"],
+    "value":14,
+    "perishable":true,
+    "ap":6
+  },{
+    "name":"Seasoned Snail",
+    "desc":"Snail that has been cooked and seasoned to the point where you can at least keep it down. It's a very acquired taste.",
+    "type":"food",
+    "cat":["meat"],
+    "value":20,
+    "ap":5
+  },{
+    "name":"Pickled Mushrooms",
+    "desc":"Tangy, but they never go bad.",
+    "type":"food",
+    "cat":["veggie"],
+    "value":14,
+    "ap":5
+  },{
+    "name":"Cheese",
+    "desc":"A loaf of milk.",
+    "foreign":true,
+    "type":"food",
+    "cat":["dairy"],
+    "value":25,
+    "perishable":true,
+    "ap":7
+  },{
+    "name":"Bread",
+    "desc":"A loaf of bread, filling and healthy.",
+    "foreign":true,
+    "type":"food",
+    "cat":["grain"],
+    "value":25,
+    "perishable":true,
+    "ap":8
+  },{
+    "name":"Hardtack",
+    "desc":"Bread made for the purpose of long-term storage and travel.",
+    "foreign":true,
+    "type":"food",
+    "cat":["grain"],
+    "value":20,
+    "ap":6
+  },{
+    "name":"Baked Potato",
+    "desc":"It's so hot, but so good...",
+    "type":"food",
+    "foreign":true,
+    "value":18,
+    "cat":["veggie"],
+    "perishable":true,
+    "ap":6
+  },{
+    "name":"Hearty Stew",
+    "desc":"Meat and potato stew. Loaded with nutrients that promote muscular and cardiovascular integrity.",
+    "type":"food",
+    "value":40,
+    "cat":["veggie","meat"],
+    "perishable":true,
+    "foreign":true,
+    "ap":10,
+    "skill_boost":{"resilience":2,"vitality":2}
+  },{
+    "name":"Steakburger",
+    "desc":"Putting bread around the meat so you don't get the juices all over your hands... genius!",
+    "type":"food",
+    "value":40,
+    "cat":["meat"],
+    "perishable":true,
+    "foreign":true,
+    "ap":10,
+    "skill_boost":{"melee":3}
+  },{
+    "name":"Mushroom Stir-Fry",
+    "desc":"A collection of mushrooms with some earthy seasoning to get you in the mood to hit rocks.",
+    "type":"food",
+    "value":40,
+    "cat":["veggie"],
+    "perishable":true,
+    "foreign":true,
+    "ap":10,
+    "skill_boost":{"mining":3}
+  },{
+    "name":"Sushi",
+    "desc":"A variety of raw fish made with specially prepared rice. This food is an art in and of itself.",
+    "type":"food",
+    "value":40,
+    "cat":["veggie"],
+    "perishable":true,
+    "foreign":true,
+    "ap":10,
+    "skill_boost":{"fishing":3}
+  },{
+    "name":"Escargot",
+    "desc":"Snails that have been cooked with wine and served in their shells. An expert chef can make this delicacy work wonders.",
+    "type":"food",
+    "value":45,
+    "cat":["meat"],
+    "perishable":true,
+    "foreign":true,
+    "ap":10,
+    "skill_boost":{"cooking":3}
+  },{
+    "name":"Cheese Omelette",
+    "desc":"A delectable concoction of cheese and eggs. Really makes you appreciate the things our animal friends can provide us without slaughtering them.",
+    "type":"food",
+    "value":40,
+    "cat":["meat"],
+    "perishable":true,
+    "foreign":true,
+    "ap":10,
+    "skill_boost":{"animals":3}
+  },{
+    "name":"Cake",
+    "desc":"Hey, you deserve to treat yourself every once in a while!",
+    "type":"food",
+    "value":50,
+    "perishable":true,
+    "foreign":true,
+    "ap":10,
+    "skill_boost":{"willpower":3}
+  },{
+    "name":"Raw Meat",
+    "desc":"Raw and very gamey. It'd be better cooked, but kobolds aren't picky.",
+    "type":"food",
+    "cat":["raw_meat","meat"],
+    "value":6,
+    "noquality":true,
+    "perishable":true,
+    "ap":5,
+    "forage":{
+      "level":[0,-1],
+      "weight":1
+    }
+  },{
+    "name":"Chunked Meat",
+    "desc":"A failed butcher produced this mess. Well, it'll still get you through the month...",
+    "stack":5,
+    "type":"food",
+    "cat":["raw_meat","meat"],
+    "value":4,
+    "noquality":true,
+    "perishable":true,
+    "ap":3,
+    "forage":{
+      "level":[0,-1],
+      "weight":1
+    }
+  },{
+    "name":"Meat Bait",
+    "desc":"An assortment of dried meats crafted specifically to attract carnivorous animals. It's not suitable for kobold consumption.",
+    "type":"bait",
+    "stack":10,
+    "cat":["meat"],
+    "noquality":true
+  },{
+    "name":"Veggie Bait",
+    "desc":"An assortment of dried plant and/or fungal matter crafted specifically to attract herbivorous animals. It's not suitable for kobold consumption.",
+    "type":"bait",
+    "stack":10,
+    "cat":["veggie"],
+    "noquality":true
+  },{
+    "name":"Kibble",
+    "desc":"A mixture of dried food pellets. Animals don't mind it, but kobolds can't eat it.",
+    "type":"bait",
+    "stack":20,
+    "cat":["veggie","meat"],
+    "noquality":true
+  },{
+    "name":"Zombie Meat",
+    "desc":"It's already rotten. Your every instinct is screaming at you not to eat this.",
+    "type":"food",
+    "cat":["meat"],
+    "value":0,
+    "noquality":true,
+    "perishable":true,
+    "ap":-2,
+    "hp":-2,
+    "forage":{
+      "level":[2,5],
+      "weight":1
+    }
+  },{
+    "name":"Raw Fish",
+    "desc":"A bit slimy, but naturally tender and flavorful even without being cooked.",
+    "type":"food",
+    "cat":["raw_meat","meat"],
+    "value":6,
+    "noquality":true,
+    "perishable":true,
+    "ap":4
+  },{
+    "name":"Raw Bug Meat",
+    "desc":"Soft and full of unidentifiable lumps. Even for a kobold, this is an acquired taste.",
+    "type":"food",
+    "cat":["meat"],
+    "value":4,
+    "noquality":true,
+    "perishable":true,
+    "ap":3
+  },{
+    "name":"Egg",
+    "desc":"A raw bird egg, unfertilized. You can eat it in this state, if you're the tough-as-nails type.",
+    "type":"food",
+    "cat":["meat"],
+    "value":6,
+    "noquality":true,
+    "perishable":true,
+    "foreign":true,
+    "ap":4,
+    "forage":{
+      "level":[0,0],
+      "weight":2
+    }
+  },{
+    "name":"Grilled Steak",
+    "desc":"Grilled to perfection. Really brings out the flavor, and the calories.",
+    "type":"food",
+    "cat":["meat"],
+    "value":12,
+    "perishable":true,
+    "ap":7
+  },{
+    "name":"Grilled Meat Chunks",
+    "desc":"It's pretty much impossible not to make this well-done, but it's tastier.",
+    "stack":5,
+    "type":"food",
+    "cat":["meat"],
+    "value":6,
+    "noquality":true,
+    "perishable":true,
+    "ap":4
+  },{
+    "name":"Grilled Fish",
+    "desc":"Easy to prepare, and even easier to eat. If you're lucky, you'll find a small bone inside to pick your teeth with when you're done.",
+    "type":"food",
+    "cat":["meat"],
+    "value":12,
+    "perishable":true,
+    "ap":6
+  },{
+    "name":"Scrambled Eggs",
+    "desc":"Cooked until white and fluffy. An easy and filling meal, as long as you have the tools for it.",
+    "type":"food",
+    "cat":["meat"],
+    "value":12,
+    "perishable":true,
+    "ap":6
+  },{
+    "name":"Grilled Bug Steak",
+    "desc":"One of the few meats that tastes worse when you bring out the flavor, but it is a bit more nutritious.",
+    "type":"food",
+    "cat":["meat"],
+    "value":9,
+    "perishable":true,
+    "ap":5
+  },{
+    "name":"Meat Jerky",
+    "desc":"Dried and covered in salt. It tastes alright and doesn't spoil.",
+    "type":"food",
+    "cat":["meat"],
+    "value":15,
+    "ap":6
+  },{
+    "name":"Salted Fish",
+    "desc":"Back to the salt from whence it came!",
+    "type":"food",
+    "cat":["meat"],
+    "value":15,
+    "ap":5
+  },{
+    "name":"Bug Jerky",
+    "desc":"With enough salt, this is surprisingly palatable.",
+    "type":"food",
+    "cat":["meat"],
+    "value":12,
+    "ap":4
+  },{
+    "name":"Raw Kobold Meat",
+    "desc":"Meat from a butchered kobold corpse. Cannibalism is unthinkable to the higher races, and even for us it's a dodgy subject. It won't be received well.",
+    "type":"food",
+    "cat":["meat"],
+    "noquality":true,
+    "perishable":true,
+    "ap":5,
+    "heat":5
+  },{
+    "name":"Grilled Kobold Steak",
+    "desc":"If you're going for cannibalism, might as well make the most of it.",
+    "type":"food",
+    "cat":["meat"],
+    "perishable":true,
+    "ap":7,
+    "heat":5
+  },{
+    "name":"Kobold Jerky",
+    "desc":"This really puts the 'jerk' in 'jerky'.",
+    "type":"food",
+    "cat":["meat"],
+    "ap":6,
+    "heat":5
+  },{
+    "name":"Corpse",
+    "desc":"A dead thing. It can be butchered.",
+    "type":"corpse",
+    "rot_into":"Skeleton",
+    "perishable":true
+  },{
+    "name":"Skeleton",
+    "desc":"A dead thing. It can be butchered.",
+    "type":"corpse",
+    "perishable":true
+  },{
+    "name":"Fish",
+    "desc":"A freshly-caught fish, ready to butcher.",
+    "type":"corpse",
+    "perishable":true
+  },{
+    "name":"Desiccated Ant Corpse",
+    "desc":"A dead ant that has been sucked of all its life juices. It won't rot, and with the corpse mostly intact you might find something interesting inside it...",
+    "type":"corpse",
+    "gain":[["Ant Pheromonal Gland",2],["Raw Chitin",1]]
+  },{
+    "name":"Kobold Corpse",
+    "desc":"A fellow Kobold, no longer living. You can butcher it, but this may be seen as barbaric.",
+    "type":"corpse",
+    "heat":5,
+    "perishable":true,
+    "rot_into":"Kobold Skeleton",
+    "gain":[["Raw Kobold Meat",2],["Bones",8]]
+  },{
+    "name":"Kobold Skeleton",
+    "desc":"A fellow Kobold, no longer living. You can butcher it, but this may be seen as barbaric.",
+    "type":"corpse",
+    "heat":5,
+    "gain":[["Bones",8]]
+  },{
+    "name":"Kobold Egg",
+    "desc":"An unborn child. These eggs take little to no effort to maintain, an adaptation meant to counter the kobold's high mortality rate. It will hatch at the end of the month, provided nothing happens to it.",
+    "type":"egg"
+  },{
+    "name":"Goblin Script",
+    "desc":"A tablet full of markings that don't make any sense to us, but looking at it long enough reveals some patterns here and there. With some study, we might be able to work out what they mean.",
+    "type":"material"
+  },{
+    "name":"Common Script",
+    "desc":"A book full of markings that don't make any sense to us, but looking at it long enough reveals some patterns here and there. With some study, we might be able to work out what they mean.",
+    "type":"material"
+  },{
+    "name":"Holy Scripture",
+    "desc":"A book cataloguing the testaments of human religion. Many humans keep these tenets close to heart, but they don't paint 'monsters' like us in a favorable light... Still, there must be something useful we can make of this.",
+    "type":"material"
+  },{
+    "name":"Dungeon Key",
+    "desc":"A key that unlocks a door in the dungeon it was found in.",
+    "type":"utility"
+  }
+]
