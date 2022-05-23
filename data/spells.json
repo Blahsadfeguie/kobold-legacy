@@ -424,6 +424,7 @@
     "cost":4,
     "strength":1,
     "level":1,
+    "target":"enemy",
     "spell_class":["arcane"],
     "function":"spell_rupture"
   },{

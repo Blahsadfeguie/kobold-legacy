@@ -4241,7 +4241,7 @@ def spell_rupture(spell,words,me,target):
   me.tohit=me.smod("int")+math.floor(me.skmod("sorcery")/2)
   me.dmg=list(spell["dmg"])
   me.dmgtype=spell["dmgtype"]
-  dmg=attack_roll(me,t)
+  dmg=attack_roll(me,target)
   if dmg>0:
     if isinstance(target,Kobold): liq="Kobold Blood"
     else: liq="Blood"
