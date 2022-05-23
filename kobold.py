@@ -895,7 +895,7 @@ class Tile:
           place.consume_item(arg[0],int(arg[1]))
           break
         else: console_print("Could not consume "+b+" when building "+res["name"]+".",True)
-    if "Farm" in res["name"]: self.farm_cap=200
+    if " Farm" in res["name"]: self.farm_cap=200 #silly but effective fix for "farm fencing" resetting cap
     if res["name"]=="Paved Road" and "Road" in self.special: self.special.remove("Road")
     if res["name"]=="Bracing": self.stability+=20
     if res["name"]=="Aqueduct":
@@ -1424,7 +1424,7 @@ class Tribe:
           break
         else: console_print("Could not consume "+b+" when building "+res["name"]+".",True)
     if res["name"]=="Reservoir": self.water_max+=25
-    if "Farm" in res["name"]: 
+    if " Farm" in res["name"]: #silly but effective fix for "farm fencing" resetting cap
       t=self.world.get_tile(self.x,self.y,self.z)
       t.farm_cap=200
       
@@ -4624,7 +4624,7 @@ def cmd_farming(words,me,target):
   msg="Farm operational: "
   gotfarm=False
   for b in p.special:
-    if "Farm" in b: 
+    if " Farm" in b: 
       msg+=b
       gotfarm=True
   if not gotfarm: msg+="None\n\nYou'll have to build a farm before you can grow anything here."
