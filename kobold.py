@@ -4035,7 +4035,7 @@ def spell_tremor(spell,words,me,target):
   if p.z==0 and not me.dungeon: dmg=math.ceil(dmg/2)
   else: 
     p.stability-=5
-    p.cave_in(party.owner)
+    p.cave_in(me.party.owner)
   if me.wearing_nonmage_equipment(): dmg=math.ceil(dmg/2)
   for t in targets:
     bdmg=dmg
