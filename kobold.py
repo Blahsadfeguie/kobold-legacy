@@ -6664,7 +6664,7 @@ def spell_hut(spell,words,me,target):
       me.p("It's too dangerous to set up camp at the "+l+".")
       return False
   me.p("[n] waves their hands around the party, and a hut of magical force materializes around them.")
-  t.camp={"tribe":me.tribe,"heat":0,"defense":0,"watch":[],"magic":true}
+  t.camp={"tribe":me.tribe,"heat":0,"defense":0,"watch":[],"magic":True}
   return True
 
 def cmd_camp(words,me,target):
