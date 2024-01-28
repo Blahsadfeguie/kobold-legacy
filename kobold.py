@@ -4035,7 +4035,7 @@ def spell_tremor(spell,words,me,target):
   if p.z==0 and not me.dungeon: dmg=math.ceil(dmg/2)
   else: 
     p.stability-=5
-    p.cave_in(party.owner)
+    p.cave_in(me.party.owner)
   if me.wearing_nonmage_equipment(): dmg=math.ceil(dmg/2)
   for t in targets:
     bdmg=dmg
@@ -4278,9 +4278,9 @@ def spell_dislocate(spell,words,me,target):
     m=spawn_item(res,me.get_place(),n)
     me.p(m.display()+" manifests on the ground.")
     p.mined[d]+=m.veinsize
-    if p.mined[d]==0 and p.resources[d]: k.p("[n] has revealed a node of "+p.resources[d]+"!")
+    if p.mined[d]==0 and p.resources[d]: me.p("[n] has revealed a node of "+p.resources[d]+"!")
     elif res!="Stone Chunk" and chance(p.mined[d]*5):
-      k.p("The "+res+" vein is depleted.")
+      me.p("The "+res+" vein is depleted.")
       p.resources[d]=None
     p.stability-=5
     p.cave_in(me,d)
@@ -6664,7 +6664,7 @@ def spell_hut(spell,words,me,target):
       me.p("It's too dangerous to set up camp at the "+l+".")
       return False
   me.p("[n] waves their hands around the party, and a hut of magical force materializes around them.")
-  t.camp={"tribe":me.tribe,"heat":0,"defense":0,"watch":[],"magic":true}
+  t.camp={"tribe":me.tribe,"heat":0,"defense":0,"watch":[],"magic":True}
   return True
 
 def cmd_camp(words,me,target):
